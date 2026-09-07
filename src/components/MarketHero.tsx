@@ -1,9 +1,21 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { MARKET_PULSE } from "@/data/marketData";
 import { Gauge, DollarSign, Percent, ShieldCheck, Zap } from "lucide-react";
+import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
 
 export default function MarketHero() {
+  const [session, setSession] = useState<MarketSessionInfo>(getWallStreetSession());
+
+  useEffect(() => {
+    setSession(getWallStreetSession());
+    const interval = setInterval(() => {
+      setSession(getWallStreetSession());
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="border-b border-slate-800/80 bg-gradient-to-b from-[#090d16] via-[#0d1424] to-[#090d16] py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -23,11 +35,30 @@ export default function MarketHero() {
           </div>
 
           <div className="mt-4 md:mt-0 flex items-center space-x-3 text-xs">
-            <div className="rounded-lg border border-slate-800 bg-slate-900/90 px-3 py-2">
-              <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Session State</span>
-              <span className="font-semibold text-emerald-400 flex items-center gap-1.5 mt-0.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
-                {MARKET_PULSE.wallStreetStatus}
+            {/* Dynamic Market Session Indicator */}
+            <div
+              className={`rounded-lg border px-3.5 py-2 transition ${
+                session.isOpen
+                  ? "border-emerald-500/40 bg-emerald-950/30"
+                  : "border-rose-500/50 bg-rose-950/30"
+              }`}
+            >
+              <span className="text-slate-400 block text-[10px] uppercase tracking-wider">
+                Wall Street Session
+              </span>
+              <span
+                className={`font-bold flex items-center gap-1.5 mt-0.5 ${
+                  session.isOpen ? "text-emerald-400" : "text-rose-300"
+                }`}
+              >
+                <span
+                  className={`h-2.5 w-2.5 rounded-full ${session.dotColor} ${
+                    session.isOpen ? "animate-ping" : ""
+                  }`}
+                ></span>
+                <span>
+                  {session.isOpen ? "মার্কেট চালু আছে (Open)" : "এখন মার্কেট অফ আছে (Closed)"}
+                </span>
               </span>
             </div>
 

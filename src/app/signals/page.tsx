@@ -1,5 +1,6 @@
 import TradeSignalsClient from "@/components/TradeSignalsClient";
 import { Radar, Zap, ShieldCheck } from "lucide-react";
+import { getAssetMarketStatus } from "@/utils/marketHours";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -171,7 +172,15 @@ const INITIAL_SIGNALS = [
     keyLevels: { support: "149.20", resistance: "152.60" },
     updatedAt: "Live Synchronized",
   },
-];
+].map((s) => {
+  const status = getAssetMarketStatus(s.category);
+  return {
+    ...s,
+    isMarketOpen: status.isOpen,
+    marketStatusText: status.badgeEn,
+    marketStatusBn: status.badgeBn,
+  };
+});
 
 export default function SignalsPage() {
   const jsonLd = {

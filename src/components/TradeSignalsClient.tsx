@@ -238,8 +238,8 @@ export default function TradeSignalsClient({
               }`}
             >
               <div>
-                {/* Header Badge & Category */}
-                <div className="flex items-center justify-between">
+                {/* Header Badge & Market Status */}
+                <div className="flex items-center justify-between gap-2 flex-wrap">
                   <span
                     className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-black tracking-wider font-mono uppercase ${
                       signal.action === "STRONG BUY"
@@ -263,10 +263,36 @@ export default function TradeSignalsClient({
                     {signal.action}
                   </span>
 
-                  <span className="rounded bg-slate-900 border border-slate-800 px-2 py-0.5 text-[10px] font-mono font-bold uppercase text-slate-400">
-                    {signal.category}
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    {/* Live Open / Closed Market State */}
+                    {signal.isMarketOpen ? (
+                      <span className="inline-flex items-center gap-1 rounded bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-bold text-emerald-400 font-mono">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        মার্কেট চালু
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 rounded bg-rose-500/15 border border-rose-500/40 px-2 py-0.5 text-[10px] font-bold text-rose-300 font-mono">
+                        <span className="h-1.5 w-1.5 rounded-full bg-rose-500"></span>
+                        এখন মার্কেট অফ আছে
+                      </span>
+                    )}
+
+                    <span className="rounded bg-slate-900 border border-slate-800 px-2 py-0.5 text-[10px] font-mono font-bold uppercase text-slate-400">
+                      {signal.category}
+                    </span>
+                  </div>
                 </div>
+
+                {/* Notice banner if Market is Closed */}
+                {!signal.isMarketOpen && (
+                  <div className="mt-3 rounded-lg border border-rose-500/30 bg-rose-950/30 px-3 py-1.5 flex items-center justify-between text-xs text-rose-300">
+                    <span className="flex items-center gap-1.5 font-semibold text-[11px]">
+                      <span className="h-2 w-2 rounded-full bg-rose-500"></span>
+                      এখন মার্কেট অফ আছে (Market Closed)
+                    </span>
+                    <span className="text-[10px] text-rose-400/80">মার্কেট খুললে সক্রিয় হবে</span>
+                  </div>
+                )}
 
                 {/* Asset Title & Live Price */}
                 <div className="mt-4 flex items-baseline justify-between border-b border-slate-800/70 pb-4">

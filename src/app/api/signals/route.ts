@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 export const revalidate = 1800; // 30 minutes in seconds (Next.js Edge & ISR cache)
 
+import { getAssetMarketStatus } from "@/utils/marketHours";
+
 export interface TradeSignal {
   id: string;
   symbol: string;
@@ -27,6 +29,9 @@ export interface TradeSignal {
     support: string;
     resistance: string;
   };
+  isMarketOpen: boolean;
+  marketStatusText: string;
+  marketStatusBn: string;
   updatedAt: string;
 }
 
@@ -380,6 +385,16 @@ export async function GET() {
     },
   ];
 
+  const enrichedSignals = signals.map((s) => {
+    const marketStatus = getAssetMarketStatus(s.category);
+    return {
+      ...s,
+      isMarketOpen: marketStatus.isOpen,
+      marketStatusText: marketStatus.badgeEn,
+      marketStatusBn: marketStatus.badgeBn,
+    };
+  });
+
   return NextResponse.json(
     {
       success: true,
@@ -387,14 +402,14 @@ export async function GET() {
       timestamp: now.toISOString(),
       updatedAt: updatedAtStr,
       summary: {
-        totalSignals: signals.length,
-        strongBuy: signals.filter((s) => s.action === "STRONG BUY").length,
-        buy: signals.filter((s) => s.action === "BUY").length,
-        strongSell: signals.filter((s) => s.action === "STRONG SELL").length,
-        sell: signals.filter((s) => s.action === "SELL").length,
-        neutral: signals.filter((s) => s.action === "NEUTRAL").length,
+        totalSignals: enrichedSignals.length,
+        strongBuy: enrichedSignals.filter((s) => s.action === "STRONG BUY").length,
+        buy: enrichedSignals.filter((s) => s.action === "BUY").length,
+        strongSell: enrichedSignals.filter((s) => s.action === "STRONG SELL").length,
+        sell: enrichedSignals.filter((s) => s.action === "SELL").length,
+        neutral: enrichedSignals.filter((s) => s.action === "NEUTRAL").length,
       },
-      signals,
+      signals: enrichedSignals,
     },
     {
       headers: {

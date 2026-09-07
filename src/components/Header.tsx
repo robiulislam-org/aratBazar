@@ -1,11 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar } from "lucide-react";
+import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [session, setSession] = useState<MarketSessionInfo>(getWallStreetSession());
+
+  useEffect(() => {
+    setSession(getWallStreetSession());
+    const interval = setInterval(() => {
+      setSession(getWallStreetSession());
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#090d16]/95 backdrop-blur-md">
@@ -13,9 +23,21 @@ export default function Header() {
       <div className="hidden border-b border-slate-800/80 px-4 py-1.5 text-xs text-slate-400 sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center space-x-4">
-            <span className="flex items-center gap-1.5 font-medium text-emerald-400">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
-              WALL STREET: ACTIVE SESSION
+            <span
+              className={`flex items-center gap-1.5 font-medium ${
+                session.isOpen ? "text-emerald-400" : "text-rose-400"
+              }`}
+            >
+              <span
+                className={`h-2 w-2 rounded-full ${session.dotColor} ${
+                  session.isOpen ? "animate-pulse" : ""
+                }`}
+              ></span>
+              {session.isOpen ? (
+                <span>WALL STREET: OPEN (Active)</span>
+              ) : (
+                <span>WALL STREET: CLOSED • মার্কেট অফ আছে</span>
+              )}
             </span>
             <span className="text-slate-600">|</span>
             <span>CRYPTO: 24/7 GLOBAL ORDERBOOK</span>
