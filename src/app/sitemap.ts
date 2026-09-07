@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/news/${article.slug}`,
     lastModified: new Date(article.publishedAt),
     changeFrequency: "daily" as const,
-    priority: 0.8,
+    priority: 0.85,
   }));
 
   return [
@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "hourly",
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/news`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/calendar`,

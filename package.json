@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:content": "node scripts/generate-daily-content.js"
   },
   "dependencies": {
     "lucide-react": "^1.41.0",

@@ -120,6 +120,17 @@ export default function NewsSection() {
           </article>
         ))}
       </div>
+
+      {/* View All Dispatches Button */}
+      <div className="mt-8 text-center">
+        <Link
+          href="/news"
+          className="inline-flex items-center space-x-2 rounded-xl border border-slate-700 bg-slate-900/80 px-6 py-3 text-xs font-bold text-slate-200 hover:bg-slate-800 hover:text-white hover:border-slate-600 transition shadow-lg"
+        >
+          <span>Explore All Daily Dispatches & Archive</span>
+          <ArrowRight className="h-4 w-4 text-cyan-400" />
+        </Link>
+      </div>
     </section>
   );
 }

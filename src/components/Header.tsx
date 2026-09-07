@@ -76,7 +76,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/#news"
+            href="/news"
             className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
           >
             <Newspaper className="h-4 w-4 text-cyan-400" />
@@ -140,7 +140,7 @@ export default function Header() {
               Position Size & ROI Calculators
             </Link>
             <Link
-              href="/#news"
+              href="/news"
               onClick={() => setMobileMenuOpen(false)}
               className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
             >
