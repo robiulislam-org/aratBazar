@@ -1,0 +1,73 @@
+export interface EconomicEvent {
+  id: string;
+  time: string;
+  currency: string;
+  event: string;
+  impact: 'HIGH' | 'MEDIUM' | 'LOW';
+  actual: string;
+  forecast: string;
+  previous: string;
+}
+
+export const ECONOMIC_EVENTS: EconomicEvent[] = [
+  {
+    id: "e1",
+    time: "12:30 GMT",
+    currency: "USD",
+    event: "Core Consumer Price Index (CPI) (MoM)",
+    impact: "HIGH",
+    actual: "0.2%",
+    forecast: "0.3%",
+    previous: "0.3%"
+  },
+  {
+    id: "e2",
+    time: "14:00 GMT",
+    currency: "USD",
+    event: "FOMC Member Speech & Policy Guidance",
+    impact: "HIGH",
+    actual: "--",
+    forecast: "--",
+    previous: "--"
+  },
+  {
+    id: "e3",
+    time: "18:00 GMT",
+    currency: "USD",
+    event: "Federal Reserve Beige Book Economic Conditions",
+    impact: "MEDIUM",
+    actual: "Moderate",
+    forecast: "--",
+    previous: "Slight"
+  },
+  {
+    id: "e4",
+    time: "08:00 GMT",
+    currency: "EUR",
+    event: "German Industrial Production (MoM)",
+    impact: "MEDIUM",
+    actual: "+0.8%",
+    forecast: "+0.5%",
+    previous: "-0.2%"
+  },
+  {
+    id: "e5",
+    time: "13:30 GMT",
+    currency: "USD",
+    event: "Non-Farm Payrolls (NFP) & Employment Report",
+    impact: "HIGH",
+    actual: "185K",
+    forecast: "170K",
+    previous: "162K"
+  },
+  {
+    id: "e6",
+    time: "09:30 GMT",
+    currency: "GBP",
+    event: "UK Gross Domestic Product (GDP) (YoY)",
+    impact: "HIGH",
+    actual: "+1.1%",
+    forecast: "+1.0%",
+    previous: "+0.9%"
+  }
+];

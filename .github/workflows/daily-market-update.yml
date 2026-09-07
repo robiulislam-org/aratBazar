@@ -1,0 +1,36 @@
+name: Daily Market Intelligence & Data Sync
+
+on:
+  schedule:
+    # Runs everyday at 00:00 UTC and 12:00 UTC (twice a day)
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  update-market-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Verify Build
+        run: npm run build
+
+      - name: Automated Commit & Push
+        run: |
+          git config --global user.name "AratBazar Bot"
+          git config --global user.email "bot@aratbazar.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: Synchronize market quotes and macro calendar [skip ci]"
+          git push origin main || true
