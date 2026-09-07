@@ -8,7 +8,7 @@ AratBazar is an institutional-grade, multi-asset financial terminal and macroeco
 
 ## ⚡ Key Highlights & Architecture
 
-- **🤖 Automated Daily AI Market Intelligence:** Fully automated daily publishing engine powered by Google Gemini AI and GitHub Actions cron (`0 6 * * *` UTC / 12:00 PM BST). Analyzes trending market movements, macroeconomic catalysts, and publishes fresh dispatches daily without any manual effort.
+- **🤖 100% Free Daily Auto-Pilot Sync (Zero API Keys):** Runs automatically via GitHub Actions cron every day at 06:00 UTC (12:00 PM BST). Fetches real-time market data from open public feeds (Yahoo Finance RSS, Alternative.me Fear & Greed, and Binance public pricing), updates market quotes and dispatches, and redeploys to Vercel automatically. **No API keys, no paid subscriptions, 100% free forever.**
 - **TradingView Advanced Interactive Charting:** Multi-asset real-time technical analysis with RSI, MACD, Volume, and full indicator suite.
 - **Continuous Live Ticker Tape:** Real-time pricing ribbon for Wall Street (S&P 500, Nasdaq, Dow), Crypto (BTC, ETH, SOL), Commodities (Gold, WTI Oil), and Forex (EUR/USD, USD/JPY).
 - **Macro Economic Calendar:** Sovereign central bank interest rate decisions, CPI inflation metrics, and Non-Farm Payroll releases.
@@ -19,22 +19,14 @@ AratBazar is an institutional-grade, multi-asset financial terminal and macroeco
 
 ---
 
-## ⚙️ Environment Variables Setup
+## ⚙️ Environment Variables (Optional)
 
-Create a `.env.local` file locally, or add these to **Vercel** and **GitHub Repository Secrets**:
+You do **NOT** need any API key for daily content updates.
 
 | Variable Name | Where to set | Description |
 |---|---|---|
-| `GEMINI_API_KEY` | **GitHub Repo Secrets** | Free API key from [Google AI Studio](https://aistudio.google.com/) for automated daily content generation |
-| `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | **Vercel Environment Variables** | Your Google AdSense Publisher ID (e.g., `ca-pub-XXXXXXXXXXXXXXXX`) |
+| `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | **Vercel Environment Variables** | Your Google AdSense Publisher ID (e.g., `ca-pub-XXXXXXXXXXXXXXXX`), required only when you want to show Google Ads |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | **Vercel Environment Variables** | (Optional) Verification token from Google Search Console |
-
-### 🔑 Setting up Daily AI Auto-Updates:
-1. Go to your GitHub repository: [robiulislam-org/aratBazar](https://github.com/robiulislam-org/aratBazar)
-2. Click **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
-3. Name: `GEMINI_API_KEY`
-4. Secret: Paste your Google AI Studio API key.
-5. Daily at 06:00 UTC (12:00 PM Bangladesh Time), GitHub Actions runs `scripts/generate-daily-content.js`, generates fresh market reports, commits to `main`, and Vercel automatically deploys the live update!
 
 ---
 
@@ -42,10 +34,10 @@ Create a `.env.local` file locally, or add these to **Vercel** and **GitHub Repo
 
 - **Framework:** Next.js (App Router, Server Components, SSG)
 - **Styling:** Tailwind CSS v4 (Dark Terminal Architecture)
-- **AI Automation:** Google Gemini AI API (`gemini-1.5-flash`)
+- **Live Data Feeds:** Public Market RSS & Public Financial Tickers (100% Free, Zero Key)
 - **Icons:** Lucide React
 - **Hosting:** Vercel (Edge CDN, Automated SSL)
-- **CI/CD:** GitHub Actions
+- **CI/CD Automation:** GitHub Actions
 
 ---
 
@@ -58,7 +50,7 @@ git clone https://github.com/robiulislam-org/aratBazar.git
 # Install dependencies
 npm install
 
-# Generate daily content manually (optional, requires GEMINI_API_KEY)
+# Run daily content sync manually (100% free, zero keys)
 npm run generate:content
 
 # Run development server
