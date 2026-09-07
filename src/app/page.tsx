@@ -5,7 +5,7 @@ import EconomicCalendar from "@/components/EconomicCalendar";
 import RiskCalculator from "@/components/RiskCalculator";
 import NewsSection from "@/components/NewsSection";
 import AdBanner from "@/components/AdBanner";
-import { ShieldCheck, TrendingUp, Award, Layers } from "lucide-react";
+import { ShieldCheck, TrendingUp, Award, Layers, Radar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,6 +17,33 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Top Ad Unit */}
         <AdBanner format="horizontal" label="SPONSORED FINANCIAL PLACEMENT • BILLBOARD" />
+
+        {/* Live 30-Minute Trade Scanner Callout Banner */}
+        <div className="my-6 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 via-slate-900 to-[#0c1322] p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+          <div className="flex items-center space-x-3.5">
+            <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400">
+              <Radar className="h-5 w-5 animate-pulse" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="font-extrabold text-white text-base">30-Minute Algorithmic Trade Signals</span>
+                <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[9px] text-slate-950 font-black uppercase tracking-wider">
+                  Live Scanner
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Real-time Buy Setups (Oversold Dips) & Sell Setups (Overbought Highs) across Crypto, Forex & Stocks.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/signals"
+            className="shrink-0 inline-flex items-center space-x-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 px-5 py-2.5 text-xs font-bold text-slate-950 transition shadow-lg shadow-emerald-500/20 cursor-pointer"
+          >
+            <span>Launch Live Scanner</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
 
         {/* Primary Trading Workspace: Chart + Movers */}
         <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-3">

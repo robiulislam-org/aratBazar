@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight } from "lucide-react";
+import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,6 +57,17 @@ export default function Header() {
           >
             <BarChart3 className="h-4 w-4 text-emerald-400" />
             <span>Markets</span>
+          </Link>
+
+          <Link
+            href="/signals"
+            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 transition hover:bg-emerald-500/20"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            </span>
+            <span>Signals (30m)</span>
           </Link>
 
           <Link
@@ -124,6 +135,19 @@ export default function Header() {
               className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
             >
               Markets & Overview
+            </Link>
+            <Link
+              href="/signals"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20"
+            >
+              <span className="flex items-center gap-2">
+                <Radar className="h-4 w-4" />
+                Live Trade Signals (30m)
+              </span>
+              <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
+                LIVE
+              </span>
             </Link>
             <Link
               href="/calendar"
