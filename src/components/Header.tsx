@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar } from "lucide-react";
+import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen } from "lucide-react";
 import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
 
 export default function Header() {
@@ -89,23 +89,39 @@ export default function Header() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
             </span>
-            <span>Signals (30m)</span>
+            <span>Signals</span>
+          </Link>
+
+          <Link
+            href="/currency-strength"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+          >
+            <Gauge className="h-4 w-4 text-emerald-400" />
+            <span>FX Meter</span>
+          </Link>
+
+          <Link
+            href="/journal"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+          >
+            <BookOpen className="h-4 w-4 text-cyan-400" />
+            <span>Journal</span>
           </Link>
 
           <Link
             href="/calendar"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
           >
             <Calendar className="h-4 w-4 text-teal-400" />
-            <span>Economic Calendar</span>
+            <span>Calendar</span>
           </Link>
 
           <Link
             href="/tools"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
           >
             <Calculator className="h-4 w-4 text-amber-400" />
-            <span>Calculators</span>
+            <span>Tools</span>
           </Link>
 
           <Link
@@ -170,6 +186,22 @@ export default function Header() {
               <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
                 LIVE
               </span>
+            </Link>
+            <Link
+              href="/currency-strength"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400 flex items-center gap-2"
+            >
+              <Gauge className="h-4 w-4 text-emerald-400" />
+              <span>Currency Strength Meter</span>
+            </Link>
+            <Link
+              href="/journal"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400 flex items-center gap-2"
+            >
+              <BookOpen className="h-4 w-4 text-cyan-400" />
+              <span>Private Trade Journal</span>
             </Link>
             <Link
               href="/calendar"

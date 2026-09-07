@@ -1,4 +1,7 @@
 import MarketHero from "@/components/MarketHero";
+import MarketSessionClock from "@/components/MarketSessionClock";
+import MarketHeatmap from "@/components/MarketHeatmap";
+import CurrencyStrengthMeter from "@/components/CurrencyStrengthMeter";
 import TradingViewChart from "@/components/TradingViewChart";
 import MarketMovers from "@/components/MarketMovers";
 import EconomicCalendar from "@/components/EconomicCalendar";
@@ -45,6 +48,11 @@ export default function Home() {
           </Link>
         </div>
 
+        {/* Global Financial Session Clock */}
+        <div className="my-6">
+          <MarketSessionClock />
+        </div>
+
         {/* Primary Trading Workspace: Chart + Movers */}
         <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Main Interactive Institutional Chart (2 Cols) */}
@@ -58,8 +66,18 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Interactive Market Heatmap */}
+        <div className="mt-8">
+          <MarketHeatmap />
+        </div>
+
+        {/* Live Currency Strength Matrix */}
+        <div className="mt-8">
+          <CurrencyStrengthMeter />
+        </div>
+
         {/* Secondary Pro Tools Grid: Risk Engine + Macro Calendar */}
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Pro Risk & Position Calculator */}
           <RiskCalculator />
 

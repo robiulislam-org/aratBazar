@@ -33,6 +33,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-emerald-400 transition">Global Overview</Link></li>
               <li><Link href="/signals" className="hover:text-emerald-300 transition text-emerald-400 font-semibold">⚡ Trade Signals (30m Scanner)</Link></li>
+              <li><Link href="/currency-strength" className="hover:text-emerald-300 transition text-cyan-400 font-semibold">📊 Currency Strength Meter</Link></li>
+              <li><Link href="/journal" className="hover:text-emerald-300 transition text-teal-400 font-semibold">📓 Private Trade Journal</Link></li>
               <li><Link href="/calendar" className="hover:text-emerald-400 transition">Economic Calendar</Link></li>
               <li><Link href="/tools" className="hover:text-emerald-400 transition">Risk & Position Calculator</Link></li>
               <li><Link href="/news" className="hover:text-emerald-400 transition">Market Intelligence & News</Link></li>
@@ -43,6 +45,8 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white uppercase tracking-wider mb-3 text-xs">Calculators & Tools</h4>
             <ul className="space-y-2">
+              <li><Link href="/journal" className="hover:text-emerald-400 transition">Win-Rate & P&L Journal</Link></li>
+              <li><Link href="/currency-strength" className="hover:text-emerald-400 transition">FX Strength Matrix</Link></li>
               <li><Link href="/tools" className="hover:text-emerald-400 transition">Lot Size Calculator</Link></li>
               <li><Link href="/tools" className="hover:text-emerald-400 transition">Compound ROI Engine</Link></li>
               <li><Link href="/tools" className="hover:text-emerald-400 transition">Forex Pip Value</Link></li>
