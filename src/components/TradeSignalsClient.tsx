@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { TradeSignal } from "@/app/api/signals/route";
+import type { TradeSignal } from "@/types/signals";
 import AdBanner from "@/components/AdBanner";
 import Link from "next/link";
 import {

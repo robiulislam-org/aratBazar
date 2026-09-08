@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BookOpen, Plus, Trash2, TrendingUp, TrendingDown, Award, PieChart, ShieldCheck, Download, CheckCircle2 } from "lucide-react";
 import AdBanner from "@/components/AdBanner";
 
@@ -126,7 +126,7 @@ export default function TradeJournalClient() {
   };
 
   const handleDeleteTrade = (id: string) => {
-    const updated = trades.filter((t) => t.id !== id);
+    const updated = trades.filter((t: JournalEntry) => t.id !== id);
     saveTrades(updated);
   };
 
@@ -138,17 +138,17 @@ export default function TradeJournalClient() {
 
   // Metrics calculation
   const totalTrades = trades.length;
-  const winningTrades = trades.filter((t) => t.pnl > 0);
-  const losingTrades = trades.filter((t) => t.pnl < 0);
+  const winningTrades = trades.filter((t: JournalEntry) => t.pnl > 0);
+  const losingTrades = trades.filter((t: JournalEntry) => t.pnl < 0);
   const winRate = totalTrades > 0 ? (winningTrades.length / totalTrades) * 100 : 0;
-  const netPnl = trades.reduce((acc, t) => acc + t.pnl, 0);
+  const netPnl = trades.reduce((acc: number, t: JournalEntry) => acc + t.pnl, 0);
 
-  const totalGains = winningTrades.reduce((acc, t) => acc + t.pnl, 0);
-  const totalLosses = Math.abs(losingTrades.reduce((acc, t) => acc + t.pnl, 0));
+  const totalGains = winningTrades.reduce((acc: number, t: JournalEntry) => acc + t.pnl, 0);
+  const totalLosses = Math.abs(losingTrades.reduce((acc: number, t: JournalEntry) => acc + t.pnl, 0));
   const profitFactor = totalLosses > 0 ? (totalGains / totalLosses).toFixed(2) : totalGains > 0 ? "MAX" : "0.00";
 
   // Filtered list
-  const displayTrades = trades.filter((t) => {
+  const displayTrades = trades.filter((t: JournalEntry) => {
     if (filter === "WINS") return t.pnl > 0;
     if (filter === "LOSSES") return t.pnl < 0;
     return true;

@@ -4,36 +4,8 @@ export const dynamic = "force-dynamic";
 export const revalidate = 1800; // 30 minutes in seconds (Next.js Edge & ISR cache)
 
 import { getAssetMarketStatus } from "@/utils/marketHours";
-
-export interface TradeSignal {
-  id: string;
-  symbol: string;
-  name: string;
-  category: "crypto" | "forex" | "stocks" | "commodities" | "indices";
-  action: "STRONG BUY" | "BUY" | "NEUTRAL" | "SELL" | "STRONG SELL";
-  bias: "BULLISH" | "BEARISH" | "NEUTRAL";
-  currentPrice: string;
-  priceNum: number;
-  change24h: string;
-  changeNum: number;
-  entryZone: string;
-  stopLoss: string;
-  target1: string;
-  target2: string;
-  riskReward: string;
-  timeframe: string;
-  confidence: number;
-  rsi: number;
-  technicalReason: string;
-  keyLevels: {
-    support: string;
-    resistance: string;
-  };
-  isMarketOpen: boolean;
-  marketStatusText: string;
-  marketStatusBn: string;
-  updatedAt: string;
-}
+import type { RawTradeSignal, TradeSignal } from "@/types/signals";
+export type { TradeSignal, RawTradeSignal };
 
 // Helper to safely fetch JSON
 async function fetchWithTimeout(url: string, timeout = 5000) {
@@ -103,7 +75,7 @@ export async function GET() {
   }
 
   // 2. Generate systematic algorithmic signals with technical metrics
-  const signals: TradeSignal[] = [
+  const signals: RawTradeSignal[] = [
     // 🟢 BUY SIGNAL 1: Solana (Oversold Dip buying)
     {
       id: "sig-sol",

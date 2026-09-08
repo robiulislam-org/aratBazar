@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Mail, MessageSquare, MapPin, Send, CheckCircle2 } from "lucide-react";
 
 export default function ContactPage() {

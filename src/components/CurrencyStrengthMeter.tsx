@@ -52,7 +52,7 @@ export default function CurrencyStrengthMeter() {
     ],
   };
 
-  const currentList = currencies[timeframe];
+  const currentList: CurrencyScore[] = currencies[timeframe] || currencies["4H"];
   const strongest = currentList[0];
   const weakest = currentList[currentList.length - 1];
 
@@ -142,7 +142,7 @@ export default function CurrencyStrengthMeter() {
 
       {/* 8 Currency Gauges Grid */}
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        {currentList.map((curr) => {
+        {currentList.map((curr: CurrencyScore) => {
           const isHigh = curr.score >= 7.0;
           const isMedium = curr.score >= 4.0 && curr.score < 7.0;
           const isLow = curr.score < 4.0;

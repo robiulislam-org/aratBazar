@@ -65,7 +65,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const article = FINANCIAL_NEWS.find((a) => a.slug === slug);
 
   if (!article) {
-    notFound();
+    return notFound();
   }
 
   const relatedArticles = FINANCIAL_NEWS.filter(

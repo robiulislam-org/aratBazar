@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import React from "react";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
