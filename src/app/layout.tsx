@@ -81,6 +81,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://aratbazar.com",
   },
+  verification: {
+    google: "_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M",
+  },
 };
 
 export default function RootLayout({
@@ -117,9 +120,10 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {googleVerification && (
-          <meta name="google-site-verification" content={googleVerification} />
-        )}
+        <meta
+          name="google-site-verification"
+          content={googleVerification || "_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M"}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
