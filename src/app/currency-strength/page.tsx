@@ -42,11 +42,46 @@ export default function CurrencyStrengthPage() {
     operatingSystem: "All",
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is a currency strength meter?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A currency strength meter calculates the relative momentum and buying/selling pressure of each major currency by analyzing all 28 possible currency pairs across the 8 major currencies (USD, EUR, GBP, JPY, AUD, CAD, CHF, NZD). A high score indicates institutional buying pressure; a low score indicates selling pressure.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do professional traders use a currency strength meter?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Professional traders use currency strength meters to identify the strongest and weakest currencies, then trade the strongest currency against the weakest. For example, if USD scores 8.6 (extremely strong) and JPY scores 1.4 (extremely weak), a trader would look to buy USD/JPY. This strategy avoids choppy, range-bound pairs with similar strength scores.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which currencies does AratBazar's strength meter track?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AratBazar's live currency strength meter tracks all 8 major G10 currencies: US Dollar (USD), Euro (EUR), British Pound (GBP), Japanese Yen (JPY), Australian Dollar (AUD), Canadian Dollar (CAD), Swiss Franc (CHF), and New Zealand Dollar (NZD). It synthesizes 28 currency cross-pairs to produce each currency's strength score.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">

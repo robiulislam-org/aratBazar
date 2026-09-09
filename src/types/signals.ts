@@ -28,5 +28,4 @@ export interface RawTradeSignal {
 export interface TradeSignal extends RawTradeSignal {
   isMarketOpen: boolean;
   marketStatusText: string;
-  marketStatusBn: string;
 }

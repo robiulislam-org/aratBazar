@@ -178,7 +178,6 @@ const INITIAL_SIGNALS = [
     ...s,
     isMarketOpen: status.isOpen,
     marketStatusText: status.badgeEn,
-    marketStatusBn: status.badgeBn,
   };
 });
 
@@ -194,11 +193,54 @@ export default function SignalsPage() {
     operatingSystem: "All",
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are algorithmic trading signals?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Algorithmic trading signals are mathematically generated buy or sell recommendations based on technical indicators like RSI (Relative Strength Index), MACD, moving averages, and price action patterns. AratBazar scans 30+ assets every 30 minutes to identify oversold dip-buying opportunities (BUY signals) and overbought peak-selling opportunities (SELL signals).",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How often are the trading signals updated?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AratBazar's algorithmic scanner refreshes all trading signals every 30 minutes, pulling real-time price data from Binance's public API for crypto assets. Each signal includes a live countdown timer showing the exact time until the next refresh.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is a Risk/Reward ratio in trading signals?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Risk/Reward ratio measures how much potential profit you can earn relative to how much you risk. A 1:3 ratio means for every $1 you risk on a stop-loss, you aim to earn $3 in profit. Professional traders typically only take trades with a minimum 1:2 risk-reward ratio.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are these trading signals financial advice?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. AratBazar trading signals are for educational and analytical purposes only. They are algorithmic outputs based on technical analysis patterns and do not constitute financial, investment, or trading advice. Always conduct your own research and consult a licensed financial advisor before trading.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">

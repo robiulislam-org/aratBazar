@@ -39,14 +39,28 @@ const CATEGORY_COLORS: Record<string, string> = {
   Economy: "text-teal-400 bg-teal-500/10 border-teal-500/30",
 };
 
-export default function NewsPage() {
+export default async function NewsPage(props: {
+  searchParams?: Promise<{ category?: string }>;
+}) {
+  const searchParams = await props.searchParams;
+  const rawCat = searchParams?.category;
+  const selectedCategory = rawCat
+    ? rawCat.charAt(0).toUpperCase() + rawCat.slice(1).toLowerCase()
+    : "All";
+
   const categories = ["All", "Stocks", "Crypto", "Forex", "Commodities", "Economy"];
-  const latestArticles = FINANCIAL_NEWS.slice(0, 3);
-  const remainingArticles = FINANCIAL_NEWS.slice(3);
+
+  const filteredArticles = selectedCategory === "All"
+    ? FINANCIAL_NEWS
+    : FINANCIAL_NEWS.filter(
+        (a) => a.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
+
+  const latestArticles = filteredArticles.slice(0, 3);
+  const remainingArticles = filteredArticles.slice(3);
 
   // Get today's date string
   const todayStr = new Date().toISOString().split("T")[0];
-  const todayArticles = FINANCIAL_NEWS.filter((a) => a.publishedAt === todayStr);
   const latestDate = FINANCIAL_NEWS[0]?.publishedAt ?? todayStr;
 
   return (
@@ -84,19 +98,22 @@ export default function NewsPage() {
 
         {/* Category Filter Links */}
         <div className="mt-6 flex flex-wrap gap-2">
-          {categories.map((cat) => (
-            <Link
-              key={cat}
-              href={cat === "All" ? "/news" : `/news?category=${cat.toLowerCase()}`}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition border ${
-                cat === "All"
-                  ? "bg-cyan-500/20 text-cyan-400 border-cyan-500/30"
-                  : "bg-slate-900 text-slate-400 hover:text-white border-slate-800 hover:border-slate-700"
-              }`}
-            >
-              {cat}
-            </Link>
-          ))}
+          {categories.map((cat) => {
+            const isActive = selectedCategory.toLowerCase() === cat.toLowerCase();
+            return (
+              <Link
+                key={cat}
+                href={cat === "All" ? "/news" : `/news?category=${cat.toLowerCase()}`}
+                className={`rounded-lg px-3 py-1.5 text-xs font-medium transition border ${
+                  isActive
+                    ? "bg-cyan-500/20 text-cyan-400 border-cyan-500/30"
+                    : "bg-slate-900 text-slate-400 hover:text-white border-slate-800 hover:border-slate-700"
+                }`}
+              >
+                {cat}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

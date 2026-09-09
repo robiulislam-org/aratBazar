@@ -117,6 +117,37 @@ export default function RootLayout({
     },
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AratBazar",
+    url: "https://aratbazar.com",
+    logo: "https://aratbazar.com/favicon.ico",
+    description:
+      "AratBazar is an independent institutional financial intelligence terminal providing real-time market analytics, algorithmic trading signals, macroeconomic data, and financial news for global traders.",
+    foundingDate: "2024",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Support",
+      url: "https://aratbazar.com/contact",
+      availableLanguage: "English",
+    },
+    sameAs: [
+      "https://aratbazar.com",
+    ],
+  };
+
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SiteLinksSearchBox",
+    url: "https://aratbazar.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://aratbazar.com/news?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
@@ -128,6 +159,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
         />
         {/* Google AdSense Script */}
         {adsenseClientId && (

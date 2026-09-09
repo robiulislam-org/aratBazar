@@ -34,9 +34,9 @@ export default function Header() {
                 }`}
               ></span>
               {session.isOpen ? (
-                <span>WALL STREET: OPEN (Active)</span>
+                <span>WALL STREET: OPEN (Active Session)</span>
               ) : (
-                <span>WALL STREET: CLOSED • মার্কেট অফ আছে</span>
+                <span>WALL STREET: {session.session === "PRE_MARKET" ? "PRE-MARKET" : session.session === "AFTER_HOURS" ? "AFTER-HOURS" : "CLOSED"}</span>
               )}
             </span>
             <span className="text-slate-600">|</span>

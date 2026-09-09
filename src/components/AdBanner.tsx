@@ -35,6 +35,13 @@ export default function AdBanner({
     }
   }, [clientId, slotId]);
 
+  // If AdSense client ID is not configured yet or no slotId is passed,
+  // do NOT render empty dashed placeholder boxes that Google reviewers might flag as
+  // "site under construction" or "blank ad space". Keep the page pristine and clean.
+  if (!clientId || !slotId) {
+    return null;
+  }
+
   return (
     <aside
       aria-label={label}
@@ -53,36 +60,20 @@ export default function AdBanner({
         </span>
       </div>
 
-      {clientId && slotId ? (
-        /* Real Google AdSense Unit */
-        <div className="flex justify-center overflow-hidden">
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              width: "100%",
-              minHeight: isSidebar ? "300px" : isInFeed ? "100px" : "90px",
-            }}
-            data-ad-client={clientId}
-            data-ad-slot={slotId}
-            data-ad-format={isSidebar ? "vertical" : "auto"}
-            data-full-width-responsive="true"
-          />
-        </div>
-      ) : (
-        /* Clean Professional Pre-Approval Placeholder */
-        <div className="flex h-full min-h-[80px] flex-col items-center justify-center rounded-lg border border-dashed border-slate-800/80 bg-[#070b14] p-4">
-          <div className="flex items-center space-x-2 text-slate-400">
-            <div className="h-2 w-2 rounded-full bg-emerald-500/60 animate-pulse"></div>
-            <span className="text-xs font-medium text-slate-300">
-              Institutional Brokerage & Market Intelligence Placement
-            </span>
-          </div>
-          <p className="mt-1 text-[11px] text-slate-400 max-w-md">
-            Compliant Financial Ads Container • Google AdSense Ready
-          </p>
-        </div>
-      )}
+      <div className="flex justify-center overflow-hidden">
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            width: "100%",
+            minHeight: isSidebar ? "300px" : isInFeed ? "100px" : "90px",
+          }}
+          data-ad-client={clientId}
+          data-ad-slot={slotId}
+          data-ad-format={isSidebar ? "vertical" : "auto"}
+          data-full-width-responsive="true"
+        />
+      </div>
     </aside>
   );
 }

@@ -1,10 +1,42 @@
 import EconomicCalendar from "@/components/EconomicCalendar";
 import AdBanner from "@/components/AdBanner";
-import { Calendar, AlertCircle, Info } from "lucide-react";
+import { Calendar, Info } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Macro Economic Calendar | AratBazar Financial Intelligence",
-  description: "Live macroeconomic calendar featuring central bank interest rates, CPI inflation, GDP, and Non-Farm Payrolls (NFP).",
+export const metadata: Metadata = {
+  title: "Live Economic Calendar — NFP, CPI, FOMC Dates & Forex Events | AratBazar",
+  description:
+    "Real-time macroeconomic calendar with high-impact events: Non-Farm Payrolls (NFP), Core CPI inflation, FOMC interest rate decisions, GDP releases, and central bank speeches. Essential for forex and stock traders.",
+  keywords: [
+    "economic calendar forex",
+    "NFP release date 2025",
+    "FOMC meeting calendar",
+    "CPI inflation data release",
+    "interest rate decision schedule",
+    "central bank calendar",
+    "forex high impact news today",
+    "economic events this week",
+    "GDP release date",
+    "non farm payrolls calendar",
+    "aratbazar economic calendar",
+  ],
+  openGraph: {
+    title: "Live Economic Calendar — NFP, CPI, FOMC & High-Impact Events | AratBazar",
+    description:
+      "Track all major macro data releases that move Forex, Stocks, Gold, and Crypto markets. Updated daily with actual vs. forecast deviations.",
+    url: "https://aratbazar.com/calendar",
+    siteName: "AratBazar",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Macro Economic Calendar — NFP, CPI & FOMC Dates | AratBazar",
+    description: "Real-time economic event calendar for professional forex and stock market traders.",
+    creator: "@aratbazar",
+  },
+  alternates: {
+    canonical: "https://aratbazar.com/calendar",
+  },
 };
 
 export default function CalendarPage() {

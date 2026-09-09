@@ -57,7 +57,7 @@ export default function MarketHero() {
                   }`}
                 ></span>
                 <span>
-                  {session.isOpen ? "মার্কেট চালু আছে (Open)" : "এখন মার্কেট অফ আছে (Closed)"}
+                  {session.isOpen ? "LIVE: Market Open" : session.session === "PRE_MARKET" ? "Pre-Market Active" : session.session === "AFTER_HOURS" ? "After-Hours Trading" : "Market Closed"}
                 </span>
               </span>
             </div>

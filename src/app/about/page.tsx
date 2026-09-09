@@ -1,9 +1,37 @@
 import { Shield, Target, Users, Award, Database, Globe } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "About Us | AratBazar Financial Intelligence",
-  description: "Learn about AratBazar's institutional mission, editorial integrity, and multi-asset financial data infrastructure.",
+export const metadata: Metadata = {
+  title: "About AratBazar — Institutional Financial Intelligence Terminal",
+  description:
+    "AratBazar is an independent institutional-grade financial data terminal providing real-time market analysis, algorithmic trading signals, and macroeconomic intelligence for global traders and capital allocators.",
+  keywords: [
+    "about aratbazar",
+    "financial data terminal",
+    "institutional market intelligence",
+    "trading platform about",
+    "financial analytics company",
+    "market data provider",
+    "aratbazar editorial policy",
+  ],
+  openGraph: {
+    title: "About AratBazar — Institutional Financial Intelligence Terminal",
+    description:
+      "Independent financial data terminal for professional traders. Real-time analytics, algorithmic signals, and macro intelligence with strict editorial integrity.",
+    url: "https://aratbazar.com/about",
+    siteName: "AratBazar",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "About AratBazar — Institutional Financial Terminal",
+    description: "Independent market intelligence terminal for professional traders worldwide.",
+    creator: "@aratbazar",
+  },
+  alternates: {
+    canonical: "https://aratbazar.com/about",
+  },
 };
 
 export default function AboutPage() {

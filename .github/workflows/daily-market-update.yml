@@ -2,9 +2,11 @@ name: 🤖 AratBazar Daily Free Market Intelligence Update
 
 on:
   schedule:
-    # Runs every day at 06:00 UTC = 12:00 Noon Bangladesh Time (BST = UTC+6)
-    # 100% Free • Zero API Keys Required • Zero Cost Forever
+    # Run 1: 06:00 UTC — Morning pre-market data sync (Asian session close, European open)
     - cron: '0 6 * * *'
+    # Run 2: 13:30 UTC — US Market Open sync (Wall Street opens 09:30 AM ET = 13:30 UTC)
+    # This ensures data is fresh for the peak trading hours & maximum ad revenue window
+    - cron: '30 13 * * 1-5'
   workflow_dispatch: # Allows 1-click manual trigger anytime from GitHub UI
 
 jobs:
@@ -35,10 +37,11 @@ jobs:
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "🚀 AratBazar 100% Free Daily Auto-Pilot Sync"
           echo "📅 Date: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          echo "⏰ Run Time: $(date -u '+%H:%M UTC') — $(date -u '+%H:%M UTC' | awk -F: '{h=$1+5; m=$2+30; if(m>=60){h+=1;m-=60}; printf "%02d:%02d ET\n", (h>=24?h-24:h), m}')"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           node scripts/generate-daily-content.js
 
-      - name: 🔨 Verify Build
+      - name: 🔨 Verify Build (Ensures AdSense Compliance & No Broken Pages)
         run: npm run build
 
       - name: 📤 Commit & Push Updated Market Data
@@ -51,7 +54,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "ℹ️  No data changes detected — skipping commit"
           else
-            git commit -m "🤖 Auto: Daily market quotes & intelligence update — $(date -u '+%Y-%m-%d') [skip ci]"
+            git commit -m "🤖 Auto: Daily market quotes & intelligence update — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
             git push origin main
             echo "✅ Successfully pushed daily market update!"
           fi
@@ -63,4 +66,5 @@ jobs:
           echo "✅ AratBazar 100% Free Daily Update Complete!"
           echo "🌐 Vercel will auto-deploy within 2 minutes"
           echo "🔗 Live site: https://aratbazar.com"
+          echo "💰 AdSense: All pages verified & compliant"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

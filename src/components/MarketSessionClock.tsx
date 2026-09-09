@@ -18,7 +18,7 @@ interface SessionData {
 
 export default function MarketSessionClock() {
   const [nowUtc, setNowUtc] = useState<Date>(new Date());
-  const [bengalTime, setBengalTime] = useState<string>("");
+  const [newYorkTime, setNewYorkTime] = useState<string>("");
   const [utcTime, setUtcTime] = useState<string>("");
   const [nyTime, setNyTime] = useState<string>("");
   const [londonTime, setLondonTime] = useState<string>("");
@@ -28,9 +28,9 @@ export default function MarketSessionClock() {
       const now = new Date();
       setNowUtc(now);
 
-      setBengalTime(
+      setNewYorkTime(
         now.toLocaleTimeString("en-US", {
-          timeZone: "Asia/Dhaka",
+          timeZone: "America/New_York",
           hour: "2-digit",
           minute: "2-digit",
           second: "2-digit",
@@ -166,11 +166,10 @@ export default function MarketSessionClock() {
           </div>
         </div>
 
-        {/* Real-Time Dual Clocks */}
         <div className="flex items-center gap-2 font-mono text-xs">
           <div className="rounded-lg border border-slate-800 bg-slate-900/90 px-3 py-1.5 text-right">
-            <span className="text-[10px] text-slate-400 block uppercase">Dhaka (BST)</span>
-            <span className="font-bold text-emerald-400">{bengalTime || "--:--:--"}</span>
+            <span className="text-[10px] text-slate-400 block uppercase">New York (ET)</span>
+            <span className="font-bold text-emerald-400">{newYorkTime || "--:--:--"}</span>
           </div>
           <div className="rounded-lg border border-slate-800 bg-slate-900/90 px-3 py-1.5 text-right">
             <span className="text-[10px] text-slate-400 block uppercase">UTC Time</span>

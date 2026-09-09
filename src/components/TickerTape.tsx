@@ -18,7 +18,7 @@ export default function TickerTape() {
               className="mx-4 flex items-center space-x-2.5 rounded border border-slate-800/60 bg-slate-900/60 px-3 py-1 text-xs transition hover:border-slate-700"
             >
               <span className="font-bold text-slate-200">{item.symbol}</span>
-              <span className="text-slate-400 font-mono">${item.price}</span>
+              <span className="text-slate-400 font-mono">{item.category === "forex" ? item.price : `$${item.price}`}</span>
               <span
                 className={`flex items-center font-mono font-semibold ${
                   isPositive ? "text-emerald-400" : "text-rose-400"

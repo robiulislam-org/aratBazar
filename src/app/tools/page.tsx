@@ -1,14 +1,101 @@
 import RiskCalculator from "@/components/RiskCalculator";
 import AdBanner from "@/components/AdBanner";
-import { Calculator, ShieldCheck, TrendingUp, HelpCircle } from "lucide-react";
+import { Calculator, ShieldCheck, TrendingUp } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Trading Calculators & Risk Management Suite | AratBazar",
-  description: "Free institutional trading calculators including Position Size, Stop Loss Risk, Compound ROI, and Pip Value calculators.",
+export const metadata: Metadata = {
+  title: "Free Forex & Trading Calculators — Position Size, Risk, Pip Value | AratBazar",
+  description:
+    "Free institutional-grade trading calculators: Position Size Calculator, Stop-Loss Risk Engine, Compound ROI Calculator, and Pip Value Tool. Manage risk like a professional hedge fund trader.",
+  keywords: [
+    "position size calculator forex",
+    "trading risk calculator",
+    "lot size calculator",
+    "pip value calculator",
+    "stop loss calculator",
+    "compound interest trading",
+    "forex money management calculator",
+    "1 percent risk rule trading",
+    "risk reward calculator",
+    "free trading tools online",
+    "aratbazar calculator",
+  ],
+  openGraph: {
+    title: "Free Trading Calculators — Position Size, Risk & ROI | AratBazar",
+    description:
+      "Institutional-grade math tools for disciplined risk management. Calculate exact lot sizes, stop-loss exposure, and compound growth trajectories.",
+    url: "https://aratbazar.com/tools",
+    siteName: "AratBazar",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Trading Risk & Position Size Calculators | AratBazar",
+    description: "Calculate position sizes, pip values, and compound ROI with professional-grade trading tools.",
+    creator: "@aratbazar",
+  },
+  alternates: {
+    canonical: "https://aratbazar.com/tools",
+  },
 };
 
 export default function ToolsPage() {
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "AratBazar Pro Trading Calculator Suite",
+    url: "https://aratbazar.com/tools",
+    description:
+      "Free institutional-grade trading calculators: Position Size, Stop-Loss Risk, Compound ROI, and Pip Value calculators.",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "All",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Calculate Forex Position Size",
+    description:
+      "Use the 1% risk rule to calculate the correct position size for any Forex trade to protect your trading capital.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Enter your account balance",
+        text: "Input your total trading account balance in USD. For example: $10,000.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Set your risk percentage",
+        text: "Enter the percentage of your balance you are willing to risk per trade. Professional traders use 1% to 2% maximum.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Enter your stop-loss distance in pips",
+        text: "Calculate the pip distance between your entry price and stop-loss level on your chart.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Get your exact lot size",
+        text: "The calculator will output your precise lot size so you never risk more than your defined percentage per trade.",
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <div className="border-b border-slate-800 pb-6">
         <div className="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 mb-2">
@@ -69,5 +156,6 @@ export default function ToolsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

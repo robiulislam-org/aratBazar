@@ -363,7 +363,6 @@ export async function GET() {
       ...s,
       isMarketOpen: marketStatus.isOpen,
       marketStatusText: marketStatus.badgeEn,
-      marketStatusBn: marketStatus.badgeBn,
     };
   });
 

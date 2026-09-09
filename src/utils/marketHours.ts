@@ -12,7 +12,6 @@ export interface MarketSessionInfo {
   isOpen: boolean;
   session: "REGULAR" | "PRE_MARKET" | "AFTER_HOURS" | "CLOSED";
   statusEn: string;
-  statusBn: string;
   dotColor: string;
   badgeBg: string;
   badgeText: string;
@@ -83,7 +82,6 @@ export function getWallStreetSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "MARKET CLOSED (Weekend)",
-      statusBn: "মার্কেট অফ আছে (উইকেন্ড বন্ধ)",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -103,7 +101,6 @@ export function getWallStreetSession(): MarketSessionInfo {
       isOpen: true,
       session: "REGULAR",
       statusEn: "LIVE: ACTIVE REGULAR SESSION",
-      statusBn: "মার্কেট এখন লাইভ চালু আছে",
       dotColor: "bg-emerald-500",
       badgeBg: "bg-emerald-950/40",
       badgeText: "text-emerald-400",
@@ -117,7 +114,6 @@ export function getWallStreetSession(): MarketSessionInfo {
       isOpen: false,
       session: "PRE_MARKET",
       statusEn: "PRE-MARKET SESSION",
-      statusBn: "প্রি-মার্কেট সেশন (রেগুলার অফ)",
       dotColor: "bg-amber-400",
       badgeBg: "bg-amber-950/40",
       badgeText: "text-amber-400",
@@ -131,7 +127,6 @@ export function getWallStreetSession(): MarketSessionInfo {
       isOpen: false,
       session: "AFTER_HOURS",
       statusEn: "AFTER-HOURS TRADING",
-      statusBn: "আফটার-আওয়ার্স ট্রেডিং (রেগুলার অফ)",
       dotColor: "bg-cyan-400",
       badgeBg: "bg-cyan-950/40",
       badgeText: "text-cyan-400",
@@ -145,7 +140,6 @@ export function getWallStreetSession(): MarketSessionInfo {
     isOpen: false,
     session: "CLOSED",
     statusEn: "MARKET CLOSED (Overnight)",
-    statusBn: "মার্কেট অফ আছে (এখন বন্ধ)",
     dotColor: "bg-rose-500",
     badgeBg: "bg-rose-950/40",
     badgeText: "text-rose-400",
@@ -169,7 +163,6 @@ export function getForexSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "FOREX CLOSED (Weekend)",
-      statusBn: "ফরেক্স মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -184,7 +177,6 @@ export function getForexSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "FOREX CLOSED (Weekend)",
-      statusBn: "ফরেক্স মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -199,7 +191,6 @@ export function getForexSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "FOREX CLOSED (Weekend)",
-      statusBn: "ফরেক্স মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -213,7 +204,6 @@ export function getForexSession(): MarketSessionInfo {
     isOpen: true,
     session: "REGULAR",
     statusEn: "FOREX: 24H INTERBANK OPEN",
-    statusBn: "ফরেক্স মার্কেট লাইভ চালু আছে",
     dotColor: "bg-emerald-500",
     badgeBg: "bg-emerald-950/40",
     badgeText: "text-emerald-400",
@@ -235,7 +225,6 @@ export function getCommoditiesSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "COMMODITIES CLOSED",
-      statusBn: "কমোডিটি মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -249,7 +238,6 @@ export function getCommoditiesSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "COMMODITIES CLOSED",
-      statusBn: "কমোডিটি মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -263,7 +251,6 @@ export function getCommoditiesSession(): MarketSessionInfo {
       isOpen: false,
       session: "CLOSED",
       statusEn: "COMMODITIES CLOSED",
-      statusBn: "কমোডিটি মার্কেট অফ আছে",
       dotColor: "bg-rose-500",
       badgeBg: "bg-rose-950/40",
       badgeText: "text-rose-400",
@@ -277,8 +264,7 @@ export function getCommoditiesSession(): MarketSessionInfo {
     return {
       isOpen: false,
       session: "CLOSED",
-      statusEn: "DAILY SETTLEMENT BREAK",
-      statusBn: "দৈনিক সেটেলমেন্ট বিরতি (অফ)",
+      statusEn: "DAILY SETTLEMENT BREAK (17:00-18:00 ET)",
       dotColor: "bg-amber-400",
       badgeBg: "bg-amber-950/40",
       badgeText: "text-amber-400",
@@ -291,7 +277,6 @@ export function getCommoditiesSession(): MarketSessionInfo {
     isOpen: true,
     session: "REGULAR",
     statusEn: "COMMODITIES: TRADING OPEN",
-    statusBn: "কমোডিটি মার্কেট লাইভ চালু আছে",
     dotColor: "bg-emerald-500",
     badgeBg: "bg-emerald-950/40",
     badgeText: "text-emerald-400",
@@ -306,7 +291,6 @@ export function getCommoditiesSession(): MarketSessionInfo {
 export function getAssetMarketStatus(category: string): {
   isOpen: boolean;
   badgeEn: string;
-  badgeBn: string;
   badgeColor: string;
 } {
   const cat = category.toLowerCase();
@@ -315,7 +299,6 @@ export function getAssetMarketStatus(category: string): {
     return {
       isOpen: true,
       badgeEn: "24/7 OPEN",
-      badgeBn: "চালু (24/7)",
       badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
     };
   }
@@ -326,14 +309,12 @@ export function getAssetMarketStatus(category: string): {
       return {
         isOpen: true,
         badgeEn: "OPEN",
-        badgeBn: "মার্কেট চালু",
         badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
       };
     }
     return {
       isOpen: false,
       badgeEn: "CLOSED",
-      badgeBn: "মার্কেট অফ আছে",
       badgeColor: "bg-rose-500/20 text-rose-400 border-rose-500/30",
     };
   }
@@ -344,14 +325,12 @@ export function getAssetMarketStatus(category: string): {
       return {
         isOpen: true,
         badgeEn: "OPEN",
-        badgeBn: "মার্কেট চালু",
         badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
       };
     }
     return {
       isOpen: false,
       badgeEn: "CLOSED",
-      badgeBn: "মার্কেট অফ আছে",
       badgeColor: "bg-rose-500/20 text-rose-400 border-rose-500/30",
     };
   }
@@ -362,14 +341,12 @@ export function getAssetMarketStatus(category: string): {
       return {
         isOpen: true,
         badgeEn: "OPEN",
-        badgeBn: "মার্কেট চালু",
         badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
       };
     }
     return {
       isOpen: false,
       badgeEn: "CLOSED",
-      badgeBn: "মার্কেট অফ আছে",
       badgeColor: "bg-rose-500/20 text-rose-400 border-rose-500/30",
     };
   }
@@ -377,7 +354,6 @@ export function getAssetMarketStatus(category: string): {
   return {
     isOpen: true,
     badgeEn: "OPEN",
-    badgeBn: "চালু",
     badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
   };
 }
