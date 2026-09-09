@@ -178,6 +178,25 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
+        {/* Google Analytics 4 */}
+        <Script
+          id="google-analytics"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-C5Q7SMBKH5"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C5Q7SMBKH5');
+            `,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
         <div>
