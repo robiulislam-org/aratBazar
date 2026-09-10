@@ -94,6 +94,7 @@ export default function RootLayout({
 }>) {
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "";
   const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-7DXMHPCQQ0";
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -179,24 +180,28 @@ export default function RootLayout({
           />
         )}
         {/* Google Analytics 4 */}
-        <Script
-          id="google-analytics"
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-C5Q7SMBKH5"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics-config"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C5Q7SMBKH5');
-            `,
-          }}
-        />
+        {gaMeasurementId && (
+          <>
+            <Script
+              id="google-analytics"
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics-config"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaMeasurementId}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="min-h-screen bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
         <div>
