@@ -2,32 +2,34 @@ import { Metadata } from "next";
 import ExchangeClient from "./ExchangeClient";
 
 export const metadata: Metadata = {
-  title: "Live Currency Exchange Rates & Gold Price Today (আজকের টাকার রেট ও সোনার দাম) | AratBazar",
+  title: "Live Currency Exchange Rates & World Gold Price Today | AratBazar",
   description:
-    "Real-time currency exchange rates for 160+ countries, live converter, expatriate remittance rates (প্রবাসী টাকার রেট), and live 24K, 22K, 21K, 18K Gold and Silver rates in BDT, USD, SAR, AED.",
+    "Real-time exchange rates for 160+ world currencies, institutional forex converter, global cross-currency rates, and live 24K, 22K, 21K, 18K Gold and Silver bullion prices.",
   keywords: [
     "Currency Exchange Rates",
     "Live Gold Price Today",
-    "আজকের টাকার রেট",
-    "আজকের সোনার দাম",
+    "Forex Converter",
+    "EUR to USD",
+    "GBP to USD",
+    "USD to JPY",
+    "USD to SAR",
+    "USD to AED",
+    "USD to INR",
+    "USD to CAD",
     "USD to BDT",
-    "SAR to BDT",
-    "AED to BDT",
-    "KWD to BDT",
-    "Currency Converter Bangladesh",
-    "Gold Price Bangladesh Vhori",
-    "22K Gold Price Today",
-    "24K Gold Price",
-    "Forex Exchange Rates Live",
+    "Gold Spot Bullion Rate",
+    "24K Gold Price per Gram",
+    "22K Gold Price per Ounce",
+    "Precious Metals Calculator",
     "AratBazar Exchange",
   ],
   alternates: {
     canonical: "https://aratbazar.com/exchange",
   },
   openGraph: {
-    title: "Live Currency Exchange Rates & Gold Price Today | AratBazar",
+    title: "Live Currency Exchange Rates & World Gold Price Today | AratBazar",
     description:
-      "Check live exchange rates for 160+ world currencies, expatriate remittance rates, and live 24K, 22K Gold & Silver rates.",
+      "Real-time currency exchange rates for 160+ world currencies, live forex converter, and live 24K, 22K, 21K, 18K Gold & Silver bullion prices.",
     url: "https://aratbazar.com/exchange",
     siteName: "AratBazar Financial Intelligence",
     images: [
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AratBazar Currency Exchange & Gold Rates",
+        alt: "AratBazar Global Currency Exchange & Gold Rates",
       },
     ],
     locale: "en_US",
@@ -43,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Live Currency Exchange Rates & Gold Price Today | AratBazar",
+    title: "Live Currency Exchange Rates & World Gold Price Today | AratBazar",
     description:
-      "Check live exchange rates for 160+ world currencies, expatriate remittance rates, and live 24K, 22K Gold & Silver rates.",
+      "Real-time currency exchange rates for 160+ world currencies, live forex converter, and live 24K, 22K, 21K, 18K Gold & Silver bullion prices.",
     images: ["/og-image.png"],
   },
 };
@@ -56,7 +58,7 @@ export default function ExchangePage() {
     "@type": "FinancialProduct",
     name: "AratBazar Global Currency & Precious Metals Exchange Engine",
     description:
-      "Real-time institutional foreign exchange rates, expatriate remittance corridors, and live gold spot bullion valuations.",
+      "Real-time institutional foreign exchange rates, global cross-currency corridors, and live gold spot bullion valuations.",
     provider: {
       "@type": "Organization",
       name: "AratBazar Financial Intelligence",

@@ -59,7 +59,7 @@ export default function ExchangeClient() {
   // Converter state
   const [amount, setAmount] = useState<number | string>(100);
   const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency, setToCurrency] = useState("BDT");
+  const [toCurrency, setToCurrency] = useState("EUR");
 
   // World table state
   const [searchQuery, setSearchQuery] = useState("");
@@ -67,10 +67,10 @@ export default function ExchangeClient() {
   const [tableBaseCurrency, setTableBaseCurrency] = useState("USD");
 
   // Gold calculator state
-  const [goldSelectedCurrency, setGoldSelectedCurrency] = useState("BDT");
+  const [goldSelectedCurrency, setGoldSelectedCurrency] = useState("USD");
   const [goldCalcAmount, setGoldCalcAmount] = useState<number | string>(1);
-  const [goldCalcUnit, setGoldCalcUnit] = useState("vhori");
-  const [goldCalcKarat, setGoldCalcKarat] = useState("22K");
+  const [goldCalcUnit, setGoldCalcUnit] = useState("ounce");
+  const [goldCalcKarat, setGoldCalcKarat] = useState("24K");
 
   // Fetch Exchange Rates & Metals
   const fetchData = async () => {
@@ -124,7 +124,7 @@ export default function ExchangeClient() {
     setToCurrency(fromCurrency);
   };
 
-  // Set pair from quick remittance card
+  // Set pair from quick corridor card
   const selectPair = (from: string, to: string) => {
     setFromCurrency(from);
     setToCurrency(to);
@@ -150,7 +150,7 @@ export default function ExchangeClient() {
 
   const getGoldPricePerUnit = (unitId: string, karat: string) => {
     const unit = GOLD_UNITS.find((u) => u.id === unitId) || GOLD_UNITS[0];
-    const purity = GOLD_PURITIES.find((p) => p.karat === karat)?.purity || 0.916;
+    const purity = GOLD_PURITIES.find((p) => p.karat === karat)?.purity || 0.999;
     const priceInUsd = goldGram24kUsd * purity * unit.grams;
     return priceInUsd * goldRateInCurrencyMultiplier;
   };
@@ -183,7 +183,7 @@ export default function ExchangeClient() {
                 World Currency Rates & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">Live Gold Price</span>
               </h1>
               <p className="max-w-2xl text-sm sm:text-base text-slate-400 leading-relaxed">
-                Check live exchange rates for 160+ world currencies, calculate currency differences, expatriate remittance rates (প্রবাসী রেট), and live 24K, 22K, 21K, 18K Gold & Silver rates.
+                Real-time exchange rates across 160+ world currencies, institutional forex converter, global remittance corridors, and live 24K, 22K, 21K, 18K Gold and Silver bullion spot valuations.
               </p>
             </div>
 
@@ -216,7 +216,7 @@ export default function ExchangeClient() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-white">Live Currency Converter</h2>
-                <p className="text-xs text-slate-400">Calculate real-time exchange rates with zero hidden fees</p>
+                <p className="text-xs text-slate-400">Calculate real-time exchange rates with zero hidden markups</p>
               </div>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-lg">
@@ -313,7 +313,7 @@ export default function ExchangeClient() {
                 <p>
                   1 {toCurrency} = <strong className="text-slate-200">{inverseRate.toFixed(4)} {fromCurrency}</strong>
                 </p>
-                <p className="text-[11px] text-emerald-400/80">Zero Bank Spread / Mid-Market Real Interbank Rate</p>
+                <p className="text-[11px] text-emerald-400/80">Real-Time Wholesale Interbank Rate (Zero Bank Spread)</p>
               </div>
             </div>
 
@@ -331,26 +331,27 @@ export default function ExchangeClient() {
           </div>
         </div>
 
-        {/* ─── 2. Expatriate Remittance Corridors (প্রবাসী মুদ্রা বিনিময় রেট) ──── */}
+        {/* ─── 2. Global Forex & Remittance Corridors ─────────────────────────── */}
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
             <div>
               <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-400 mb-1">
                 <Globe className="h-3.5 w-3.5" />
-                <span>Expatriate Remittance Hub</span>
+                <span>Global Currency Corridors</span>
               </div>
               <h2 className="text-2xl font-bold text-white">
-                প্রবাসী রেট — আজকের মুদ্রা বিনিময় হার (BDT Corridors)
+                Major Foreign Exchange & Remittance Rates
               </h2>
             </div>
-            <p className="text-xs text-slate-400">Click any card to load into converter</p>
+            <p className="text-xs text-slate-400">Click any currency pair to load directly into the converter</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {POPULAR_EXCHANGES.map((item) => {
               const fromVal = rates[item.from] || 1;
-              const bdtVal = rates["BDT"] || 123.25;
-              const rateInBdt = fromVal > 0 ? bdtVal / fromVal : 0;
+              const toVal = rates[item.to] || 1;
+              const pairRate = fromVal > 0 ? toVal / fromVal : 0;
+              const toSymbol = currencyMap.get(item.to)?.symbol || "";
 
               return (
                 <button
@@ -366,7 +367,7 @@ export default function ExchangeClient() {
                       <span className="text-2xl">{item.flagTo}</span>
                     </div>
                     <span className="rounded bg-teal-500/10 px-2 py-0.5 text-[11px] font-bold text-teal-400 group-hover:bg-teal-500/20 transition">
-                      {item.from} / BDT
+                      {item.from} / {item.to}
                     </span>
                   </div>
 
@@ -374,14 +375,14 @@ export default function ExchangeClient() {
                     <p className="text-xs font-medium text-slate-400">{item.label}</p>
                     <div className="mt-1 flex items-baseline gap-1.5">
                       <span className="text-2xl font-black text-white group-hover:text-teal-300 transition">
-                        ৳{rateInBdt.toFixed(2)}
+                        {toSymbol}{pairRate >= 10 ? pairRate.toFixed(2) : pairRate.toFixed(4)}
                       </span>
                       <span className="text-xs text-slate-400">per 1 {item.from}</span>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/80 pt-2 w-full">
-                    <span>1,000 {item.from} = ৳{(rateInBdt * 1000).toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
+                    <span>1,000 {item.from} = {toSymbol}{(pairRate * 1000).toLocaleString("en-US", { maximumFractionDigits: 2 })}</span>
                     <ChevronRight className="h-3.5 w-3.5 text-slate-500 group-hover:text-teal-400 group-hover:translate-x-1 transition" />
                   </div>
                 </button>
@@ -390,7 +391,7 @@ export default function ExchangeClient() {
           </div>
         </div>
 
-        {/* ─── 3. Live Gold & Silver Rate Center (সোনার দাম) ────────────────── */}
+        {/* ─── 3. Live Gold & Silver Rate Center ─────────────────────────────── */}
         <div className="rounded-2xl border border-amber-500/30 bg-gradient-to-b from-[#10141e] to-[#090d16] p-6 sm:p-8 shadow-2xl relative overflow-hidden">
           <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
 
@@ -401,12 +402,12 @@ export default function ExchangeClient() {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h2 className="text-2xl font-black text-white">Live Gold & Silver Rates (আজকের সোনার দর)</h2>
+                  <h2 className="text-2xl font-black text-white">Live Gold & Silver Rates (London Bullion Spot)</h2>
                   <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-xs font-bold text-amber-400 border border-amber-500/30">
                     London Spot XAU
                   </span>
                 </div>
-                <p className="text-xs text-slate-400">Real-time bullion spot pricing for 24K, 22K, 21K, 18K in Vhori, Gram, and Ounce</p>
+                <p className="text-xs text-slate-400">Real-time bullion spot pricing for 24K, 22K, 21K, 18K in Troy Ounces, Grams, and Kilograms</p>
               </div>
             </div>
 
@@ -431,7 +432,7 @@ export default function ExchangeClient() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
             <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Gold Spot (Ounce)</span>
+                <span>Gold Spot (1 Troy Ounce)</span>
                 <span className={`font-bold ${(metals?.gold.change24h || 0) >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
                   {(metals?.gold.change24h || 0) >= 0 ? "+" : ""}{(metals?.gold.change24h || 0).toFixed(2)}%
                 </span>
@@ -446,33 +447,33 @@ export default function ExchangeClient() {
 
             <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-4">
               <div className="flex items-center justify-between text-xs text-amber-400 font-semibold">
-                <span>22 Karat (1 Vhori / ভরি)</span>
-                <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px]">Jewelry Standard</span>
+                <span>24 Karat Pure (1 Gram)</span>
+                <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px]">99.9% Pure</span>
               </div>
               <p className="text-2xl font-black text-white mt-1">
-                {selectedCurrencySymbol}{getGoldPricePerUnit("vhori", "22K").toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                {selectedCurrencySymbol}{getGoldPricePerUnit("gram", "24K").toLocaleString("en-US", { maximumFractionDigits: 2 })}
               </p>
-              <p className="text-[11px] text-slate-400 mt-1">11.664 Grams Hallmarked Gold</p>
+              <p className="text-[11px] text-slate-400 mt-1">Raw Bullion / Sovereign Bar Standard</p>
             </div>
 
             <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>24 Karat Pure (1 Vhori)</span>
-                <span className="text-[10px] text-slate-400">99.9% Pure</span>
+                <span>22 Karat (1 Gram)</span>
+                <span className="text-[10px] text-amber-300 font-semibold">Jewelry Standard</span>
               </div>
               <p className="text-2xl font-black text-slate-200 mt-1">
-                {selectedCurrencySymbol}{getGoldPricePerUnit("vhori", "24K").toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                {selectedCurrencySymbol}{getGoldPricePerUnit("gram", "22K").toLocaleString("en-US", { maximumFractionDigits: 2 })}
               </p>
-              <p className="text-[11px] text-slate-400 mt-1">Raw Bullion / Sovereign Bar</p>
+              <p className="text-[11px] text-slate-400 mt-1">91.6% Hallmarked Fine Jewelry</p>
             </div>
 
             <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Silver Spot (1 Vhori)</span>
+                <span>Silver Spot (1 Troy Ounce)</span>
                 <span className="text-[10px] text-slate-400">Silver 999</span>
               </div>
               <p className="text-2xl font-black text-slate-300 mt-1">
-                {selectedCurrencySymbol}{((metals?.silver.perVhori || 15.5) * goldRateInCurrencyMultiplier).toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                {selectedCurrencySymbol}{((metals?.silver.spotUsd || 33.5) * goldRateInCurrencyMultiplier).toLocaleString("en-US", { maximumFractionDigits: 2 })}
               </p>
               <p className="text-[11px] text-slate-400 mt-1">
                 Spot: ${(metals?.silver.spotUsd || 33.5).toFixed(2)}/oz
@@ -487,43 +488,48 @@ export default function ExchangeClient() {
                 <tr>
                   <th className="py-3 px-4">Gold Purity / Grade</th>
                   <th className="py-3 px-4">Purity %</th>
-                  <th className="py-3 px-4">Per 1 Gram (গ্রাম)</th>
-                  <th className="py-3 px-4">Per 1 Vhori (১ ভরি)</th>
-                  <th className="py-3 px-4">Per 1 Ana (আনা)</th>
-                  <th className="py-3 px-4">Per 1 Ounce (আউন্স)</th>
-                  <th className="py-3 px-4">Usage / Description</th>
+                  <th className="py-3 px-4">Per 1 Gram (g)</th>
+                  <th className="py-3 px-4">Per 1 Troy Ounce (oz)</th>
+                  <th className="py-3 px-4">Per 1 Tola (11.66g)</th>
+                  <th className="py-3 px-4">Per 1 Kilogram (kg)</th>
+                  <th className="py-3 px-4">Primary Application</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60 text-slate-200">
                 {GOLD_PURITIES.map((p) => {
                   const gramPrice = getGoldPricePerUnit("gram", p.karat);
-                  const vhoriPrice = getGoldPricePerUnit("vhori", p.karat);
-                  const anaPrice = getGoldPricePerUnit("ana", p.karat);
                   const ouncePrice = getGoldPricePerUnit("ounce", p.karat);
+                  const tolaPrice = getGoldPricePerUnit("tola", p.karat);
+                  const kgPrice = getGoldPricePerUnit("kg", p.karat);
 
                   return (
                     <tr key={p.karat} className="hover:bg-slate-900/50 transition">
                       <td className="py-3.5 px-4 font-bold text-white flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-amber-400" />
                         <span>{p.name}</span>
-                        {p.karat === "22K" && (
+                        {p.karat === "24K" && (
                           <span className="rounded bg-amber-500/20 px-1.5 py-0.2 text-[10px] text-amber-300 font-semibold">
-                            Standard
+                            Pure Bullion
+                          </span>
+                        )}
+                        {p.karat === "22K" && (
+                          <span className="rounded bg-teal-500/20 px-1.5 py-0.2 text-[10px] text-teal-300 font-semibold">
+                            Crown Hallmark
                           </span>
                         )}
                       </td>
                       <td className="py-3.5 px-4 font-mono text-slate-400">{(p.purity * 100).toFixed(1)}%</td>
                       <td className="py-3.5 px-4 font-bold text-amber-300 font-mono">
-                        {selectedCurrencySymbol}{gramPrice.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                        {selectedCurrencySymbol}{gramPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
                       </td>
                       <td className="py-3.5 px-4 font-black text-emerald-400 font-mono text-sm">
-                        {selectedCurrencySymbol}{vhoriPrice.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                        {selectedCurrencySymbol}{ouncePrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
                       </td>
                       <td className="py-3.5 px-4 font-mono text-slate-300">
-                        {selectedCurrencySymbol}{anaPrice.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                        {selectedCurrencySymbol}{tolaPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
                       </td>
                       <td className="py-3.5 px-4 font-mono text-slate-300">
-                        {selectedCurrencySymbol}{ouncePrice.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                        {selectedCurrencySymbol}{kgPrice.toLocaleString("en-US", { maximumFractionDigits: 0 })}
                       </td>
                       <td className="py-3.5 px-4 text-[11px] text-slate-400">{p.desc}</td>
                     </tr>
@@ -537,7 +543,7 @@ export default function ExchangeClient() {
           <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900/80 p-6">
             <div className="flex items-center gap-2.5 mb-4">
               <Calculator className="h-5 w-5 text-amber-400" />
-              <h3 className="text-base font-bold text-white">Interactive Gold Price Calculator (স্বর্ণের মূল্য ক্যালকুলেটর)</h3>
+              <h3 className="text-base font-bold text-white">Interactive Precious Metals Valuation Calculator</h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -550,12 +556,12 @@ export default function ExchangeClient() {
                   value={goldCalcAmount}
                   onChange={(e) => setGoldCalcAmount(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm font-bold text-white focus:border-amber-500 focus:outline-none"
-                  placeholder="e.g. 2.5"
+                  placeholder="e.g. 5"
                 />
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-400">Weight Unit (একক)</label>
+                <label className="text-xs font-semibold text-slate-400">Weight Unit</label>
                 <select
                   value={goldCalcUnit}
                   onChange={(e) => setGoldCalcUnit(e.target.value)}
@@ -570,7 +576,7 @@ export default function ExchangeClient() {
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-400">Gold Purity (ক্যারেট)</label>
+                <label className="text-xs font-semibold text-slate-400">Gold Karat / Purity</label>
                 <select
                   value={goldCalcKarat}
                   onChange={(e) => setGoldCalcKarat(e.target.value)}
@@ -588,7 +594,7 @@ export default function ExchangeClient() {
                 <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-4 py-2 text-center">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">Estimated Market Value</span>
                   <p className="text-lg font-black text-white">
-                    {selectedCurrencySymbol}{calculatedGoldTotal.toLocaleString("en-US", { maximumFractionDigits: 0 })} {goldSelectedCurrency}
+                    {selectedCurrencySymbol}{calculatedGoldTotal.toLocaleString("en-US", { maximumFractionDigits: 2 })} {goldSelectedCurrency}
                   </p>
                 </div>
               </div>
@@ -604,7 +610,7 @@ export default function ExchangeClient() {
                 <Globe className="h-5 w-5 text-emerald-400" />
                 <h2 className="text-xl font-bold text-white">All World Currencies Exchange Rates</h2>
               </div>
-              <p className="text-xs text-slate-400 mt-0.5">Comprehensive real-time exchange rates against major currencies</p>
+              <p className="text-xs text-slate-400 mt-0.5">Comprehensive real-time interbank exchange rates across 160+ world currencies</p>
             </div>
 
             {/* Controls: Search & Base Currency */}
@@ -621,19 +627,24 @@ export default function ExchangeClient() {
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-400 whitespace-nowrap">Base:</span>
+                <span className="text-xs text-slate-400 whitespace-nowrap">Base Currency:</span>
                 <select
                   value={tableBaseCurrency}
                   onChange={(e) => setTableBaseCurrency(e.target.value)}
                   className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-bold text-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-500"
                 >
-                  <option value="USD">🇺🇸 USD</option>
-                  <option value="BDT">🇧🇩 BDT</option>
-                  <option value="EUR">🇪🇺 EUR</option>
-                  <option value="SAR">🇸🇦 SAR</option>
-                  <option value="AED">🇦🇪 AED</option>
-                  <option value="GBP">🇬🇧 GBP</option>
-                  <option value="INR">🇮🇳 INR</option>
+                  <option value="USD">🇺🇸 USD — US Dollar</option>
+                  <option value="EUR">🇪🇺 EUR — Euro</option>
+                  <option value="GBP">🇬🇧 GBP — British Pound</option>
+                  <option value="JPY">🇯🇵 JPY — Japanese Yen</option>
+                  <option value="CAD">🇨🇦 CAD — Canadian Dollar</option>
+                  <option value="AUD">🇦🇺 AUD — Australian Dollar</option>
+                  <option value="CHF">🇨🇭 CHF — Swiss Franc</option>
+                  <option value="SAR">🇸🇦 SAR — Saudi Riyal</option>
+                  <option value="AED">🇦🇪 AED — UAE Dirham</option>
+                  <option value="SGD">🇸🇬 SGD — Singapore Dollar</option>
+                  <option value="INR">🇮🇳 INR — Indian Rupee</option>
+                  <option value="BDT">🇧🇩 BDT — Bangladeshi Taka</option>
                 </select>
               </div>
             </div>
@@ -641,7 +652,7 @@ export default function ExchangeClient() {
 
           {/* Region Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800/80 text-xs">
-            {["All", "Middle East", "Asia", "Europe", "Americas", "Africa"].map((region) => (
+            {["All", "Middle East", "Asia", "Europe", "Americas", "Africa", "Oceania"].map((region) => (
               <button
                 key={region}
                 type="button"
@@ -675,6 +686,7 @@ export default function ExchangeClient() {
                   const targetVal = rates[c.code] || 1;
                   const rateAgainstBase = baseVal > 0 ? targetVal / baseVal : 0;
                   const inverseRateAgainstBase = rateAgainstBase > 0 ? 1 / rateAgainstBase : 0;
+                  const baseSymbol = currencyMap.get(tableBaseCurrency)?.symbol || "$";
 
                   return (
                     <tr key={c.code} className="hover:bg-slate-900/50 transition">
@@ -696,7 +708,7 @@ export default function ExchangeClient() {
                         {rateAgainstBase.toFixed(4)} {c.code}
                       </td>
                       <td className="py-3 px-4 font-mono text-slate-300">
-                        {tableBaseCurrency === "BDT" ? "৳" : "$"}
+                        {baseSymbol}
                         {inverseRateAgainstBase.toFixed(4)} {tableBaseCurrency}
                       </td>
                       <td className="py-3 px-4">
@@ -720,35 +732,35 @@ export default function ExchangeClient() {
         <div className="rounded-2xl border border-slate-800 bg-[#090d16]/80 p-6 sm:p-8 space-y-6">
           <div className="flex items-center gap-2 text-emerald-400">
             <ShieldCheck className="h-5 w-5" />
-            <h2 className="text-xl font-bold text-white">Frequently Asked Questions & Currency Guide</h2>
+            <h2 className="text-xl font-bold text-white">Frequently Asked Questions & Forex Guide</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-400 leading-relaxed">
             <div className="space-y-2 rounded-xl bg-slate-900/50 p-4 border border-slate-800">
-              <h3 className="font-bold text-slate-200 text-sm">মুদ্রা বিনিময় হার (Exchange Rate) কীভাবে নির্ধারিত হয়?</h3>
+              <h3 className="font-bold text-slate-200 text-sm">How are foreign exchange (Forex) rates determined?</h3>
               <p>
-                আন্তর্জাতিক মুদ্রা বাজারে (Forex Market) চাহিদা ও জোগানের ভিত্তিতে কারেন্সি রেট নির্ধারিত হয়। কেন্দ্রীয় ব্যাংকের সুদের হার (Interest Rates), বাণিজ্য ঘাটতি, মুদ্রাস্ফীতি (Inflation), এবং অর্থনৈতিক প্রবৃদ্ধি কারেন্সির মান ওঠানামায় মুখ্য ভূমিকা রাখে।
+                Foreign exchange rates are determined in the global decentralized interbank market driven by macroeconomic supply and demand dynamics. Key catalysts include central bank interest rate policies (such as the Federal Reserve, ECB, and Bank of England), sovereign inflation differentials, trade balance surpluses/deficits, geopolitical stability, and benchmark sovereign bond yields.
               </p>
             </div>
 
             <div className="space-y-2 rounded-xl bg-slate-900/50 p-4 border border-slate-800">
-              <h3 className="font-bold text-slate-200 text-sm">১ ভরি সোনার আন্তর্জাতিক ওজন কত গ্রাম?</h3>
+              <h3 className="font-bold text-slate-200 text-sm">What is the difference between 24K, 22K, and 18K Gold?</h3>
               <p>
-                বাংলাদেশ ও দক্ষিণ এশিয়ায় সনাতন পরিমাপে ১ ভরি বা তোলা সমান ১১.৬৬৪ গ্রাম (11.664 Grams)। ১ ট্রয় আউন্স (Troy Ounce) সমান ৩১.১০৩৪৭৬৮ গ্রাম, যার মধ্যে আনুমানিক ২.৬৬৬ ভরি সোনা থাকে।
+                The karat rating system measures gold purity on a 24-part scale. 24 Karat represents 99.9% pure bullion, typically held as raw institutional bars and sovereign coins. 22 Karat contains 91.6% pure gold alloyed with 8.4% copper or silver for structural durability, widely favored for fine jewelry. 18 Karat contains 75% pure gold, offering enhanced scratch resistance ideal for luxury watches and diamond settings.
               </p>
             </div>
 
             <div className="space-y-2 rounded-xl bg-slate-900/50 p-4 border border-slate-800">
-              <h3 className="font-bold text-slate-200 text-sm">২২ ক্যারেট এবং ২৪ ক্যারেট সোনার পার্থক্য কী?</h3>
+              <h3 className="font-bold text-slate-200 text-sm">What is the international standard weight of a Troy Ounce?</h3>
               <p>
-                ২৪ ক্যারেট সোনা হলো ৯৯.৯% খাঁটি সোনা যা মূলত বার বা কয়েন হিসেবে থাকে। ২২ ক্যারেট সোনায় ৯১.৬% খাঁটি সোনা এবং বাকি অংশ অন্যান্য ধাতু মিশিয়ে মজবুত গহনা তৈরি করা হয়, যা ক্যাডমিয়াম হলমার্কযুক্ত হিসেবে অধিক জনপ্রিয়।
+                In international bullion and commodity clearing centers (such as the London Bullion Market Association - LBMA and COMEX), gold, silver, and platinum are measured in Troy Ounces. Exactly 1 Troy Ounce equals 31.1034768 grams, which is heavier than a standard commercial avoirdupois ounce (28.3495 grams).
               </p>
             </div>
 
             <div className="space-y-2 rounded-xl bg-slate-900/50 p-4 border border-slate-800">
-              <h3 className="font-bold text-slate-200 text-sm">প্রবাসী রেট ও ব্যাংকিং রেটের মধ্যে তফাৎ কেন থাকে?</h3>
+              <h3 className="font-bold text-slate-200 text-sm">What is the difference between Interbank Rates and Retail Bank Rates?</h3>
               <p>
-                ব্যাংক বা মানি এক্সচেঞ্জ হাউসগুলো মুদ্রা লেনদেনের সময় স্প্রেড (Spread) বা সার্ভিস কমিশন গ্রহণ করে। এছাড়া সরকারি রেমিট্যান্স প্রণোদনা (Incentive Bonus) যুক্ত হলে প্রবাসীরা স্বাভাবিক ব্যাংক রেটের চেয়ে বাড়তি টাকা পেতে পারেন।
+                The interbank rate (or mid-market rate) is the real-time wholesale exchange rate at which institutional banks trade currencies among themselves in multi-million dollar volume tranches. Retail commercial banks and consumer money transfer providers typically add a spread (markup of 1% to 4%) over the mid-market rate to cover operational margins.
               </p>
             </div>
           </div>

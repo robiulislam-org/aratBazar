@@ -209,7 +209,7 @@ export default function Header() {
               className="rounded-md px-3 py-2 text-sm font-medium text-amber-400 hover:bg-slate-800 flex items-center gap-2"
             >
               <Coins className="h-4 w-4 text-amber-400" />
-              <span>Currency Rates & Gold (টাকা ও স্বর্ণ)</span>
+              <span>Currency Rates & Gold</span>
             </Link>
             <Link
               href="/journal"
