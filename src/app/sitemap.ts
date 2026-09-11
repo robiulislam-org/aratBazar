@@ -42,6 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "hourly" as const,
       priority: 0.95,
     },
+    // Live Currency Rates & Gold Price — updated hourly
+    {
+      url: `${baseUrl}/exchange`,
+      lastModified: now,
+      changeFrequency: "hourly" as const,
+      priority: 0.96,
+    },
     // Economic Calendar — updated daily
     {
       url: `${baseUrl}/calendar`,

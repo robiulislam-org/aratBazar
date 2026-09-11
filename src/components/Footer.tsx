@@ -34,6 +34,7 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-emerald-400 transition">Global Overview</Link></li>
               <li><Link href="/signals" className="hover:text-emerald-300 transition text-emerald-400 font-semibold">⚡ Trade Signals (30m Scanner)</Link></li>
               <li><Link href="/currency-strength" className="hover:text-emerald-300 transition text-cyan-400 font-semibold">📊 Currency Strength Meter</Link></li>
+              <li><Link href="/exchange" className="hover:text-emerald-300 transition text-amber-400 font-semibold">🪙 Currency Rates & Gold Price</Link></li>
               <li><Link href="/journal" className="hover:text-emerald-300 transition text-teal-400 font-semibold">📓 Private Trade Journal</Link></li>
               <li><Link href="/calendar" className="hover:text-emerald-400 transition">Economic Calendar</Link></li>
               <li><Link href="/tools" className="hover:text-emerald-400 transition">Risk & Position Calculator</Link></li>

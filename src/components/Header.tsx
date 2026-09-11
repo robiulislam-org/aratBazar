@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen } from "lucide-react";
+import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen, Coins } from "lucide-react";
 import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
 
 export default function Header() {
@@ -101,6 +101,14 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/exchange"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-amber-400/90 transition hover:bg-slate-800 hover:text-amber-300"
+          >
+            <Coins className="h-4 w-4 text-amber-400" />
+            <span>Exchange & Gold</span>
+          </Link>
+
+          <Link
             href="/journal"
             className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
           >
@@ -194,6 +202,14 @@ export default function Header() {
             >
               <Gauge className="h-4 w-4 text-emerald-400" />
               <span>Currency Strength Meter</span>
+            </Link>
+            <Link
+              href="/exchange"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-md px-3 py-2 text-sm font-medium text-amber-400 hover:bg-slate-800 flex items-center gap-2"
+            >
+              <Coins className="h-4 w-4 text-amber-400" />
+              <span>Currency Rates & Gold (টাকা ও স্বর্ণ)</span>
             </Link>
             <Link
               href="/journal"
