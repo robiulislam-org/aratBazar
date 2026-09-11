@@ -1,9 +1,18 @@
 import { MetadataRoute } from "next";
 import { FINANCIAL_NEWS } from "@/data/newsData";
+import { AI_MODELS } from "@/data/aiModelsData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://aratbazar.com";
   const now = new Date();
+
+  // Individual AI Model URLs — massive long-tail organic search traffic
+  const aiModelUrls = AI_MODELS.map((model) => ({
+    url: `${baseUrl}/ai/${model.slug}`,
+    lastModified: new Date(model.lastUpdated),
+    changeFrequency: "daily" as const,
+    priority: 0.88,
+  }));
 
   // Individual news article URLs — dynamic, high-value pages for organic traffic
   const newsUrls = FINANCIAL_NEWS.map((article) => ({
@@ -27,6 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "hourly" as const,
       priority: 0.98,
+    },
+    // AI Intelligence Hub & Free Models Directory — high-traffic daily sync
+    {
+      url: `${baseUrl}/ai`,
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.97,
     },
     // News & Intelligence — updated daily with fresh articles
     {
@@ -105,6 +121,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.70,
     },
+    // Individual AI Model review & benchmark pages
+    ...aiModelUrls,
     // Individual news articles
     ...newsUrls,
   ];

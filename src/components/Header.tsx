@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen, Coins } from "lucide-react";
+import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen, Coins, BrainCircuit, Sparkles } from "lucide-react";
 import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
 
 export default function Header() {
@@ -90,6 +90,15 @@ export default function Header() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
             </span>
             <span>Signals</span>
+          </Link>
+
+          <Link
+            href="/ai"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 transition hover:bg-emerald-500/20"
+          >
+            <BrainCircuit className="h-4 w-4 text-emerald-400" />
+            <span>AI Hub</span>
+            <span className="rounded bg-emerald-500/30 px-1 py-0.5 text-[9px] font-black text-emerald-300">FREE</span>
           </Link>
 
           <Link
@@ -193,6 +202,19 @@ export default function Header() {
               </span>
               <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
                 LIVE
+              </span>
+            </Link>
+            <Link
+              href="/ai"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20"
+            >
+              <span className="flex items-center gap-2">
+                <BrainCircuit className="h-4 w-4 text-emerald-400" />
+                AI Models & Free Tools Hub
+              </span>
+              <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
+                NEW
               </span>
             </Link>
             <Link

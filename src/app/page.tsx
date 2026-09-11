@@ -8,7 +8,7 @@ import EconomicCalendar from "@/components/EconomicCalendar";
 import RiskCalculator from "@/components/RiskCalculator";
 import NewsSection from "@/components/NewsSection";
 import AdBanner from "@/components/AdBanner";
-import { ShieldCheck, TrendingUp, Award, Layers, Radar, ArrowRight } from "lucide-react";
+import { ShieldCheck, TrendingUp, Award, Layers, Radar, ArrowRight, BrainCircuit } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -44,6 +44,33 @@ export default function Home() {
             className="shrink-0 inline-flex items-center space-x-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 px-5 py-2.5 text-xs font-bold text-slate-950 transition shadow-lg shadow-emerald-500/20 cursor-pointer"
           >
             <span>Launch Live Scanner</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        {/* Live AI Intelligence Hub & Free Model Tracker Callout Banner */}
+        <div className="my-6 rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-950/40 via-slate-900 to-[#0c1322] p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+          <div className="flex items-center space-x-3.5">
+            <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-500/15 border border-purple-500/30 text-purple-400">
+              <BrainCircuit className="h-5 w-5 animate-pulse" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="font-extrabold text-white text-base">Global AI Intelligence Hub & Free Models Tracker</span>
+                <span className="rounded bg-purple-500 px-1.5 py-0.5 text-[9px] text-white font-black uppercase tracking-wider">
+                  Daily Sync
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Daily automated launches, 100% free open-weights LLMs (DeepSeek, Llama, Qwen), free trial guides & benchmark rankings.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/ai"
+            className="shrink-0 inline-flex items-center space-x-2 rounded-xl bg-purple-500 hover:bg-purple-400 px-5 py-2.5 text-xs font-bold text-slate-950 transition shadow-lg shadow-purple-500/20 cursor-pointer"
+          >
+            <span>Explore AI Directory</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

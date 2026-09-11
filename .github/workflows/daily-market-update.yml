@@ -25,27 +25,28 @@ jobs:
         with:
           node-version: 20
 
-      - name: 📡 Fetch Real Feeds & Synthesize New Articles
+      - name: 📡 Fetch Real Feeds & Synthesize New Articles & AI Intelligence
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "🚀 AratBazar Bi-Hourly Auto-Publisher Running"
           echo "📅 UTC: $(date -u '+%Y-%m-%d %H:%M UTC')"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           node scripts/auto-news-generator.js
+          node scripts/auto-ai-generator.js
 
-      - name: 📤 Commit & Push New News & Market Data
+      - name: 📤 Commit & Push New News, AI Models & Market Data
         run: |
           git config --global user.name "AratBazar Bot"
           git config --global user.email "bot@aratbazar.com"
           
-          git add src/data/newsData.ts src/data/marketData.ts
+          git add src/data/newsData.ts src/data/marketData.ts src/data/aiModelsData.ts
           
           if git diff --staged --quiet; then
             echo "ℹ️ No new articles needed — existing archive is already current"
           else
-            git commit -m "🤖 Auto: Bi-hourly market dispatch & intelligence update — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
+            git commit -m "🤖 Auto: Bi-hourly market & AI model intelligence update — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
             git push origin main
-            echo "✅ Successfully published new article to GitHub & Vercel!"
+            echo "✅ Successfully published new market & AI intelligence to GitHub & Vercel!"
           fi
 
       - name: 🔔 Status Summary
