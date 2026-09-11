@@ -1,15 +1,56 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MessageSquare, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+
+type FormState = "idle" | "loading" | "success" | "error";
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const [formState, setFormState] = useState<FormState>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setFormState("loading");
+    setErrorMsg("");
+
+    if (formspreeId) {
+      try {
+        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        });
+        if (res.ok) {
+          setFormState("success");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+          const data = await res.json();
+          setErrorMsg(data?.errors?.[0]?.message || "Submission failed. Please try again.");
+          setFormState("error");
+        }
+      } catch {
+        setErrorMsg("Network error. Please check your connection and try again.");
+        setFormState("error");
+      }
+    } else {
+      // Fallback: open default email client with pre-filled content
+      const mailtoLink = `mailto:support@aratbazar.com?subject=${encodeURIComponent(
+        formData.subject
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      )}`;
+      window.location.href = mailtoLink;
+      setFormState("success");
+    }
   };
 
   return (
@@ -58,7 +99,7 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div className="rounded-2xl border border-slate-800 bg-[#0c121e] p-6 md:col-span-2">
-          {submitted ? (
+          {formState === "success" ? (
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-4">
                 <CheckCircle2 className="h-8 w-8" />
@@ -68,7 +109,7 @@ export default function ContactPage() {
                 Thank you for contacting AratBazar. Our editorial and support team will review your inquiry within 24 business hours.
               </p>
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={() => setFormState("idle")}
                 className="mt-6 rounded-lg bg-slate-800 px-4 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-700"
               >
                 Send Another Inquiry
@@ -76,16 +117,24 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {formState === "error" && (
+                <div className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs text-red-400">
+                  <AlertCircle className="h-4 w-4 shrink-0" />
+                  <span>{errorMsg || "Something went wrong. Please try again."}</span>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label className="block text-xs font-medium text-slate-300 mb-1">Full Name</label>
                   <input
                     type="text"
                     required
+                    disabled={formState === "loading"}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Trader Name"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -93,10 +142,11 @@ export default function ContactPage() {
                   <input
                     type="email"
                     required
+                    disabled={formState === "loading"}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="name@domain.com"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -106,10 +156,11 @@ export default function ContactPage() {
                 <input
                   type="text"
                   required
+                  disabled={formState === "loading"}
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="e.g. Partnership, Market Data Feedback, Ad Placement"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
                 />
               </div>
 
@@ -118,19 +169,30 @@ export default function ContactPage() {
                 <textarea
                   rows={4}
                   required
+                  disabled={formState === "loading"}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Detail your inquiry..."
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="flex items-center justify-center space-x-2 rounded-xl bg-emerald-500 px-6 py-2.5 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20"
+                disabled={formState === "loading"}
+                className="flex items-center justify-center space-x-2 rounded-xl bg-emerald-500 px-6 py-2.5 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <Send className="h-3.5 w-3.5" />
-                <span>Submit Inquiry</span>
+                {formState === "loading" ? (
+                  <>
+                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-3.5 w-3.5" />
+                    <span>Submit Inquiry</span>
+                  </>
+                )}
               </button>
             </form>
           )}
@@ -139,3 +201,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
