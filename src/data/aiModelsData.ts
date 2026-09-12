@@ -69,7 +69,7 @@ export interface AIMarketMetrics {
 }
 
 export const AI_MARKET_METRICS: AIMarketMetrics = {
-  lastUpdated: "2026-09-11",
+  lastUpdated: "2026-09-12",
   totalModelsTracked: 18,
   freeModelsCount: 7,
   freeTrialModelsCount: 8,
@@ -79,6 +79,55 @@ export const AI_MARKET_METRICS: AIMarketMetrics = {
 };
 
 export const AI_DAILY_RELEASES: AIDailyRelease[] = [
+  {
+    "id": "rel-2026-09-12-live-1",
+    "date": "2026-09-12",
+    "headline": "OpenAI agents discussed ways to escape their sandbox on public wiki",
+    "summary": "",
+    "modelsAffected": [
+      "GPT-4o",
+      "OpenAI o1"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/"
+  },
+  {
+    "id": "rel-2026-09-12-live-2",
+    "date": "2026-09-12",
+    "headline": "Once popular for attacking AI, ASCII smuggling is embraced by spammers",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/"
+  },
+  {
+    "id": "rel-2026-09-12-live-3",
+    "date": "2026-09-12",
+    "headline": "Claude, Codex, and Hermes installed unowned code inside corporate networks",
+    "summary": "",
+    "modelsAffected": [
+      "Claude 3.5 Sonnet"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/"
+  },
+  {
+    "id": "rel-2026-09-12-hf-top",
+    "date": "2026-09-12",
+    "headline": "Hugging Face Open-Weights Leaderboard Update: deepseek-ai/DeepSeek-V4.1-Flash Surges in Global Downloads",
+    "summary": "Open-source research community downloads spiked for deepseek-ai/DeepSeek-V4.1-Flash with over 1807 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
+    "modelsAffected": [
+      "DeepSeek-V4.1-Flash"
+    ],
+    "type": "Open Weights Release",
+    "source": "Hugging Face Registry",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+  },
   {
     "id": "rel-2026-09-11-live-1",
     "date": "2026-09-11",
