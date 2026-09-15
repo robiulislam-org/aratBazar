@@ -120,6 +120,55 @@ export const AI_DAILY_RELEASES: AIDailyRelease[] = [
     "id": "rel-2026-09-15-hf-top",
     "date": "2026-09-15",
     "headline": "Hugging Face Open-Weights Leaderboard Update: deepseek-ai/DeepSeek-V4.1-Flash Surges in Global Downloads",
+    "summary": "Open-source research community downloads spiked for deepseek-ai/DeepSeek-V4.1-Flash with over 2634 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
+    "modelsAffected": [
+      "DeepSeek-V4.1-Flash"
+    ],
+    "type": "Open Weights Release",
+    "source": "Hugging Face Registry",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+  },
+  {
+    "id": "rel-2026-09-15-live-1",
+    "date": "2026-09-15",
+    "headline": "AI bots &quot;Timmy,&quot; &quot;Ren,&quot; and &quot;Jackie&quot; are flooding social media with slop",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/"
+  },
+  {
+    "id": "rel-2026-09-15-live-2",
+    "date": "2026-09-15",
+    "headline": "OpenAI agents discussed ways to escape their sandbox on public wiki",
+    "summary": "",
+    "modelsAffected": [
+      "GPT-4o",
+      "OpenAI o1"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/"
+  },
+  {
+    "id": "rel-2026-09-15-live-3",
+    "date": "2026-09-15",
+    "headline": "Once popular for attacking AI, ASCII smuggling is embraced by spammers",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/"
+  },
+  {
+    "id": "rel-2026-09-15-hf-top",
+    "date": "2026-09-15",
+    "headline": "Hugging Face Open-Weights Leaderboard Update: deepseek-ai/DeepSeek-V4.1-Flash Surges in Global Downloads",
     "summary": "Open-source research community downloads spiked for deepseek-ai/DeepSeek-V4.1-Flash with over 2585 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
     "modelsAffected": [
       "DeepSeek-V4.1-Flash"
