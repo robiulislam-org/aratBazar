@@ -3,7 +3,7 @@ import React from "react";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
-import TickerTape from "@/components/TickerTape";
+import LiveSourcingTicker from "@/components/LiveSourcingTicker";
 import Footer from "@/components/Footer";
 
 export const viewport: Viewport = {
@@ -16,25 +16,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://aratbazar.com"),
   title: {
-    default: "AratBazar | Global Financial Terminal, Real-Time Trading & Macro Analytics",
-    template: "%s | AratBazar Financial Intelligence",
+    default: "AratBazar | Global Winning Products & Wholesale Sourcing Intelligence",
+    template: "%s | AratBazar Wholesale & Sourcing Intelligence",
   },
   description:
-    "AratBazar (aratbazar.com) is the premier institutional market intelligence terminal. Featuring real-time stock, crypto, forex, and commodity analytics, macro economic calendar, position calculators, and daily market dispatches.",
+    "AratBazar (aratbazar.com) is the premier global winning product hunter and wholesale sourcing intelligence hub. Discover high-margin viral products, lowest factory supplier rates, profit calculators, and market research for smart e-commerce sellers.",
   keywords: [
-    "trading news",
-    "stock market live",
-    "bitcoin price analysis",
-    "crypto terminal",
-    "forex rates live",
-    "economic calendar",
-    "position size calculator",
+    "winning products",
+    "viral gadgets",
+    "dropshipping winning products",
+    "wholesale sourcing hub",
+    "lowest price supplier",
+    "aliexpress factory direct",
+    "dropship profit calculator",
     "aratbazar",
-    "gold spot price",
-    "sp500 live analysis",
-    "institutional market intelligence",
-    "financial news today",
-    "macro economics daily",
+    "e-commerce product hunting",
+    "tiktok viral finds",
+    "high margin products",
+    "b2b sourcing",
+    "cheap useful gadgets"
   ],
   authors: [{ name: "AratBazar Intelligence Team", url: "https://aratbazar.com/about" }],
   creator: "AratBazar Research",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "AratBazar | Global Financial Terminal & Macro Intelligence",
+    title: "AratBazar | Global Winning Products & Wholesale Sourcing Hub",
     description:
-      "Real-time institutional market intelligence, live interactive charting, macroeconomic calendar, and algorithmic risk management for professional traders.",
+      "Discover high-margin viral products, factory supplier quotes, profit margin analytics, and video ad hooks for e-commerce entrepreneurs.",
     url: "https://aratbazar.com",
     siteName: "AratBazar",
     locale: "en_US",
@@ -57,15 +57,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AratBazar - Global Financial Terminal",
+        alt: "AratBazar - Global Sourcing & Winning Products Hub",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AratBazar | Institutional Market Terminal",
+    title: "AratBazar | Global Winning Products & Wholesale Hub",
     description:
-      "Live charts, crypto, stocks, commodities, economic calendar, and daily intelligence reports.",
+      "Find viral winning products, lowest factory prices, profit calculators, and supplier links.",
     creator: "@aratbazar",
   },
   robots: {
@@ -101,10 +101,10 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "AratBazar",
     url: "https://aratbazar.com",
-    description: "Institutional-grade financial terminal, macroeconomic news, and real-time market analytics.",
+    description: "Global winning product hunter, wholesale sourcing quotes, and e-commerce seller intelligence.",
     publisher: {
       "@type": "Organization",
-      name: "AratBazar Intelligence",
+      name: "AratBazar Sourcing Intelligence",
       url: "https://aratbazar.com",
       logo: {
         "@type": "ImageObject",
@@ -113,7 +113,7 @@ export default function RootLayout({
     },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://aratbazar.com/news?q={search_term_string}",
+      target: "https://aratbazar.com/?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -125,7 +125,7 @@ export default function RootLayout({
     url: "https://aratbazar.com",
     logo: "https://aratbazar.com/favicon.ico",
     description:
-      "AratBazar is an independent institutional financial intelligence terminal providing real-time market analytics, algorithmic trading signals, macroeconomic data, and financial news for global traders.",
+      "AratBazar is an independent global product research and wholesale sourcing directory connecting online sellers and shoppers to verified lowest-price manufacturers.",
     foundingDate: "2024",
     contactPoint: {
       "@type": "ContactPoint",
@@ -136,17 +136,6 @@ export default function RootLayout({
     sameAs: [
       "https://aratbazar.com",
     ],
-  };
-
-  const siteNavigationSchema = {
-    "@context": "https://schema.org",
-    "@type": "SiteLinksSearchBox",
-    url: "https://aratbazar.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://aratbazar.com/news?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
@@ -164,10 +153,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
         />
         {/* Google AdSense Script */}
         {adsenseClientId && (
@@ -206,7 +191,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
         <div>
           <Header />
-          <TickerTape />
+          <LiveSourcingTicker />
           <main>{children}</main>
         </div>
         <Footer />

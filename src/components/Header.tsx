@@ -1,56 +1,59 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Activity, BarChart3, Calculator, Calendar, Newspaper, Shield, Menu, X, ArrowUpRight, Radar, Gauge, BookOpen, Coins, BrainCircuit, Sparkles } from "lucide-react";
-import { getWallStreetSession, MarketSessionInfo } from "@/utils/marketHours";
+import { useState } from "react";
+import { 
+  ShoppingBag, 
+  Flame, 
+  Percent, 
+  Calculator, 
+  Search, 
+  Menu, 
+  X, 
+  ShieldCheck, 
+  Sparkles, 
+  ChevronDown, 
+  ExternalLink 
+} from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [session, setSession] = useState<MarketSessionInfo>(getWallStreetSession());
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
 
-  useEffect(() => {
-    setSession(getWallStreetSession());
-    const interval = setInterval(() => {
-      setSession(getWallStreetSession());
-    }, 60000);
-    return () => clearInterval(interval);
-  }, []);
+  const categories = [
+    { name: "Tech & Smart Gadgets", slug: "tech-gadgets" },
+    { name: "Home & Kitchen Innovations", slug: "home-kitchen" },
+    { name: "Health & Beauty", slug: "beauty-health" },
+    { name: "Car & Outdoor Gear", slug: "car-outdoor" },
+    { name: "Everyday Utilities", slug: "tools-utility" },
+    { name: "Fitness & Lifestyle", slug: "fitness-lifestyle" },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#090d16]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/95 backdrop-blur-md">
       {/* Top utility sub-header */}
-      <div className="hidden border-b border-slate-800/80 px-4 py-1.5 text-xs text-slate-400 sm:block">
+      <div className="hidden border-b border-slate-800/60 px-4 py-1.5 text-[11px] text-slate-400 md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <span
-              className={`flex items-center gap-1.5 font-medium ${
-                session.isOpen ? "text-emerald-400" : "text-rose-400"
-              }`}
-            >
-              <span
-                className={`h-2 w-2 rounded-full ${session.dotColor} ${
-                  session.isOpen ? "animate-pulse" : ""
-                }`}
-              ></span>
-              {session.isOpen ? (
-                <span>WALL STREET: OPEN (Active Session)</span>
-              ) : (
-                <span>WALL STREET: {session.session === "PRE_MARKET" ? "PRE-MARKET" : session.session === "AFTER_HOURS" ? "AFTER-HOURS" : "CLOSED"}</span>
-              )}
+          <div className="flex items-center space-x-3">
+            <span className="flex items-center gap-1.5 font-bold text-emerald-400">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              ARATBAZAR GLOBAL SOURCING HUB:
             </span>
-            <span className="text-slate-600">|</span>
-            <span>CRYPTO: 24/7 GLOBAL ORDERBOOK</span>
-            <span className="text-slate-600">|</span>
-            <span className="text-slate-400">SERVER TIME: UTC+00:00</span>
+            <span>Real factory wholesale prices verified daily across AliExpress, 1688, CJ & Temu</span>
           </div>
-          <div className="flex items-center space-x-3 text-slate-400">
+
+          <div className="flex items-center space-x-4 text-slate-400">
+            <span className="text-emerald-400 font-semibold">Average Margin: 78.4%</span>
+            <span className="text-slate-700">|</span>
             <Link href="/disclaimer" className="transition hover:text-emerald-400">
-              Risk Disclosure
+              FTC Affiliate Disclosure
             </Link>
-            <span>•</span>
+            <span className="text-slate-700">|</span>
             <Link href="/about" className="transition hover:text-emerald-400">
-              Editorial Policy
+              About AratBazar
             </Link>
           </div>
         </div>
@@ -58,224 +61,144 @@ export default function Header() {
 
       {/* Main navigation */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center space-x-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-700 shadow-lg shadow-emerald-500/20">
-            <Activity className="h-5 w-5 text-white" />
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            <ShoppingBag className="w-5 h-5" />
           </div>
           <div>
-            <div className="flex items-center space-x-1.5">
-              <span className="text-xl font-black tracking-wider text-white">ARAT<span className="text-emerald-400">BAZAR</span></span>
-              <span className="rounded bg-emerald-950/80 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-400 border border-emerald-800/50">PRO</span>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+                Arat<span className="text-emerald-400">Bazar</span>
+              </span>
+              <span className="text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/80">
+                B2B Sourcing
+              </span>
             </div>
-            <p className="text-[10px] font-medium tracking-tight text-slate-400">GLOBAL FINANCIAL TERMINAL</p>
+            <span className="text-[10px] text-slate-400 hidden sm:block leading-none">
+              Winning Products & Wholesale Intelligence
+            </span>
           </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center space-x-1 md:flex">
+        {/* Desktop Nav Links */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 text-xs font-bold text-slate-300">
           <Link
-            href="/"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            href="/#winning-products"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-emerald-400 transition-colors"
           >
-            <BarChart3 className="h-4 w-4 text-emerald-400" />
-            <span>Markets</span>
+            <Flame className="w-4 h-4 text-amber-400" />
+            <span>Viral Winning Deals</span>
           </Link>
 
-          <Link
-            href="/signals"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 transition hover:bg-emerald-500/20"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
-            </span>
-            <span>Signals</span>
-          </Link>
+          {/* Categories Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setCategoriesOpen(!categoriesOpen)}
+              onMouseEnter={() => setCategoriesOpen(true)}
+              className="flex items-center gap-1 px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-emerald-400 transition-colors"
+            >
+              <span>Categories</span>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </button>
 
-          <Link
-            href="/ai"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 transition hover:bg-emerald-500/20"
-          >
-            <BrainCircuit className="h-4 w-4 text-emerald-400" />
-            <span>AI Hub</span>
-            <span className="rounded bg-emerald-500/30 px-1 py-0.5 text-[9px] font-black text-emerald-300">FREE</span>
-          </Link>
-
-          <Link
-            href="/currency-strength"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
-          >
-            <Gauge className="h-4 w-4 text-emerald-400" />
-            <span>FX Meter</span>
-          </Link>
-
-          <Link
-            href="/exchange"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-amber-400/90 transition hover:bg-slate-800 hover:text-amber-300"
-          >
-            <Coins className="h-4 w-4 text-amber-400" />
-            <span>Exchange & Gold</span>
-          </Link>
-
-          <Link
-            href="/journal"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
-          >
-            <BookOpen className="h-4 w-4 text-cyan-400" />
-            <span>Journal</span>
-          </Link>
-
-          <Link
-            href="/calendar"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
-          >
-            <Calendar className="h-4 w-4 text-teal-400" />
-            <span>Calendar</span>
-          </Link>
+            {categoriesOpen && (
+              <div 
+                onMouseLeave={() => setCategoriesOpen(false)}
+                className="absolute top-full left-0 mt-1 w-56 rounded-2xl bg-slate-900 border border-slate-800 p-2 shadow-2xl z-50"
+              >
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/category/${cat.slug}`}
+                    onClick={() => setCategoriesOpen(false)}
+                    className="block px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-xl transition-colors"
+                  >
+                    {cat.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           <Link
             href="/tools"
-            className="flex items-center space-x-1.5 rounded-md px-2.5 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-emerald-400 transition-colors"
           >
-            <Calculator className="h-4 w-4 text-amber-400" />
-            <span>Tools</span>
-          </Link>
-
-          <Link
-            href="/news"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
-          >
-            <Newspaper className="h-4 w-4 text-cyan-400" />
-            <span>Intelligence</span>
+            <Calculator className="w-4 h-4 text-emerald-400" />
+            <span>Profit Margin Calculator</span>
           </Link>
 
           <Link
             href="/about"
-            className="flex items-center space-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-emerald-400 transition-colors"
           >
-            <Shield className="h-4 w-4 text-slate-400" />
-            <span>About</span>
+            <ShieldCheck className="w-4 h-4 text-blue-400" />
+            <span>Sourcing Standards</span>
           </Link>
         </nav>
 
-        {/* Right Action */}
-        <div className="hidden items-center space-x-3 sm:flex">
+        {/* Right CTA */}
+        <div className="hidden sm:flex items-center gap-3">
           <Link
-            href="/tools"
-            className="inline-flex items-center space-x-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-400 shadow-sm transition hover:bg-emerald-500/20"
+            href="/#winning-products"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-emerald-500/20"
           >
-            <span>Risk Calculator</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Discover Products</span>
           </Link>
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
+        >
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="border-b border-slate-800 bg-[#0c121e] px-4 py-3 md:hidden">
-          <div className="flex flex-col space-y-2">
-            <Link
-              href="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              Markets & Overview
-            </Link>
-            <Link
-              href="/signals"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20"
-            >
-              <span className="flex items-center gap-2">
-                <Radar className="h-4 w-4" />
-                Live Trade Signals (30m)
-              </span>
-              <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
-                LIVE
-              </span>
-            </Link>
-            <Link
-              href="/ai"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20"
-            >
-              <span className="flex items-center gap-2">
-                <BrainCircuit className="h-4 w-4 text-emerald-400" />
-                AI Models & Free Tools Hub
-              </span>
-              <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] text-slate-950 font-black">
-                NEW
-              </span>
-            </Link>
-            <Link
-              href="/currency-strength"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400 flex items-center gap-2"
-            >
-              <Gauge className="h-4 w-4 text-emerald-400" />
-              <span>Currency Strength Meter</span>
-            </Link>
-            <Link
-              href="/exchange"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-amber-400 hover:bg-slate-800 flex items-center gap-2"
-            >
-              <Coins className="h-4 w-4 text-amber-400" />
-              <span>Currency Rates & Gold</span>
-            </Link>
-            <Link
-              href="/journal"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400 flex items-center gap-2"
-            >
-              <BookOpen className="h-4 w-4 text-cyan-400" />
-              <span>Private Trade Journal</span>
-            </Link>
-            <Link
-              href="/calendar"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              Macro Economic Calendar
-            </Link>
-            <Link
-              href="/tools"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              Position Size & ROI Calculators
-            </Link>
-            <Link
-              href="/news"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              Market Intelligence & News
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              About & Editorial Policy
-            </Link>
-            <Link
-              href="/disclaimer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400"
-            >
-              Financial Risk Disclaimer
-            </Link>
+        <div className="lg:hidden border-t border-slate-800/80 bg-slate-950 p-4 space-y-3">
+          <Link
+            href="/#winning-products"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900 text-sm font-bold text-slate-200"
+          >
+            <Flame className="w-4 h-4 text-amber-400" />
+            <span>Viral Winning Deals</span>
+          </Link>
+
+          <Link
+            href="/tools"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900 text-sm font-bold text-slate-200"
+          >
+            <Calculator className="w-4 h-4 text-emerald-400" />
+            <span>Profit Margin Calculator</span>
+          </Link>
+
+          <div className="p-3 bg-slate-900/60 rounded-xl space-y-2">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Browse Categories:</span>
+            <div className="grid grid-cols-2 gap-2">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/category/${cat.slug}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-semibold text-slate-300 hover:text-emerald-400 py-1"
+                >
+                  {cat.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About AratBazar</Link>
+            <Link href="/disclaimer" onClick={() => setMobileMenuOpen(false)}>Affiliate Policy</Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
       )}

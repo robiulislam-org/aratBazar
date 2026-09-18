@@ -1,9 +1,10 @@
-import { ShieldAlert, AlertTriangle, CheckCircle, HelpCircle } from "lucide-react";
+import { ShieldAlert, AlertTriangle, CheckCircle, HelpCircle, DollarSign } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Financial Disclaimer & Risk Warning | AratBazar",
-  description: "Official financial disclaimer and high-risk investment disclosure for AratBazar (aratbazar.com).",
+export const metadata: Metadata = {
+  title: "FTC Affiliate Disclosure & Sourcing Disclaimer | AratBazar",
+  description: "Official FTC affiliate compensation disclosure and sourcing pricing disclaimer for AratBazar (aratbazar.com).",
 };
 
 export default function DisclaimerPage() {
@@ -12,55 +13,65 @@ export default function DisclaimerPage() {
       <div className="border-b border-slate-800 pb-6">
         <div className="inline-flex items-center space-x-2 text-xs font-semibold text-amber-400 mb-2">
           <ShieldAlert className="h-4 w-4" />
-          <span>STATUTORY FINANCIAL DISCLOSURE</span>
+          <span>STATUTORY DISCLOSURE & FTC COMPLIANCE</span>
         </div>
-        <h1 className="text-3xl font-extrabold text-white">Financial Disclaimer & Risk Disclosure</h1>
+        <h1 className="text-3xl font-extrabold text-white">FTC Affiliate & Sourcing Disclaimer</h1>
         <p className="mt-2 text-slate-400 text-sm">
-          Please read this disclosure thoroughly before utilizing any information or analytical tools on <strong>aratbazar.com</strong>.
+          Please read this disclosure thoroughly to understand how <strong>aratbazar.com</strong> generates revenue and provides sourcing data.
         </p>
       </div>
 
       <div className="mt-8 space-y-7 text-slate-300 text-sm leading-relaxed">
-        <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-6">
-          <div className="flex items-center space-x-2.5 font-bold text-amber-400 text-base">
-            <AlertTriangle className="h-5 w-5" />
-            <span>High-Risk Investment Warning</span>
+        {/* FTC Highlight */}
+        <div className="rounded-3xl border border-emerald-500/30 bg-emerald-950/30 p-6 md:p-8">
+          <div className="flex items-center space-x-2.5 font-bold text-emerald-400 text-base">
+            <DollarSign className="h-5 w-5" />
+            <span>FTC Affiliate Compensation Disclosure</span>
           </div>
-          <p className="mt-3 text-slate-300">
-            Trading financial instruments, including but not limited to foreign exchange (Forex), cryptocurrencies, options, futures, equities, and commodities, carries a high level of risk and may result in the substantial or complete loss of your invested capital. 
+          <p className="mt-3 text-slate-300 leading-relaxed">
+            In compliance with the Federal Trade Commission (FTC) guidelines, please assume that certain links pointing to third-party marketplaces (such as AliExpress, CJ Dropshipping, Temu, Amazon, and Alibaba) are affiliate referral links.
           </p>
-          <p className="mt-2 text-slate-300">
-            You should never invest money that you cannot afford to lose. The leverage typically offered in forex and CFD trading can work both to your advantage and disadvantage.
+          <p className="mt-2 text-slate-300 leading-relaxed">
+            If you click on these links and initiate a purchase or place a sample order, AratBazar may receive a small affiliate commission from the respective marketplace at <strong>zero extra cost to you</strong>. These commissions help fund our ongoing server infrastructure, web crawlers, and automated daily product research.
           </p>
         </div>
 
-        <section className="rounded-2xl border border-slate-800 bg-[#0c121e] p-6">
+        {/* Pricing Fluctuation */}
+        <section className="rounded-3xl border border-slate-800 bg-[#0c121e] p-6 md:p-8">
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
             <CheckCircle className="h-4 w-4 text-emerald-400" />
-            1. No Financial Advice
+            1. Supplier Pricing & Stock Fluctuations
           </h2>
-          <p className="mt-3 text-slate-300">
-            The content, charts, calculators, algorithmic metrics, market wraps, and opinions published on <strong>AratBazar</strong> are intended solely for general informational, educational, and analytical purposes. Nothing contained on this website constitutes investment advice, a financial recommendation, or an endorsement of any broker, exchange, or security.
+          <p className="mt-3 text-slate-300 leading-relaxed">
+            The factory sourcing costs, shipping estimates, and retail benchmark prices displayed on AratBazar represent snapshot estimates collected at the time of publication or automated indexing.
           </p>
-          <p className="mt-2 text-slate-300">
-            You are strongly encouraged to seek independent financial advice from a licensed financial advisor or registered investment professional before making any investment or speculative trading decisions.
+          <p className="mt-2 text-slate-300 leading-relaxed">
+            Independent third-party manufacturers may alter their unit pricing, minimum order quantities (MOQ), coupons, or shipping options at their discretion. AratBazar does not own, manufacture, inspect, or directly dispatch any physical inventory. Always verify current prices and seller feedback on the merchant's checkout page before placing orders.
           </p>
         </section>
 
-        <section className="rounded-2xl border border-slate-800 bg-[#0c121e] p-6">
+        {/* E-Commerce Earnings Warning */}
+        <section className="rounded-3xl border border-slate-800 bg-[#0c121e] p-6 md:p-8">
+          <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <AlertTriangle className="h-4 w-4 text-amber-400" />
+            2. Business Earnings & Marketing Disclaimers
+          </h2>
+          <p className="mt-3 text-slate-300 leading-relaxed">
+            The potential profit margins and calculator projections showcased across AratBazar are mathematical models based on industry averages and competitor retail benchmarks. They do <strong>not</strong> constitute a guarantee of personal income, profit, or sales success.
+          </p>
+          <p className="mt-2 text-slate-300 leading-relaxed">
+            Your actual e-commerce profitability depends on diverse factors beyond our control, including your advertising spend, video creative quality, customer service, tax obligations, and store conversion optimization.
+          </p>
+        </section>
+
+        {/* Intellectual Property */}
+        <section className="rounded-3xl border border-slate-800 bg-[#0c121e] p-6 md:p-8">
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
             <HelpCircle className="h-4 w-4 text-cyan-400" />
-            2. Data Accuracy & Latency
+            3. Intellectual Property & Trademarks
           </h2>
-          <p className="mt-3 text-slate-300">
-            While AratBazar endeavors to maintain real-time and accurate financial data streams, we do not guarantee that the pricing, volume, macroeconomic releases, or calculations will be error-free, uninterrupted, or perfectly synchronized with interbank exchanges. AratBazar and its affiliates accept no liability for any direct or indirect loss or damage arising from reliance on data presented on this website.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-slate-800 bg-[#0c121e] p-6">
-          <h2 className="text-lg font-bold text-white">3. Third-Party Links & Advertising</h2>
-          <p className="mt-3 text-slate-300">
-            AratBazar may contain hyperlinks to external third-party websites or display advertising content supplied by Google AdSense and financial partners. We do not endorse, oversee, or assume responsibility for the content, privacy practices, or operations of third-party platforms.
+          <p className="mt-3 text-slate-300 leading-relaxed">
+            All trademarks, logos, and brand names (e.g. AliExpress, Amazon, TikTok, Temu) referenced on this platform are the property of their respective trademark holders. Reference to them does not imply endorsement, sponsorship, or direct affiliation, other than standard approved publisher/affiliate agreements.
           </p>
         </section>
       </div>

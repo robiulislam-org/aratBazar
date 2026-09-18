@@ -1,129 +1,77 @@
 import { MetadataRoute } from "next";
-import { FINANCIAL_NEWS } from "@/data/newsData";
-import { AI_MODELS } from "@/data/aiModelsData";
+import { INITIAL_PRODUCTS, CATEGORIES } from "@/data/productsData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://aratbazar.com";
   const now = new Date();
 
-  // Individual AI Model URLs — massive long-tail organic search traffic
-  const aiModelUrls = AI_MODELS.map((model) => ({
-    url: `${baseUrl}/ai/${model.slug}`,
-    lastModified: new Date(model.lastUpdated),
+  // Winning Product Dossier URLs — High search intent for buyers and sellers
+  const productUrls = INITIAL_PRODUCTS.map((prod) => ({
+    url: `${baseUrl}/product/${prod.slug}`,
+    lastModified: new Date(prod.updatedAt || now),
     changeFrequency: "daily" as const,
-    priority: 0.88,
+    priority: 0.95,
   }));
 
-  // Individual news article URLs — dynamic, high-value pages for organic traffic
-  const newsUrls = FINANCIAL_NEWS.map((article) => ({
-    url: `${baseUrl}/news/${article.slug}`,
-    lastModified: new Date(article.publishedAt),
+  // Category Landing Pages
+  const categoryUrls = CATEGORIES.map((cat) => ({
+    url: `${baseUrl}/category/${cat.slug}`,
+    lastModified: now,
     changeFrequency: "daily" as const,
-    priority: 0.88,
+    priority: 0.9,
   }));
 
   return [
-    // Homepage — highest priority, updated hourly with live market data
+    // Homepage
     {
       url: baseUrl,
       lastModified: now,
-      changeFrequency: "hourly" as const,
+      changeFrequency: "daily" as const,
       priority: 1.0,
     },
-    // Trade Signals — high-traffic, updated every 30 min via API
-    {
-      url: `${baseUrl}/signals`,
-      lastModified: now,
-      changeFrequency: "hourly" as const,
-      priority: 0.98,
-    },
-    // AI Intelligence Hub & Free Models Directory — high-traffic daily sync
-    {
-      url: `${baseUrl}/ai`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.97,
-    },
-    // News & Intelligence — updated daily with fresh articles
-    {
-      url: `${baseUrl}/news`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.95,
-    },
-    // Currency Strength Meter — updated hourly
-    {
-      url: `${baseUrl}/currency-strength`,
-      lastModified: now,
-      changeFrequency: "hourly" as const,
-      priority: 0.95,
-    },
-    // Live Currency Rates & Gold Price — updated hourly
-    {
-      url: `${baseUrl}/exchange`,
-      lastModified: now,
-      changeFrequency: "hourly" as const,
-      priority: 0.96,
-    },
-    // Economic Calendar — updated daily
-    {
-      url: `${baseUrl}/calendar`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.92,
-    },
-    // Trading Journal — stable utility page
-    {
-      url: `${baseUrl}/journal`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.90,
-    },
-    // Tools & Calculators — stable utility page
+    // Dropshipping & Seller Tools
     {
       url: `${baseUrl}/tools`,
       lastModified: now,
       changeFrequency: "weekly" as const,
-      priority: 0.90,
+      priority: 0.9,
     },
-    // About — trust/E-E-A-T page, important for AdSense
+    // About
     {
       url: `${baseUrl}/about`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: 0.75,
+      priority: 0.7,
     },
-    // Contact — required for AdSense policy compliance
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    // Privacy Policy — REQUIRED for AdSense approval
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.70,
-    },
-    // Terms of Service — required for AdSense compliance
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    // Financial Disclaimer — required by AdSense finance category policies
+    // Affiliate Disclaimer
     {
       url: `${baseUrl}/disclaimer`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: 0.70,
+      priority: 0.7,
     },
-    // Individual AI Model review & benchmark pages
-    ...aiModelUrls,
-    // Individual news articles
-    ...newsUrls,
+    // Privacy Policy
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    // Terms of Service
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    // Contact
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    ...categoryUrls,
+    ...productUrls,
   ];
 }
