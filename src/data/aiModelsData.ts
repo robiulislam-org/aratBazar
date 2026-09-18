@@ -69,7 +69,7 @@ export interface AIMarketMetrics {
 }
 
 export const AI_MARKET_METRICS: AIMarketMetrics = {
-  lastUpdated: "2026-09-17",
+  lastUpdated: "2026-09-18",
   totalModelsTracked: 18,
   freeModelsCount: 7,
   freeTrialModelsCount: 8,
@@ -79,6 +79,55 @@ export const AI_MARKET_METRICS: AIMarketMetrics = {
 };
 
 export const AI_DAILY_RELEASES: AIDailyRelease[] = [
+  {
+    "id": "rel-2026-09-18-live-1",
+    "date": "2026-09-18",
+    "headline": "AI bots &quot;Timmy,&quot; &quot;Ren,&quot; and &quot;Jackie&quot; are flooding social media with slop",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/"
+  },
+  {
+    "id": "rel-2026-09-18-live-2",
+    "date": "2026-09-18",
+    "headline": "OpenAI agents discussed ways to escape their sandbox on public wiki",
+    "summary": "",
+    "modelsAffected": [
+      "GPT-4o",
+      "OpenAI o1"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/"
+  },
+  {
+    "id": "rel-2026-09-18-live-3",
+    "date": "2026-09-18",
+    "headline": "Once popular for attacking AI, ASCII smuggling is embraced by spammers",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/"
+  },
+  {
+    "id": "rel-2026-09-18-hf-top",
+    "date": "2026-09-18",
+    "headline": "Hugging Face Open-Weights Leaderboard Update: Edge0/Edge0-35B-A3B-preview Surges in Global Downloads",
+    "summary": "Open-source research community downloads spiked for Edge0/Edge0-35B-A3B-preview with over 3314 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
+    "modelsAffected": [
+      "Edge0-35B-A3B-preview"
+    ],
+    "type": "Open Weights Release",
+    "source": "Hugging Face Registry",
+    "url": "https://huggingface.co/Edge0/Edge0-35B-A3B-preview"
+  },
   {
     "id": "rel-2026-09-17-live-1",
     "date": "2026-09-17",
