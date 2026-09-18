@@ -849,7 +849,7 @@ export const INITIAL_PRODUCTS: ProductItem[] = [
     isFeatured: true,
     addedAt: "2026-09-17T00:00:00Z",
     updatedAt: "2026-09-18T14:30:00Z"
-  }
+  },
   {
     id: "prod-011",
     slug: "cordless-electric-cleaning-spin-scrubber",

@@ -48,7 +48,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/tools" className="hover:text-emerald-400 transition text-emerald-400 font-semibold">🧮 Dropship Profit Calculator</Link></li>
               <li><Link href="/tools#breakeven-roas" className="hover:text-emerald-400 transition">Breakeven ROAS Finder</Link></li>
-              <li><Link href="/#winning-products" className="hover:text-emerald-400 transition">High Margin (>80%) Deals</Link></li>
+              <li><Link href="/#winning-products" className="hover:text-emerald-400 transition">High Margin (&gt;80%) Deals</Link></li>
               <li><Link href="/about" className="hover:text-emerald-400 transition">Factory Sourcing Standards</Link></li>
             </ul>
           </div>
