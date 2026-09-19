@@ -120,6 +120,55 @@ export const AI_DAILY_RELEASES: AIDailyRelease[] = [
     "id": "rel-2026-09-19-hf-top",
     "date": "2026-09-19",
     "headline": "Hugging Face Open-Weights Leaderboard Update: prism-ml/Ternary-Bonsai-2-27B-gguf Surges in Global Downloads",
+    "summary": "Open-source research community downloads spiked for prism-ml/Ternary-Bonsai-2-27B-gguf with over 1160 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
+    "modelsAffected": [
+      "Ternary-Bonsai-2-27B-gguf"
+    ],
+    "type": "Open Weights Release",
+    "source": "Hugging Face Registry",
+    "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf"
+  },
+  {
+    "id": "rel-2026-09-19-live-1",
+    "date": "2026-09-19",
+    "headline": "LLMs respond differently to harmful prompts when AI watermarking is used",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/"
+  },
+  {
+    "id": "rel-2026-09-19-live-2",
+    "date": "2026-09-19",
+    "headline": "AI bots &quot;Timmy,&quot; &quot;Ren,&quot; and &quot;Jackie&quot; are flooding social media with slop",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/"
+  },
+  {
+    "id": "rel-2026-09-19-live-3",
+    "date": "2026-09-19",
+    "headline": "OpenAI agents discussed ways to escape their sandbox on public wiki",
+    "summary": "",
+    "modelsAffected": [
+      "GPT-4o",
+      "OpenAI o1"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/"
+  },
+  {
+    "id": "rel-2026-09-19-hf-top",
+    "date": "2026-09-19",
+    "headline": "Hugging Face Open-Weights Leaderboard Update: prism-ml/Ternary-Bonsai-2-27B-gguf Surges in Global Downloads",
     "summary": "Open-source research community downloads spiked for prism-ml/Ternary-Bonsai-2-27B-gguf with over 1128 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
     "modelsAffected": [
       "Ternary-Bonsai-2-27B-gguf"
