@@ -10,9 +10,12 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  // Prerender all 120 verified winning products at build time for instant loading and 100% SSG coverage.
-  return INITIAL_PRODUCTS.map((product) => ({
+  // Prerender the top 240 featured winning products at build time for instant loading.
+  // The remaining products are rendered on-demand and cached via Next.js ISR (Incremental Static Regeneration).
+  return INITIAL_PRODUCTS.slice(0, 240).map((product) => ({
     slug: product.slug,
   }));
 }

@@ -93,6 +93,8 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
                 const target = e.currentTarget;
                 if (images[1] && target.src !== images[1]) {
                   target.src = images[1];
+                } else if (!target.src.includes("unsplash.com")) {
+                  target.src = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80";
                 }
               }}
             />
