@@ -89,6 +89,12 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
               src={images[activeImageIndex] || images[0]}
               alt={title}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (images[1] && target.src !== images[1]) {
+                  target.src = images[1];
+                }
+              }}
             />
             {/* Discount Badge */}
             <div className="absolute top-4 left-4 flex flex-col gap-2">

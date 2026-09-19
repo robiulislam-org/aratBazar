@@ -38,7 +38,7 @@ export default function CategoryNavGrid({ categories }: CategoryNavGridProps) {
       <div className="flex items-center justify-between mb-4">
         <div>
           <h2 className="text-sm sm:text-base font-extrabold text-white">
-            Explore 500+ Uncommon Product Categories
+            Explore 5,000+ Uncommon Products Across Categories
           </h2>
           <p className="text-[11px] text-slate-400">
             Click any niche to filter verified viral products

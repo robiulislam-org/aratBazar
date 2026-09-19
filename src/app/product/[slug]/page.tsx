@@ -10,15 +10,19 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
+const PRODUCT_MAP = new Map(INITIAL_PRODUCTS.map((p) => [p.slug, p]));
+
 export async function generateStaticParams() {
-  return INITIAL_PRODUCTS.map((product) => ({
+  // Prerender top 150 daily picks & featured products at build time;
+  // remaining 5,000+ products are rendered on-demand and cached dynamically.
+  return INITIAL_PRODUCTS.slice(0, 150).map((product) => ({
     slug: product.slug,
   }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = INITIAL_PRODUCTS.find((p) => p.slug === slug);
+  const product = PRODUCT_MAP.get(slug);
 
   if (!product) {
     return {
@@ -85,7 +89,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = INITIAL_PRODUCTS.find((p) => p.slug === slug);
+  const product = PRODUCT_MAP.get(slug);
 
   if (!product) {
     notFound();

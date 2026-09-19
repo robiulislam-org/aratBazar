@@ -47,6 +47,12 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (images[1] && target.src !== images[1]) {
+                target.src = images[1];
+              }
+            }}
           />
         </Link>
 

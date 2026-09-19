@@ -47,7 +47,7 @@ export default function Header() {
               </span>
               GLOBAL WHOLESALE ARAT:
             </span>
-            <span>Over 500+ uncommon problem-solving products at direct factory supplier rates</span>
+            <span>Over 5,000+ uncommon problem-solving products at direct factory supplier rates</span>
           </div>
 
           <div className="flex items-center space-x-4 text-slate-400">
