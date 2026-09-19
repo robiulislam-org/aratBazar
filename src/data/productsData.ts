@@ -3575,7 +3575,187 @@ function generateAllProducts(): ProductItem[] {
         const reviewsCount = 500 + ((v * 370 + globalIndex * 13) % 9500);
 
         const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
-        const trendStatus = trendStatuses[(v + globalIndex) % trendStatuses.length];
+        const trendStatus = trendStatuses[(v + globalIndex) % trendStatuses.length  {
+    id: "prod-011",
+    slug: "cordless-electric-cleaning-spin-scrubber",
+    title: "Cordless Electric Power Spin Scrubber with Extension Handle",
+    tagline: "Cleans bathroom tiles, tubs, grout, and sinks without bending or manual elbow grease.",
+    description: "The viral cleaning gadget taking over social media. High-torque 360-degree rotating brush heads effortlessly eliminate stubborn calcium, soap scum, and grime. Extends up to 43 inches to save your back and knees.",
+    category: "home-kitchen",
+    categoryName: "Home & Kitchen Innovations",
+    images: [
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80"
+    ],
+    sourcing: {
+      lowestPrice: 12.80,
+      currency: "$",
+      supplierName: "AliExpress Cleaning Warehouse",
+      supplierUrl: "https://www.aliexpress.com/wholesale?SearchText=electric%20spin%20scrubber%20cordless%20power%20brush%20bathroom",
+      moq: "1 unit",
+      shippingTimeEst: "8-12 business days",
+      secondarySuppliers: [
+        {
+          name: "CJ Dropshipping Direct",
+          price: 13.40,
+          currency: "$",
+          url: "https://cjdropshipping.com/search/electric%20spin%20scrubber.html",
+          moq: "1 unit",
+          shippingEst: "8-14 days"
+        },
+        {
+          name: "Temu Sourcing Hub",
+          price: 13.70,
+          currency: "$",
+          url: "https://www.temu.com/search_result.html?search_key=cordless%20power%20spin%20scrubber",
+          moq: "1 unit",
+          shippingEst: "7-12 days"
+        }
+      ]
+    },
+    market: {
+      retailPrice: 49.99,
+      currency: "$",
+      potentialProfit: 37.19,
+      profitMarginPercent: 74.4,
+      competitorStoreName: "Amazon / TikTok Shop",
+      competitorStoreUrl: "https://www.amazon.com/s?k=electric%20spin%20scrubber%20cordless%20power%20brush%20bathroom",
+      recommendedAdSpend: 7.00,
+      estimatedNetProfit: 30.19
+    },
+    analytics: {
+      trendScore: 9.7,
+      trendStatus: "🔥 Viral Now",
+      monthlySalesVolumeEst: "48,000+ units",
+      competitionLevel: "Medium",
+      tiktokViews: "112.4M views",
+      socialBuzz: "Very High"
+    },
+    businessGuide: {
+      whyItSells: [
+        "Deeply satisfying cleaning transformation clips perform insanely well on TikTok and Facebook.",
+        "Solves real physical pain: no more crawling on hands and knees scrubbing bathroom grout.",
+        "High perceived retail value: easily commands $50+ while sourced for under $13."
+],
+      targetAudience: [
+        "Homeowners and apartment renters",
+        "Seniors and people with lower back or knee issues",
+        "CleanTok and organization enthusiasts"
+],
+      adHooks: [
+        "I literally haven't scrubbed my bathroom by hand in 6 months.",
+        "If you hate cleaning your shower, this $50 tool is a lifesaver.",
+        "POV: You clean your entire bathtub in under 2 minutes without bending over."
+],
+      recommendedNiches: [
+        "Home Cleaning",
+        "Mobility Aids",
+        "Gadgets"
+]
+    },
+    specs: {
+      "Battery": "2500mAh Lithium Ion (90 mins continuous use)",
+      "Speed Modes": "Dual Speed (300 RPM & 400 RPM)",
+      "Brush Attachments": "4 interchangeable heads (Flat, Corner, Dome, Sponge)",
+      "Extension Length": "Adjustable from 25 inches to 43 inches",
+      "Waterproof": "IPX7 waterproof rating"
+},
+    rating: 4.8,
+    reviewsCount: 6240,
+    addedAt: "2026-09-19T16:58:46.580Z",
+    updatedAt: "2026-09-19T16:58:46.580Z"
+  },
+  {
+    id: "prod-012",
+    slug: "smart-posture-corrector-with-vibration-sensor",
+    title: "Intelligent Upper Back Posture Corrector with Vibration Reminder",
+    tagline: "Gently vibrates whenever you slouch more than 25 degrees to build muscle memory.",
+    description: "Break bad slouching habits naturally without uncomfortable rigid braces. Features an angle-sensing sensor that buzzes gently when your back bends forward, training your spine and shoulders into upright alignment.",
+    category: "beauty-health",
+    categoryName: "Health, Beauty & Wellness",
+    images: [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+    ],
+    sourcing: {
+      lowestPrice: 3.40,
+      currency: "$",
+      supplierName: "AliExpress Wellness Direct",
+      supplierUrl: "https://www.aliexpress.com/wholesale?SearchText=smart%20posture%20corrector%20sensor%20vibration%20reminder",
+      moq: "1 unit",
+      shippingTimeEst: "7-11 business days",
+      secondarySuppliers: [
+        {
+          name: "CJ Dropshipping Direct",
+          price: 4.00,
+          currency: "$",
+          url: "https://cjdropshipping.com/search/smart%20posture%20corrector.html",
+          moq: "1 unit",
+          shippingEst: "8-14 days"
+        },
+        {
+          name: "Temu Sourcing Hub",
+          price: 4.30,
+          currency: "$",
+          url: "https://www.temu.com/search_result.html?search_key=vibration%20posture%20corrector",
+          moq: "1 unit",
+          shippingEst: "7-12 days"
+        }
+      ]
+    },
+    market: {
+      retailPrice: 22.99,
+      currency: "$",
+      potentialProfit: 19.59,
+      profitMarginPercent: 85.2,
+      competitorStoreName: "Amazon / TikTok Shop",
+      competitorStoreUrl: "https://www.amazon.com/s?k=smart%20posture%20corrector%20sensor%20vibration%20reminder",
+      recommendedAdSpend: 7.00,
+      estimatedNetProfit: 12.59
+    },
+    analytics: {
+      trendScore: 9.3,
+      trendStatus: "⭐ High Margin",
+      monthlySalesVolumeEst: "26,500+ units",
+      competitionLevel: "Low",
+      tiktokViews: "28.6M views",
+      socialBuzz: "Very High"
+    },
+    businessGuide: {
+      whyItSells: [
+        "Almost everyone who works at a laptop or looks at their phone has tech-neck slouching.",
+        "Vibration sensor is an interactive novelty that stands out over boring elastic posture straps.",
+        "Sub-$4 sourcing cost gives sellers an unbeatable 85%+ profit margin buffer."
+],
+      targetAudience: [
+        "Remote office workers and gamers",
+        "Students with heavy backpacks",
+        "Fitness enthusiasts looking for spinal alignment"
+],
+      adHooks: [
+        "Stop slouching! This tiny gadget buzzes whenever your posture slips.",
+        "How I fixed my rounded shoulders in 14 days without going to a chiropractor.",
+        "The $20 gadget that every person working from home needs right now."
+],
+      recommendedNiches: [
+        "Posture & Ergonomics",
+        "Work From Home",
+        "Fitness"
+]
+    },
+    specs: {
+      "Sensor Angle": "Triggered when posture bends > 25 degrees",
+      "Battery": "500mAh USB Rechargeable (15 days battery life)",
+      "Display": "LCD screen tracks daily slouch counts",
+      "Straps": "Adjustable high-elastic nylon harness",
+      "Weight": "Ultra-light 85g"
+},
+    rating: 4.7,
+    reviewsCount: 3410,
+    addedAt: "2026-09-19T16:58:46.580Z",
+    updatedAt: "2026-09-19T16:58:46.580Z"
+  },
+];
 
         const product: ProductItem = {
           id: idStr,
