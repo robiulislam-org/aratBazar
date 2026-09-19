@@ -5,7 +5,8 @@ export type ProductCategory =
   | "car-outdoor"
   | "tools-utility"
   | "kids-novelty"
-  | "fitness-lifestyle";
+  | "fitness-lifestyle"
+  | "smart-home";
 
 export type TrendStatus = 
   | "🔥 Viral Now"

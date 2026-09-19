@@ -10,7 +10,7 @@
     "generate:content": "node scripts/generate-daily-content.js",
     "generate:news": "node scripts/auto-news-generator.js",
     "generate:ai": "node scripts/auto-ai-generator.js",
-    "generate:products": "node scripts/auto-product-hunter.js"
+    "generate:products": "node scripts/generate-500-products.js"
   },
   "dependencies": {
     "lucide-react": "^1.41.0",

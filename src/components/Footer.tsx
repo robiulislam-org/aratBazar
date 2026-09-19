@@ -39,6 +39,8 @@ export default function Footer() {
               <li><Link href="/category/car-outdoor" className="hover:text-emerald-400 transition">Car Accessories & Outdoor Gear</Link></li>
               <li><Link href="/category/tools-utility" className="hover:text-emerald-400 transition">Everyday Problem Solvers</Link></li>
               <li><Link href="/category/fitness-lifestyle" className="hover:text-emerald-400 transition">Fitness & Active Lifestyle</Link></li>
+              <li><Link href="/category/smart-home" className="hover:text-emerald-400 transition">Smart Home & Ambient LEDs</Link></li>
+              <li><Link href="/category/kids-novelty" className="hover:text-emerald-400 transition">Viral Novelties & Unique Gifts</Link></li>
             </ul>
           </div>
 
