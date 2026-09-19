@@ -15,7 +15,7 @@ const archetypes = eval("(" + content.slice(archStart + "export const ARCHETYPES
 
 // Extract VARIANT_MODIFIERS
 const modStart = content.indexOf("export const VARIANT_MODIFIERS = [");
-const modEnd = content.indexOf("const PRODUCT_RAW_MAP");
+const modEnd = content.indexOf("const CATEGORY_TAGS");
 if (modStart === -1 || modEnd === -1) {
   console.error("Could not find VARIANT_MODIFIERS boundaries!");
   process.exit(1);
@@ -135,9 +135,8 @@ function generateAllProducts(): ProductItem[] {
     const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
 
     const cleanSearchQuery = arch.cleanSearch;
-    const categoryTag = CATEGORY_TAGS[arch.category] || "gadget";
     const img1 = arch.images[0];
-    const img2 = \`https://loremflickr.com/800/800/\${categoryTag}?lock=\${globalIndex + 10000}\`;
+    const img2 = arch.images[1] || \`https://picsum.photos/seed/\${slug}-detail/800/800\`;
 
     const views = \`\${arch.viewsBase.toFixed(1)}M\`;
     const rating = Number((4.7 + ((globalIndex * 3) % 3) * 0.1).toFixed(1));
@@ -256,9 +255,9 @@ function generateAllProducts(): ProductItem[] {
         const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
 
         const cleanSearchQuery = arch.cleanSearch;
-        // Guaranteed UNIQUE primary and secondary image with unique lock ID
-        const img1 = \`https://loremflickr.com/800/800/\${categoryTag}?lock=\${globalIndex}\`;
-        const img2 = \`https://loremflickr.com/800/800/\${categoryTag}?lock=\${globalIndex + 10000}\`;
+        // Guaranteed UNIQUE primary and secondary image with unique deterministic seed
+        const img1 = \`https://picsum.photos/seed/\${slug}/800/800\`;
+        const img2 = \`https://picsum.photos/seed/\${slug}-alt/800/800\`;
 
         const views = \`\${(arch.viewsBase * (0.7 + 0.6 * ((v * 7) % 10) / 10)).toFixed(1)}M\`;
         const rating = Number((4.6 + (((v * 3) % 4) * 0.1)).toFixed(1));
