@@ -78,8 +78,8 @@ const ARCHETYPES = [
     lowRange: [6.5, 14.0],
     retailRange: [29.99, 49.99],
     images: [
-      "https://images.unsplash.com/photo-1622445262464-84b1456045b6?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 24.5,
     specs: { "Input": "9V/2A, 12V/2A USB-C PD", "Output": "15W / 5W / 3W Fast Charge", "Certification": "Qi, CE, FCC, RoHS Certified" },
@@ -198,7 +198,7 @@ const ARCHETYPES = [
     retailRange: [32.99, 54.99],
     images: [
       "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1622445262464-84b1456045b6?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 17.8,
     specs: { "Ports": "2x USB-C PD 65W + 1x USB-A QC 3.0", "Technology": "Navitas GaNFast III Semiconductor", "Safety": "Over-voltage & Thermal Guard" },
@@ -372,7 +372,7 @@ const ARCHETYPES = [
     retailRange: [42.99, 69.99],
     images: [
       "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 49.1,
     specs: { "Suction Power": "60kPa Strong Vacuum Pump", "Modes": "Dry / Moist / Pulse Modes", "Sealing Width": "30cm Extended Heating Strip" },
@@ -389,7 +389,7 @@ const ARCHETYPES = [
     retailRange: [26.99, 42.99],
     images: [
       "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 42.1,
     specs: { "Grip Range": "Lids 1.2 to 3.5 inches", "Operation": "One-Touch Automatic Reverse", "Battery": "2x AA Powered" },
@@ -406,7 +406,7 @@ const ARCHETYPES = [
     retailRange: [29.99, 49.99],
     images: [
       "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 35.8,
     specs: { "Grinding Core": "Non-corrosive Ceramic Rotor", "Trigger": "Gravity Tilt Sensor", "Capacity": "85ml Transparent Chamber" },
@@ -439,8 +439,8 @@ const ARCHETYPES = [
     lowRange: [4.6, 9.8],
     retailRange: [21.99, 34.99],
     images: [
-      "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 31.5,
     specs: { "Material": "High-Density Thermal Alloy Aluminum", "Dimensions": "30cm x 21cm x 3mm", "Drainage": "Integrated Drip Channels with Tray" },
@@ -456,8 +456,8 @@ const ARCHETYPES = [
     lowRange: [14.0, 24.0],
     retailRange: [59.99, 94.99],
     images: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 28.7,
     specs: { "Technology": "High-Energy OH- Ion Electrolysis", "Waterproof": "IPX7 Submersible Capsule", "Battery": "4400mAh Wireless Inductive Dock" },
@@ -473,8 +473,8 @@ const ARCHETYPES = [
     lowRange: [13.5, 23.0],
     retailRange: [54.99, 89.99],
     images: [
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 36.4,
     specs: { "Capacity": "15 Liters / 4 Gallons", "Sensor": "Infrared + Kick/Knee Vibration Sensor", "Material": "Fingerprint-Proof Brushed Stainless" },
@@ -490,8 +490,8 @@ const ARCHETYPES = [
     lowRange: [2.5, 5.8],
     retailRange: [13.99, 22.99],
     images: [
-      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 64.2,
     specs: { "Heater": "Micro-Ceramic Thermal Heating Element", "Blade": "Concealed Stainless Steel Cutter", "Rechargeable": "USB-C Lithium Battery" },
@@ -507,8 +507,8 @@ const ARCHETYPES = [
     lowRange: [15.0, 26.0],
     retailRange: [59.99, 99.99],
     images: [
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 22.9,
     specs: { "Material": "SUS 304 Rustproof Carbon Steel", "Load Capacity": "Up to 80 lbs Stable", "Adjustable Width": "25.6 to 37.5 inches" },
@@ -524,8 +524,8 @@ const ARCHETYPES = [
     lowRange: [1.8, 4.2],
     retailRange: [9.99, 16.99],
     images: [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 19.3,
     specs: { "Material": "Solid 304 Polished Stainless Steel", "Lifespan": "Forever Reusable (Never Wears Down)", "Holder": "Includes Black Silicone Drip Base" },
@@ -647,8 +647,8 @@ const ARCHETYPES = [
     lowRange: [6.5, 12.8],
     retailRange: [29.99, 46.99],
     images: [
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 51.9,
     specs: { "Frequency": "24,000 High-Frequency Oscillations/sec", "Modes": "Peeling, Ion+, Ion-, EMS Microcurrent", "Spatula": "100% Medical Stainless Steel" },
@@ -664,7 +664,7 @@ const ARCHETYPES = [
     lowRange: [8.5, 15.0],
     retailRange: [34.99, 59.99],
     images: [
-      "https://images.unsplash.com/photo-1559591937-e62fb3d8d4bb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 33.4,
@@ -681,8 +681,8 @@ const ARCHETYPES = [
     lowRange: [7.8, 14.5],
     retailRange: [32.99, 49.99],
     images: [
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 44.7,
     specs: { "Blade": "Carbon Titanium T-Outliner Blade", "Motor": "7000 RPM Rotary Power", "Display": "Digital Battery Percentage LED" },
@@ -698,8 +698,8 @@ const ARCHETYPES = [
     lowRange: [9.8, 17.5],
     retailRange: [39.99, 64.99],
     images: [
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 71.0,
     specs: { "Suction Levels": "12 Adjustable Negative Pressure Gears", "Heat": "100°F - 122°F Constant Temperature", "Safety": "One-Touch Instant Pressure Release" },
@@ -716,7 +716,7 @@ const ARCHETYPES = [
     retailRange: [16.99, 26.99],
     images: [
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 88.3,
     specs: { "Roller Material": "Surgical Grade 304 Stainless Steel", "Core": "Non-Toxic Freezing Gel Insert", "Gua Sha": "Natural Rose Quartz Stone" },
@@ -766,8 +766,8 @@ const ARCHETYPES = [
     lowRange: [8.9, 16.5],
     retailRange: [36.99, 58.99],
     images: [
-      "https://images.unsplash.com/photo-1559591937-e62fb3d8d4bb?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 29.8,
     specs: { "Water Pressure": "30 - 120 PSI (3 Custom Modes)", "Reservoir": "200ml Telescopic Tank", "Nozzle": "360° Rotatable with Storage Slot" },
@@ -834,8 +834,8 @@ const ARCHETYPES = [
     lowRange: [8.8, 16.5],
     retailRange: [34.99, 56.99],
     images: [
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 31.6,
     specs: { "Speed": "Adjustable 0 - 35,000 RPM", "Direction": "Forward and Reverse Rotation Toggle", "Attachments": "6 Carbide Bits + 6 Sanding Bands" },
@@ -856,7 +856,7 @@ const ARCHETYPES = [
     retailRange: [89.99, 149.99],
     images: [
       "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 59.2,
     specs: { "Peak Current": "2500 Amperes Heavy-Duty", "Compressor": "150 PSI Smart Auto Shut-Off", "Flashlight": "400 Lumen Emergency Strobe & SOS" },
@@ -906,7 +906,7 @@ const ARCHETYPES = [
     lowRange: [7.2, 13.8],
     retailRange: [28.99, 44.99],
     images: [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 38.1,
@@ -941,7 +941,7 @@ const ARCHETYPES = [
     retailRange: [19.99, 32.99],
     images: [
       "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 35.6,
     specs: { "Filtration Capacity": "5,000 Liters (1,320 Gallons)", "Pore Size": "0.01 Micron Absolute Membrane", "Certifications": "Removes 99.9999% Bacteria & Microplastics" },
@@ -958,7 +958,7 @@ const ARCHETYPES = [
     retailRange: [34.99, 54.99],
     images: [
       "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 27.2,
     specs: { "Material": "210T Tear-Resistant Parachute Nylon", "Load Capacity": "500 lbs (2 Adults Comfortably)", "Straps": "2x 10ft Tree Straps with 16 Loops + Steel Carabiners" },
@@ -974,7 +974,7 @@ const ARCHETYPES = [
     lowRange: [9.5, 18.0],
     retailRange: [38.99, 64.99],
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 41.5,
@@ -1025,8 +1025,8 @@ const ARCHETYPES = [
     lowRange: [5.2, 10.5],
     retailRange: [22.99, 36.99],
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 58.7,
     specs: { "Coating": "Titanium Silver Thermal Insulation Layer", "Skeleton": "10 Aviation-Grade Ribs with Protective Leather Pouch", "Universal": "Fits Sedans, SUVs, and Trucks" },
@@ -1042,8 +1042,8 @@ const ARCHETYPES = [
     lowRange: [11.0, 19.5],
     retailRange: [44.99, 69.99],
     images: [
-      "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 19.8,
     specs: { "Power": "Solar Charging Panel + USB Backup", "Sensors": "4 External Anti-Theft Waterproof Cap Sensors", "Alarms": "Visual & Audio Beep Alerts for Leaks & High Temp" },
@@ -1059,8 +1059,8 @@ const ARCHETYPES = [
     lowRange: [3.4, 7.2],
     retailRange: [17.99, 29.99],
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 74.5,
     specs: { "Volume": "500ml Spray Bottle + Microfiber Buffing Towel", "Durability": "Up to 6 Months Mirror Finish & UV Guard", "Surface": "Safe on Paint, Glass, Chrome, and Headlights" },
@@ -1076,8 +1076,8 @@ const ARCHETYPES = [
     lowRange: [5.6, 11.2],
     retailRange: [24.99, 39.99],
     images: [
-      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 26.5,
     specs: { "Power": "3500W High Heat Efficiency", "Ignition": "Built-in Ceramic Piezo Electric Spark", "Weight": "280g Lightweight Foldable Stainless Steel" },
@@ -1093,7 +1093,7 @@ const ARCHETYPES = [
     lowRange: [2.1, 4.8],
     retailRange: [11.99, 18.99],
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 49.3,
@@ -1114,8 +1114,8 @@ const ARCHETYPES = [
     lowRange: [8.5, 16.0],
     retailRange: [34.99, 54.99],
     images: [
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 38.2,
     specs: { "Laser Range": "40m / 131ft Laser Precision (±2mm)", "Physical Tape": "5m / 16ft Nylon Coated Steel", "Screen": "Backlit LCD Display (m/in/ft)" },
@@ -1131,8 +1131,8 @@ const ARCHETYPES = [
     lowRange: [11.2, 19.5],
     retailRange: [42.99, 69.99],
     images: [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 44.8,
     specs: { "Torque": "0.35 N.m Electric / 3 N.m Manual Lock", "Bits": "64 S2 Hardened Steel Precision Bits", "Case": "Pop-Up Magnetic Storage Aluminum Shell" },
@@ -1148,8 +1148,8 @@ const ARCHETYPES = [
     lowRange: [7.8, 14.2],
     retailRange: [29.99, 46.99],
     images: [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 52.1,
     specs: { "Capacity": "Supports Up to 660 lbs (300 kg)", "Rollers": "4x 360-Degree Swivel Non-Slip Pads", "Lever": "Thickened Carbon Steel Pry Crowbar" },
@@ -1166,7 +1166,7 @@ const ARCHETYPES = [
     retailRange: [18.99, 29.99],
     images: [
       "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 36.5,
     specs: { "Width": "10-inch Extra Wide Profile Depth", "Locking Mechanism": "Heavy Duty Aluminum Alloy Clamping Core", "Pins": "High-Density ABS Plastic Teeth" },
@@ -1182,8 +1182,8 @@ const ARCHETYPES = [
     lowRange: [8.9, 16.5],
     retailRange: [34.99, 54.99],
     images: [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 33.2,
     specs: { "Steel": "440C High-Carbon Stainless Steel", "Safety": "Full All-Locking Tool Mechanism", "Sheath": "Durable Ballistic Nylon Belt Holster" },
@@ -1216,8 +1216,8 @@ const ARCHETYPES = [
     lowRange: [12.0, 22.0],
     retailRange: [45.99, 74.99],
     images: [
-      "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 46.1,
     specs: { "Power": "70W Rapid Heating Thermal Core", "Staples": "600x Assorted Wave & Flat Staples", "Accessories": "Includes Diagonal Cutters & Pliable Smoothing Head" },
@@ -1234,7 +1234,7 @@ const ARCHETYPES = [
     retailRange: [24.99, 39.99],
     images: [
       "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 24.8,
     specs: { "Wire Gauge": "10-24 AWG (0.2-6.0mm²)", "Functions": "Wire Stripping, Cutting, and Terminal Crimping", "Jaws": "High Carbon Alloy Steel Induction Heat-Treated" },
@@ -1250,8 +1250,8 @@ const ARCHETYPES = [
     lowRange: [2.5, 5.8],
     retailRange: [13.99, 22.99],
     images: [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 41.2,
     specs: { "Material": "High-Speed Steel HSS 4341 (Hardness 63-65 HRC)", "Sizes": "#0 to #4 For Screws 2mm to 12mm", "Shank": "Standard 1/4-Inch Hex Quick Connect" },
@@ -1267,8 +1267,8 @@ const ARCHETYPES = [
     lowRange: [3.6, 7.8],
     retailRange: [16.99, 27.99],
     images: [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 35.0,
     specs: { "Grip Range": "1/4-inch to 3/4-inch (7mm - 19mm)", "Pins": "54 Solid Chrome Vanadium Steel Spring Rods", "Adapter": "Includes 3/8-inch Power Drill Drive Adapter" },
@@ -1285,7 +1285,7 @@ const ARCHETYPES = [
     retailRange: [54.99, 89.99],
     images: [
       "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 29.7,
     specs: { "Beam": "High-Visibility German Osram Green Laser", "Accuracy": "±1/9-inch at 33 Feet", "Self-Leveling": "Smart Smart Pendulum System (within 4°)" },
@@ -1301,8 +1301,8 @@ const ARCHETYPES = [
     lowRange: [2.8, 6.2],
     retailRange: [14.99, 24.99],
     images: [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 48.3,
     specs: { "Material": "Tire-Grade Heavy Duty Rubber + Polymer Resin", "Suction": "Micro-Grip Bottom Suction Pattern", "Load": "Supports Up to 1000 lbs Shock Vibration" },
@@ -1336,7 +1336,7 @@ const ARCHETYPES = [
     retailRange: [12.99, 21.99],
     images: [
       "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 26.9,
     specs: { "Scraper": "Stainless Steel Residual Caulk Shovel", "Smoothing Pads": "5 Interchangeable Silicone Radius Heads (3R to 17R)", "Application": "Sinks, Bathtubs, Countertops, and Tiles" },
@@ -1353,7 +1353,7 @@ const ARCHETYPES = [
     retailRange: [19.99, 32.99],
     images: [
       "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 18.7,
     specs: { "Material": "Finely Polished Stainless Steel Frame", "Precision": "Resolution 0.01mm / 0.0005 inch", "Switch": "One-Button mm / Inch / Fraction Toggle" },
@@ -1407,8 +1407,8 @@ const ARCHETYPES = [
     lowRange: [2.8, 6.2],
     retailRange: [14.99, 24.99],
     images: [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 42.1,
     specs: { "Bearings": "Dual 360° High-Speed Steel Ball Bearings", "Cable": "Braided Steel Wire with Wear-Proof PVC Sleeve", "Handles": "Silicone Anti-Slip Aluminum Alloy Grips" },
@@ -1424,8 +1424,8 @@ const ARCHETYPES = [
     lowRange: [3.8, 7.9],
     retailRange: [19.99, 32.99],
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 58.9,
     specs: { "Levels": "4 Adjustable Curvature Height Arches", "Points": "88 Deep-Tissue Acupressure Pins + Soft Silicone Spine Strip", "Weight Limit": "Tough ABS Supports Up to 350 lbs" },
@@ -1441,8 +1441,8 @@ const ARCHETYPES = [
     lowRange: [2.4, 5.5],
     retailRange: [12.99, 21.99],
     images: [
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 49.3,
     specs: { "Resistance": "Quick Twist Dial from 22 lbs to 132 lbs (10-60kg)", "Counter": "Mechanical Clicker Automatically Records Reps", "Grip": "Ergonomic Non-Slip Rubber Palm Mould" },
@@ -1475,8 +1475,8 @@ const ARCHETYPES = [
     lowRange: [5.2, 10.8],
     retailRange: [22.99, 38.99],
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1591741535585-9c4f52b3f13f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 28.1,
     specs: { "Core": "Durable Hollow PVC Core (Will Not Crack Under 500 lbs)", "Surface": "3D Multi-Density Matrix EVA Foam Zones", "Size": "13-inch Compact Travel Length" },
@@ -1493,7 +1493,7 @@ const ARCHETYPES = [
     retailRange: [27.99, 44.99],
     images: [
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 53.7,
     specs: { "Bar": "Steel Retractable Bar Wrapped in Soft EVA Foam", "Bands": "Heavy Duty Double Latex Elastic Cables", "Portability": "Detaches into 2 Halves for Easy Travel" },
@@ -1543,7 +1543,7 @@ const ARCHETYPES = [
     lowRange: [7.9, 14.5],
     retailRange: [32.99, 52.99],
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 44.6,
@@ -1560,7 +1560,7 @@ const ARCHETYPES = [
     lowRange: [8.2, 15.0],
     retailRange: [34.99, 54.99],
     images: [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 31.9,
@@ -1594,8 +1594,8 @@ const ARCHETYPES = [
     lowRange: [1.8, 3.9],
     retailRange: [9.99, 16.99],
     images: [
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 38.5,
     specs: { "Levels": "3 Resistance Tensions (6.6lb, 8.8lb, 11lb)", "Silicone": "Tear-Proof High Elastic Silicone", "Ideal For": "Guitarists, Rock Climbers, Gamers, Rehab" },
@@ -1611,8 +1611,8 @@ const ARCHETYPES = [
     lowRange: [2.1, 4.6],
     retailRange: [11.99, 18.99],
     images: [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 27.6,
     specs: { "Technology": "Hyper-Evaporative Breathable Mesh Fabric", "Chemicals": "Zero Chemicals (Physical Evaporative Cooling)", "Sun Protection": "UPF 50+ UV Blocking Rating" },
@@ -1649,7 +1649,7 @@ const ARCHETYPES = [
     lowRange: [9.5, 18.0],
     retailRange: [38.99, 64.99],
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 84.1,
@@ -1683,8 +1683,8 @@ const ARCHETYPES = [
     lowRange: [6.2, 12.0],
     retailRange: [24.99, 39.99],
     images: [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 47.3,
     specs: { "Push Force": "1.6 kgf (Pushes Any Standard Rocker/Button)", "Arms": "Tool Pack with 5 Robotic Mechanical Arms", "Battery": "CR2 3V Battery (Over 600 Days Battery Life)" },
@@ -1701,7 +1701,7 @@ const ARCHETYPES = [
     retailRange: [89.99, 149.99],
     images: [
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 76.9,
     specs: { "Printing": "3D High-Resolution NASA Topographic Surface", "Base": "Walnut Grain Electromagnetic Levitation Base", "Modes": "Warm White, Cool White, Natural Yellow" },
@@ -1717,8 +1717,8 @@ const ARCHETYPES = [
     lowRange: [5.2, 11.0],
     retailRange: [22.99, 36.99],
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 41.5,
     specs: { "LEDs": "60 Eye-Caring Glare-Free Side-Emitting Diodes", "Sensor": "PIR Infrared Detects Motion Up to 10 Feet", "Mounting": "Built-in Strong Magnets + 3M Metal Adhesive Plates" },
@@ -1734,8 +1734,8 @@ const ARCHETYPES = [
     lowRange: [9.8, 17.5],
     retailRange: [38.99, 64.99],
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 115.2,
     specs: { "Head Movement": "360° Magnetic Detachable Head Articulation", "Effects": "8 Nebula Color Blends + Breathing Star Speeds", "Timer": "45 min / 90 min Auto-Off Sleep Timer" },
@@ -1751,8 +1751,8 @@ const ARCHETYPES = [
     lowRange: [4.2, 8.5],
     retailRange: [18.99, 29.99],
     images: [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 26.4,
     specs: { "Rating": "16A / 1800W Flame Retardant Shell", "Integration": "Amazon Alexa, Google Home, Smart Life App", "Features": "Power Metering, Schedule Timers, Away Mode" },
@@ -1768,7 +1768,7 @@ const ARCHETYPES = [
     lowRange: [14.0, 26.0],
     retailRange: [54.99, 89.99],
     images: [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 39.8,
@@ -1785,8 +1785,8 @@ const ARCHETYPES = [
     lowRange: [9.2, 16.5],
     retailRange: [36.99, 58.99],
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 88.0,
     specs: { "Glass": "High-Transparency Lead-Free Sealed Crystal", "Lighting": "Touch Dimming LED Circular Base (3 Colors)", "Rotation": "360-Degree Continuous Flipping Design" },
@@ -1820,7 +1820,7 @@ const ARCHETYPES = [
     retailRange: [32.99, 49.99],
     images: [
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 37.9,
     specs: { "Salt Origin": "100% Authentic Khewra Salt Mine, Pakistan", "Base": "Solid Neem Wooden Base with Brass Screws", "Dimmer": "Rotary Dimmer Switch with 15W Halogen Bulb" },
@@ -1853,8 +1853,8 @@ const ARCHETYPES = [
     lowRange: [13.5, 24.5],
     retailRange: [54.99, 89.99],
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 67.2,
     specs: { "Height": "56 inches (142cm) Space-Saving Corner Stand", "Effects": "300+ Dynamic Multicolored Light Modes", "Control": "Remote Control + Smart Bluetooth App" },
@@ -1870,8 +1870,8 @@ const ARCHETYPES = [
     lowRange: [2.5, 5.8],
     retailRange: [13.99, 22.99],
     images: [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 31.8,
     specs: { "Compatibility": "Fits standard 0.8 to 1.1 inch plastic bottle necks", "Drip Speed": "Adjustable Valve (0-60s per drip = 1-15 days)", "Pack": "Includes 12 Self-Watering Spikes with Brackets" },
@@ -1891,7 +1891,7 @@ const ARCHETYPES = [
     lowRange: [4.2, 8.5],
     retailRange: [18.99, 29.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 142.0,
@@ -1908,8 +1908,8 @@ const ARCHETYPES = [
     lowRange: [3.4, 7.2],
     retailRange: [16.99, 26.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 65.4,
     specs: { "Screen": "10-inch Eye-Protection Flexible Color LCD", "Battery": "CR2025 Coin Battery (Over 100,000 Erases)", "Lock": "Anti-Accidental Erasure Lock Switch on Back" },
@@ -1943,7 +1943,7 @@ const ARCHETYPES = [
     retailRange: [15.99, 24.99],
     images: [
       "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 89.2,
     specs: { "Magnets": "13 Neodymium Magnetic Tubes + 12 Steel Balls", "Writing": "Smooth Gel Pen Ink Refills Included", "Touchscreen": "2 Soft Capacitive Stylus Touch Tips" },
@@ -1959,8 +1959,8 @@ const ARCHETYPES = [
     lowRange: [4.5, 8.9],
     retailRange: [19.99, 32.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 124.9,
     specs: { "Functions": "Twisting Dance, Repeating Voice Echo, LED Glow", "Music": "Preloaded with 120 English & Global Songs", "Fabric": "Knitted Soft Plush Non-Toxic Cotton" },
@@ -1977,7 +1977,7 @@ const ARCHETYPES = [
     retailRange: [22.99, 36.99],
     images: [
       "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 47.8,
     specs: { "Rings": "Chromed Plastic Balanced Orbiting Rings", "Base": "Sturdy Heavy Magnetic Electromagnet Stand", "Battery": "Powered by 4x AA Batteries" },
@@ -1993,8 +1993,8 @@ const ARCHETYPES = [
     lowRange: [1.8, 3.8],
     retailRange: [9.99, 16.99],
     images: [
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 168.4,
     specs: { "Design": "Double-Sided Flip Reversible Two-Tone Eyes", "Material": "Extra-Soft Crystal Velvet + PP Cotton Filler", "Size": "20cm / 7.8 inch Huggable Diameter" },
@@ -2010,8 +2010,8 @@ const ARCHETYPES = [
     lowRange: [9.2, 16.0],
     retailRange: [34.99, 54.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 49.3,
     specs: { "Feeder": "Automatic Induction Paper Currency Roller", "Security": "4-Digit Customizable Password Knob Lock", "Capacity": "Holds 600 Coins or 100 Cash Bills" },
@@ -2028,7 +2028,7 @@ const ARCHETYPES = [
     retailRange: [32.99, 52.99],
     images: [
       "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 58.1,
     specs: { "Fluid": "Nano Magnetic Iron Particles in Mineral Suspension", "Bottle": "Sealed Crystal-Clear Tempered Glass", "Magnets": "Includes 2 Neodymium Sculpting Wand Magnets" },
@@ -2045,7 +2045,7 @@ const ARCHETYPES = [
     retailRange: [19.99, 32.99],
     images: [
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 62.7,
     specs: { "Plate": "Optical Grade Laser Engraved Acrylic Plate", "Base": "Crack Pattern Smart Touch Base with 10 LEDs", "Power": "USB Cable or 3x AA Battery Powered" },
@@ -2061,8 +2061,8 @@ const ARCHETYPES = [
     lowRange: [5.8, 11.5],
     retailRange: [24.99, 39.99],
     images: [
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1558877385-81a1c7e67d72?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 91.2,
     specs: { "Items": "28 Tested Sensory Focus Toys in Storage Tub", "Safety": "100% Non-Toxic BPA-Free Child Safety Certified", "Age": "Great for Kids, Teens, and Classroom Calm-Down Corners" },
@@ -2078,7 +2078,7 @@ const ARCHETYPES = [
     lowRange: [8.9, 16.5],
     retailRange: [34.99, 56.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 38.0,
@@ -2095,8 +2095,8 @@ const ARCHETYPES = [
     lowRange: [3.5, 7.8],
     retailRange: [16.99, 27.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1595588982209-5c45ceb4f350?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581975878061-7a91f800757a?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 71.4,
     specs: { "Magnets": "48 Factory-Installed Neodymium Magnets", "Corner Cutting": "55° Forward and 35° Reverse Corner Cutting", "Surface": "Frosted Scratch-Resistant Bright Stickerless ABS" },
@@ -2112,7 +2112,7 @@ const ARCHETYPES = [
     lowRange: [6.8, 13.0],
     retailRange: [27.99, 44.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1500995617113-cf789362a3e1?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 112.7,
@@ -2129,8 +2129,8 @@ const ARCHETYPES = [
     lowRange: [4.8, 9.8],
     retailRange: [21.99, 34.99],
     images: [
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1560859251-d563a49c5e4a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
     ],
     viewsBase: 49.5,
     specs: { "Set": "5 Interlocking Skatepark Obstacle Modules", "Boards": "3x Metal Alloy Truck Fingerboards with Real Grip Tape", "Tools": "Mini Wheel Screwdriver & Spare Bearings Included" },
@@ -2243,7 +2243,7 @@ function generateAllProducts() {
           lowestPrice: lowPrice,
           currency: "$",
           supplierName: "AliExpress Verified Direct Manufacturer",
-          supplierUrl: `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(cleanSearchQuery)}`,
+          supplierUrl: `https://www.aliexpress.com/w/wholesale-${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html`,
           moq: "1 unit (Dropship Ready)",
           shippingTimeEst: "7-12 business days",
           secondarySuppliers: [
@@ -2405,7 +2405,7 @@ function generateAllProducts(): ProductItem[] {
           lowestPrice: lowPrice,
           currency: "$",
           supplierName: "AliExpress Verified Direct Manufacturer",
-          supplierUrl: \`https://www.aliexpress.com/wholesale?SearchText=\${encodeURIComponent(cleanSearchQuery)}\`,
+          supplierUrl: \`https://www.aliexpress.com/w/wholesale-\${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html\`,
           moq: "1 unit (Dropship Ready)",
           shippingTimeEst: "7-12 business days",
           secondarySuppliers: []
