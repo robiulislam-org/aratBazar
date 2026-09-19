@@ -57,60 +57,106 @@ const CATEGORIES_DATA = [
   }
 ];
 
-// High-quality gadget and product photos from Unsplash with matching themes
-const UNSPLASH_IMAGES = {
-  tech: [
-    "https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80"
-  ],
-  kitchen: [
-    "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
-  ],
-  beauty: [
-    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1608248597359-25f0a811c750?auto=format&fit=crop&w=800&q=80"
-  ],
-  car: [
-    "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
-  ],
-  tools: [
-    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
-  ],
-  fitness: [
-    "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
-  ],
-  home: [
-    "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80"
-  ],
-  novelty: [
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
-  ]
-};
+// Realistic and accurate product photo mapping by keyword
+const PHOTO_MAP = [
+  // Tech & Electronics
+  { keywords: ['drone', 'quadcopter', 'flying orb', 'hover ball'], img: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['magsafe', 'charging station', 'wireless charger', 'docking station', 'cable', 'charger', 'adapter'], img: 'https://images.unsplash.com/photo-1622445262464-84b1456045b6?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['bone conduction', 'earbuds', 'headphone', 'headset', 'airpods', 'earphone'], img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['gimbal', 'face-tracking', 'tripod', 'tracking phone', 'selfie'], img: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['holographic', 'projector', 'hologram', 'fan led'], img: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['keyboard', 'keypad', 'qwerty'], img: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['power bank', 'battery pack'], img: 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['game console', 'retro', 'joystick', 'gaming'], img: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['camera detector', 'bug tracker', 'spy', 'detector', 'endoscope', 'security'], img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['padlock', 'fingerprint lock', 'smart lock', 'door lock', 'cylinder'], img: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['recorder', 'microphone', 'mic', 'lavalier', 'audio bug'], img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['backpack', 'bag', 'holster', 'sling'], img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['tracker', 'wallet', 'card', 'finder', 'cardholder'], img: 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['hand warmer', 'warmer', 'heated'], img: 'https://images.unsplash.com/photo-1543083477-4f785aeafaa9?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['sleep mask', 'eye mask'], img: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['printer', 'label maker', 'label', 'receipt'], img: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['mouse', 'mouse pad'], img: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['lighter', 'arc lighter'], img: 'https://images.unsplash.com/photo-1519750783826-e2420f4d687f?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['desk cleaner', 'air blower', 'jet duster', 'vacuum cleaner', 'cleaner', 'cleaning machine'], img: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['speaker', 'globe speaker'], img: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['thermometer', 'decibel meter', 'tachometer', 'scale', 'measuring', 'caliper', 'oximeter', 'water level', 'stud finder'], img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['steamer', 'iron', 'lint', 'shaver'], img: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['laptop stand', 'phone stand', 'mount clamp', 'magnifier', 'screen magnifier', 'phone pouch', 'remote hub', 'ir remote', 'remote controller'], img: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['glasses', 'anti-blue light', 'anti-glare'], img: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80' },
+
+  // Home & Kitchen
+  { keywords: ['scrubber', 'spin scrubber', 'cleaning brush'], img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['cutter', 'slicer', 'chopper', 'dicer', 'peeler', 'knife', 'mandoline', 'scissors', 'shears', 'stripper', 'tenderizer', 'meat claws', 'patty maker', 'cake scraper'], img: 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['vacuum sealer', 'sealer', 'bag resealer', 'stretch lids', 'storage keeper'], img: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['grinder', 'mill', 'dispenser', 'opener', 'thawing tray', 'frother', 'sifter', 'strainer', 'funnel', 'spoon rest', 'dumpling maker', 'soap bar', 'purifier', 'ozone'], img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['rack', 'organizer', 'drawer', 'shelf', 'clothesline', 'curtain track', 'blinds', 'caddy', 'fruit basket', 'trash can', 'splash guard'], img: 'https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['gloves', 'cut-resistant'], img: 'https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['straws', 'cup', 'bottle', 'water balloon', 'kettle', 'ice pop', 'tea infuser', 'baking mat'], img: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80' },
+
+  // Health & Beauty
+  { keywords: ['posture', 'corrector', 'cervical', 'pillow', 'donut sitting', 'seat cushion', 'armrest cushion', 'armrest'], img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['mask', 'facial', 'skin scrubber', 'pore', 'acne', 'microcurrent', 'face lifting', 'ice roller', 'gua sha', 'pimple', 'patches', 't-bar', 'sponge blender', 'chest & neck pad'], img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['massage gun', 'massager', 'cupping', 'shiatsu', 'kneading', 'laser therapy', 'foot pads', 'shampoo brush', 'scalp'], img: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['tooth', 'dental', 'toothbrush', 'plaque', 'teeth whitening'], img: 'https://images.unsplash.com/photo-1559591937-e62fb3d8d4bb?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['hair', 'trimmer', 'curler', 'straightener', 'nail drill'], img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['mirror', 'vanity'], img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['inhaler', 'nebulizer', 'snoring', 'nose clip', 'earwax'], img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=800&q=80' },
+
+  // Car & Outdoor
+  { keywords: ['jump starter', 'tire inflator', 'inflator', 'air compressor', 'pump', 'tire plug', 'puncture'], img: 'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['car vacuum', 'vacuum', 'car cleaner', 'duster'], img: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['water filter', 'straw', 'survival', 'camping', 'hammock', 'stool', 'tent', 'lantern', 'trekking poles', 'hiking'], img: 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['dash cam', 'car mount', 'car phone', 'tpms', 'car charger', 'seat belt', 'headrest', 'steering wheel lock', 'umbrella', 'sunshade'], img: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['flashlight', 'torch', 'led flashlight'], img: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['car organizer', 'trunk', 'dent repair', 'spray', 'coating', 'freshener', 'coasters', 'snow tire', 'ice scraper', 'scratch & swirl', 'scratch repair', 'backseat cover', 'animal & pest', 'exhaust fan', 'battery terminal'], img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+
+  // Tools & Utility
+  { keywords: ['tape measure', 'laser tape', 'measuring ruler', 'contour gauge', 'contour duplication', 'caliper'], img: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['screwdriver', 'wrench', 'socket wrench', 'pliers', 'drill bit', 'punch', 'stripper', 'staple gun', 'riveter', 'rivets', 'extractor', 'deburring', 'multi-tool'], img: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['nano tape', 'mounting tape', 'tape', 'weather stripping', 'draft stopper'], img: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['welder', 'soldering', 'wire connectors', 'glue', 'thermal camera', 'caulking', 'plastic welding', 'rotary', 'sand', 'wrist strap'], img: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['moving sliders', 'lifter', 'float valve', 'stud finder', 'tie down', 'ratchet', 'epoxy', 'anti-vibration'], img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80' },
+
+  // Fitness & Lifestyle
+  { keywords: ['jump rope', 'skipping rope'], img: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['pilates', 'resistance band', 'toning bar', 'stretching', 'yoga block', 'yoga mat', 'cooling towel'], img: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['back stretcher', 'acupressure', 'foam roller', 'roller', 'slant board', 'calf', 'foot rocker', 'lacrosse ball'], img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['grip', 'hand grip', 'finger resistance', 'arm & chest expander'], img: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['push-up', 'ab roller', 'pull-up', 'dumbbell', 'weights', 'hula hoop', 'agility', 'speed ball', 'thigh master', 'sauna', 'balance board', 'ems', 'weighted vest', 'sled harness', 'silicone ring'], img: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['knee sleeve', 'knee wrap', 'ankle support', 'wrist straps', 'compression', 'running vest', 'fanny pack'], img: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80' },
+
+  // Smart Home
+  { keywords: ['moon lamp', 'lamp', 'projector', 'sunset lamp', 'led lights', 'neon rope', 'wall light', 'puck lights', 'floor lamp', 'light bar', 'under-cabinet', 'candles', 'sconces', 'fairy lights', 'backlight', 'led bulb', 'light strips', 'fireworks lights', 'wall paneling', 'ceiling fan', 'ground disk lights', 'toilet nightlight', 'acoustic foam', 'light bulb', 'bulb', 'e26'], img: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['diffuser', 'humidifier', 'flame effect', 'vaporizer'], img: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['doorbell', 'fingerbot', 'air quality', 'pet feeder', 'socket', 'smart plug', 'alarm clock', 'thermostat', 'sensor', 'aquarium', 'jellyfish', 'sand art', 'water droplets', 'plant water'], img: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80' },
+
+  // Kids & Novelty
+  { keywords: ['ferrofluid', 'hypercube', 'fidget', 'spinning ball', 'magnetic', 'sensory', 'crawling toy', 'plushie', 'octopus', 'pop-it', 'perpetual', 'newton', 'meilong', 'puppets'], img: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80' },
+  { keywords: ['doodle board', 'writing tablet', 'pen', 'prism', 'bubbler', 'cactus', 'climbing car', 'push game', 'beer pong', 'bowling', 'sticky balls', 'chopsticks', 'sunflower', 'dinosaur', 'chicken', 'bubble gun', 'catapult', 'trebuchet', 'piggy bank', 'puzzle box', 'safe', 'guitar', 'blanket', 'useless box', 'fingerboard', 'laser tag', 'notebook'], img: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80', img2: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80' }
+];
+
+function getMatchingImages(title) {
+  const lower = title.toLowerCase();
+  for (const entry of PHOTO_MAP) {
+    if (entry.keywords.some(k => lower.includes(k))) {
+      return [entry.img, entry.img2];
+    }
+  }
+  return [
+    'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'
+  ];
+}
+
+function getCleanSearchQuery(name) {
+  return name
+    .replace(/\(.*?\)/g, '')
+    .replace(/&/g, 'and')
+    .replace(/[^a-zA-Z0-9 ]/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
 
 // 65 distinct researched product templates for each category = 8 * 65 = 520 products!
 const CATEGORY_ITEMS = {
@@ -646,16 +692,6 @@ function generateAllProducts() {
     const catSlug = catMeta.slug;
     const items = CATEGORY_ITEMS[catSlug] || [];
     
-    // Choose image pool
-    let imgPool = UNSPLASH_IMAGES.tech;
-    if (catSlug === "home-kitchen") imgPool = UNSPLASH_IMAGES.kitchen;
-    else if (catSlug === "beauty-health") imgPool = UNSPLASH_IMAGES.beauty;
-    else if (catSlug === "car-outdoor") imgPool = UNSPLASH_IMAGES.car;
-    else if (catSlug === "tools-utility") imgPool = UNSPLASH_IMAGES.tools;
-    else if (catSlug === "fitness-lifestyle") imgPool = UNSPLASH_IMAGES.fitness;
-    else if (catSlug === "smart-home") imgPool = UNSPLASH_IMAGES.home;
-    else if (catSlug === "kids-novelty") imgPool = UNSPLASH_IMAGES.novelty;
-
     items.forEach((item, i) => {
       const idStr = `prod-${String(prodIndex).padStart(3, "0")}`;
       prodIndex++;
@@ -669,9 +705,9 @@ function generateAllProducts() {
       const marginPercent = Number((((item.retail - item.low) / item.retail) * 100).toFixed(1));
       const estNetProfit = Number(Math.max(profitSpread - 7.5, 3.5).toFixed(2));
 
-      // Choose 2 images from pool
-      const img1 = imgPool[i % imgPool.length];
-      const img2 = imgPool[(i + 1) % imgPool.length];
+      // Choose 2 realistic matching images from PHOTO_MAP
+      const [img1, img2] = getMatchingImages(item.name);
+      const cleanQ = getCleanSearchQuery(item.name);
 
       // Generate realistic reviews count & rating
       const rating = Number((4.6 + (i % 5) * 0.08).toFixed(1));
@@ -695,7 +731,7 @@ function generateAllProducts() {
           lowestPrice: item.low,
           currency: "$",
           supplierName: "AliExpress Verified Direct Manufacturer",
-          supplierUrl: `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(item.name)}`,
+          supplierUrl: `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(cleanQ)}`,
           moq: "1 unit (Dropship Ready)",
           shippingTimeEst: "7-12 business days",
           secondarySuppliers: [
@@ -703,7 +739,7 @@ function generateAllProducts() {
               name: "CJ Dropshipping Global",
               price: Number((item.low * 1.08).toFixed(2)),
               currency: "$",
-              url: `https://cjdropshipping.com/search/${encodeURIComponent(item.name)}.html`,
+              url: `https://cjdropshipping.com/search/${encodeURIComponent(cleanQ)}.html`,
               moq: "1 unit",
               shippingEst: "8-14 days"
             },
@@ -711,7 +747,7 @@ function generateAllProducts() {
               name: "Temu Direct Factory",
               price: Number((item.low * 1.12).toFixed(2)),
               currency: "$",
-              url: `https://www.temu.com/search_result.html?search_key=${encodeURIComponent(item.name)}`,
+              url: `https://www.temu.com/search_result.html?search_key=${encodeURIComponent(cleanQ)}`,
               moq: "1 unit",
               shippingEst: "6-11 days"
             }
@@ -723,7 +759,7 @@ function generateAllProducts() {
           potentialProfit: profitSpread,
           profitMarginPercent: marginPercent,
           competitorStoreName: "Amazon / TikTok Shop",
-          competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(item.name)}`,
+          competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(cleanQ)}`,
           recommendedAdSpend: 7.5,
           estimatedNetProfit: estNetProfit
         },

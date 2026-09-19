@@ -12,7 +12,6 @@ import {
   ShieldCheck, 
   Sparkles, 
   ChevronDown,
-  ShoppingCart,
   Heart,
   Search,
   Zap
@@ -22,7 +21,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
 
-  const { totalItems, wishlist, setIsCartOpen } = useCart();
+  const { wishlist } = useCart();
 
   const categories = [
     { name: "Tech & Smart Gadgets", slug: "tech-gadgets" },
@@ -161,21 +160,6 @@ export default function Header() {
               </span>
             )}
           </Link>
-
-          {/* Cart Icon with Live Counter */}
-          <button
-            onClick={() => setIsCartOpen(true)}
-            className="relative p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/60 text-slate-300 hover:text-emerald-400 transition-all flex items-center gap-2 shadow-lg"
-            title="Open Sourcing Cart"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            <span className="hidden sm:inline text-xs font-bold text-white">Cart</span>
-            {totalItems > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 min-w-[1.25rem] h-5 px-1 rounded-full bg-emerald-500 text-slate-950 text-[10px] font-black flex items-center justify-center shadow-md animate-pulse">
-                {totalItems}
-              </span>
-            )}
-          </button>
 
           {/* Discover Button */}
           <a

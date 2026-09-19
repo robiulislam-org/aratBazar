@@ -11,7 +11,8 @@ import {
   Check, 
   Flame, 
   Zap,
-  Eye
+  Eye,
+  ExternalLink
 } from "lucide-react";
 
 interface ProductCardProps {
@@ -31,7 +32,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     reviewsCount 
   } = product;
 
-  const { addToCart, toggleWishlist, isWishlisted } = useCart();
+  const { toggleWishlist, isWishlisted } = useCart();
   const wishlisted = isWishlisted(id);
 
   const discountPercent = Math.round(market.profitMarginPercent) || 50;
@@ -129,20 +130,23 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        {/* Action Button: Add to Cart */}
+        {/* Action Button: Direct Supplier Link */}
         <div className="mt-4 pt-3 border-t border-slate-800/70 flex items-center gap-2">
-          <button
-            onClick={() => addToCart(product, 1)}
-            className="flex-1 py-2.5 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs transition-all shadow-md shadow-emerald-500/20 flex items-center justify-center gap-1.5 hover:scale-[1.01]"
+          <a
+            href={sourcing.supplierUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-black text-xs transition-all shadow-md shadow-emerald-500/20 flex items-center justify-center gap-1.5 hover:scale-[1.02] active:scale-95 group/btn"
+            title={`Direct Factory Source: ${title}`}
           >
-            <ShoppingCart className="w-3.5 h-3.5" />
-            <span>Add to Cart</span>
-          </button>
+            <span>Get Deal (${sourcing.lowestPrice.toFixed(2)})</span>
+            <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+          </a>
 
           <Link
             href={`/product/${slug}`}
-            className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700"
-            title="View Product Specs & Research"
+            className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700 hover:text-white"
+            title="View Full Specs & Sourcing Intelligence"
           >
             <Eye className="w-3.5 h-3.5" />
           </Link>

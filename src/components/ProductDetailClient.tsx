@@ -7,7 +7,6 @@ import { useCart } from "@/context/CartContext";
 import ProductCard from "./ProductCard";
 import { 
   Star, 
-  ShoppingCart, 
   Heart, 
   ShieldCheck, 
   Truck, 
@@ -17,9 +16,6 @@ import {
   CheckCircle2, 
   Flame, 
   Video, 
-  Layers, 
-  Plus, 
-  Minus,
   Sparkles,
   Zap,
   ArrowRight,
@@ -50,18 +46,10 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
   } = product;
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState<"overview" | "specs" | "viral" | "reviews" | "faq">("overview");
-  const [addedNotice, setAddedNotice] = useState(false);
 
-  const { addToCart, toggleWishlist, isWishlisted } = useCart();
+  const { toggleWishlist, isWishlisted } = useCart();
   const wishlisted = isWishlisted(id);
-
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
-    setAddedNotice(true);
-    setTimeout(() => setAddedNotice(false), 2500);
-  };
 
   const discountPercent = Math.round(market.profitMarginPercent) || 50;
 
@@ -211,54 +199,99 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
               </span>
             </div>
 
-            {/* Quantity Selector & Add to Cart */}
+            {/* Direct Purchase / Best Resource Sourcing CTA */}
             <div className="pt-2 space-y-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center bg-slate-950 border border-slate-800 rounded-2xl p-1">
-                  <button
-                    onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                    className="p-2 text-slate-400 hover:text-white transition-colors"
-                  >
-                    <Minus className="w-4 h-4" />
-                  </button>
-                  <span className="font-extrabold text-sm px-4 min-w-[3rem] text-center text-white">
-                    {quantity}
-                  </span>
-                  <button
-                    onClick={() => setQuantity((q) => q + 1)}
-                    className="p-2 text-slate-400 hover:text-white transition-colors"
-                  >
-                    <Plus className="w-4 h-4" />
-                  </button>
-                </div>
-
-                {/* Primary Add to Cart Button */}
-                <button
-                  onClick={handleAddToCart}
-                  className="flex-1 py-4 px-6 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-xl shadow-emerald-500/25 hover:scale-[1.01] flex items-center justify-center gap-2"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  <span>Add to Cart — ${(sourcing.lowestPrice * quantity).toFixed(2)}</span>
-                </button>
-              </div>
-
-              {addedNotice && (
-                <div className="p-3 rounded-xl bg-emerald-950 border border-emerald-500 text-emerald-300 text-xs font-bold text-center animate-in fade-in">
-                  ✓ Added {quantity} unit(s) to your sourcing cart!
-                </div>
-              )}
-
-              {/* Direct Supplier Link (B2B wholesale advantage) */}
+              {/* Primary Direct Buy Button */}
               <a
                 href={sourcing.supplierUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="w-full py-3.5 px-4 rounded-2xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-bold transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-black text-sm sm:text-base uppercase tracking-wider transition-all shadow-xl shadow-emerald-500/30 hover:scale-[1.01] active:scale-98 flex items-center justify-center gap-2.5 group"
               >
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Source Directly on AliExpress Verified Factory</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span>Buy at Factory Rate (${sourcing.lowestPrice.toFixed(2)})</span>
               </a>
+
+              {/* Direct Multi-Marketplace Best Resource Links */}
+              <div className="space-y-2 pt-1">
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                  Direct Verified Sourcing Resources:
+                </span>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {/* AliExpress Verified Factory */}
+                  <a
+                    href={sourcing.supplierUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="p-3 rounded-xl bg-slate-950 hover:bg-slate-800/90 border border-emerald-500/30 text-slate-200 text-xs font-bold transition-all flex items-center justify-between group"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>AliExpress Factory</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-emerald-400">
+                      <span>${sourcing.lowestPrice.toFixed(2)}</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </div>
+                  </a>
+
+                  {/* Amazon Competitor Benchmark */}
+                  <a
+                    href={market.competitorStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-xl bg-slate-950 hover:bg-slate-800/90 border border-slate-800 text-slate-200 text-xs font-bold transition-all flex items-center justify-between group"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-amber-400" />
+                      <span>Amazon Retail</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-slate-400">
+                      <span className="line-through">${market.retailPrice.toFixed(2)}</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </div>
+                  </a>
+
+                  {/* CJ Dropshipping */}
+                  {sourcing.secondarySuppliers?.[0] && (
+                    <a
+                      href={sourcing.secondarySuppliers[0].url}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="p-3 rounded-xl bg-slate-950 hover:bg-slate-800/90 border border-slate-800 text-slate-200 text-xs font-bold transition-all flex items-center justify-between group"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                        <span>CJ Dropshipping</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-cyan-400">
+                        <span>${sourcing.secondarySuppliers[0].price.toFixed(2)}</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </div>
+                    </a>
+                  )}
+
+                  {/* Temu Direct Factory */}
+                  {sourcing.secondarySuppliers?.[1] && (
+                    <a
+                      href={sourcing.secondarySuppliers[1].url}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="p-3 rounded-xl bg-slate-950 hover:bg-slate-800/90 border border-slate-800 text-slate-200 text-xs font-bold transition-all flex items-center justify-between group"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-purple-400" />
+                        <span>Temu Factory</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-purple-400">
+                        <span>${sourcing.secondarySuppliers[1].price.toFixed(2)}</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </div>
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
 
             {/* Buyer Protection Badges */}
@@ -270,52 +303,11 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
                 <RotateCcw className="w-3.5 h-3.5 text-cyan-400" /> 30-Day Money Back
               </span>
               <span className="flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5 text-amber-400" /> 100% Encrypted Checkout
+                <Lock className="w-3.5 h-3.5 text-amber-400" /> Direct Manufacturer Price
               </span>
               <span className="flex items-center gap-1.5">
                 <PackageCheck className="w-3.5 h-3.5 text-purple-400" /> Verified Factory Direct
               </span>
-            </div>
-          </div>
-
-          {/* Supplier Comparison Mini Table */}
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-            <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-              <Layers className="w-4 h-4 text-emerald-400" />
-              <span>Direct Supplier Price Check</span>
-            </h4>
-            <div className="divide-y divide-slate-800 text-xs">
-              <div className="py-2 flex items-center justify-between">
-                <div>
-                  <span className="text-white font-bold">{sourcing.supplierName}</span>
-                  <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-bold border border-emerald-800">
-                    Best Rate
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <strong className="text-emerald-400">${sourcing.lowestPrice.toFixed(2)}</strong>
-                  <a
-                    href={sourcing.supplierUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="text-slate-400 hover:text-white"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-
-              {sourcing.secondarySuppliers.map((sec, i) => (
-                <div key={i} className="py-2 flex items-center justify-between text-slate-400">
-                  <span>{sec.name} ({sec.shippingEst})</span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-slate-300 font-semibold">${sec.price.toFixed(2)}</span>
-                    <a href={sec.url} target="_blank" rel="noopener noreferrer sponsored" className="hover:text-white">
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
