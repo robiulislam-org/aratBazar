@@ -40,12 +40,12 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group bg-slate-900/90 hover:bg-slate-900 border border-slate-800/80 hover:border-emerald-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between relative">
       {/* Top Image Box */}
-      <div className="relative aspect-square w-full overflow-hidden bg-slate-950">
-        <Link href={`/product/${slug}`} className="block w-full h-full">
+      <div className="relative aspect-square w-full overflow-hidden bg-slate-950/80 p-3 flex items-center justify-center">
+        <Link href={`/product/${slug}`} className="block w-full h-full flex items-center justify-center">
           <img
             src={images[0]}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
             loading="lazy"
             onError={(e) => {
               const target = e.currentTarget;

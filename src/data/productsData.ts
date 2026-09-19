@@ -6,56 +6,56 @@ export const CATEGORIES: CategoryMeta[] = [
     "name": "Tech & Smart Gadgets",
     "iconName": "Cpu",
     "description": "Trending electronics, viral smart devices & portable tech accessories with massive global appeal.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "home-kitchen",
     "name": "Home & Kitchen Innovations",
     "iconName": "Home",
     "description": "Problem-solving kitchen tools, automated cleaning devices & modern home aesthetics.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "beauty-health",
     "name": "Health, Beauty & Wellness",
     "iconName": "Sparkles",
     "description": "Personal care, posture correctors, therapeutic massagers & skincare devices.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "car-outdoor",
     "name": "Car & Outdoor Gear",
     "iconName": "Car",
     "description": "Automotive detailing, portable power tools, solar gadgets & outdoor survival items.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "tools-utility",
     "name": "Everyday Problem Solvers",
     "iconName": "Wrench",
     "description": "Handy multi-tools, laser measuring equipment & instant household fixers.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "fitness-lifestyle",
     "name": "Fitness & Active Lifestyle",
     "iconName": "Activity",
     "description": "Home workout gear, smart recovery tools & portable athletic accessories.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "smart-home",
     "name": "Smart Home & Ambient Lighting",
     "iconName": "Zap",
     "description": "Aesthetic LED lighting, levitating decor, automated sensors & smart home life-hacks.",
-    "productCount": 660
+    "productCount": 15
   },
   {
     "slug": "kids-novelty",
     "name": "Viral Novelties & Unique Gifts",
     "iconName": "Gift",
     "description": "Unusual sensory toys, magnetic desk gadgets, kinetic art & unforgettable conversation-starter gifts.",
-    "productCount": 660
+    "productCount": 15
   }
 ];
 
@@ -76,8 +76,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00001-tech-magsafe.jpg"
     ],
     "viewsBase": 24.5,
     "specs": {
@@ -103,8 +102,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00002-tech-earbuds.jpg"
     ],
     "viewsBase": 38.2,
     "specs": {
@@ -130,8 +128,7 @@ export const ARCHETYPES = [
       79.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00003-tech-smartwatch.jpg"
     ],
     "viewsBase": 42,
     "specs": {
@@ -157,8 +154,7 @@ export const ARCHETYPES = [
       119.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00004-tech-drone.jpg"
     ],
     "viewsBase": 65.4,
     "specs": {
@@ -184,8 +180,7 @@ export const ARCHETYPES = [
       69.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00005-tech-gimbal.jpg"
     ],
     "viewsBase": 33.1,
     "specs": {
@@ -211,8 +206,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00006-tech-keyboard.jpg"
     ],
     "viewsBase": 28.7,
     "specs": {
@@ -238,8 +232,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00007-tech-mouse.jpg"
     ],
     "viewsBase": 19.4,
     "specs": {
@@ -265,8 +258,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00008-tech-gan-charger.jpg"
     ],
     "viewsBase": 17.8,
     "specs": {
@@ -292,8 +284,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00009-tech-powerbank.jpg"
     ],
     "viewsBase": 29.5,
     "specs": {
@@ -319,8 +310,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00010-tech-printer.jpg"
     ],
     "viewsBase": 58.4,
     "specs": {
@@ -346,8 +336,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00011-tech-padlock.jpg"
     ],
     "viewsBase": 18.2,
     "specs": {
@@ -373,8 +362,7 @@ export const ARCHETYPES = [
       69.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00012-tech-recorder.jpg"
     ],
     "viewsBase": 14.1,
     "specs": {
@@ -400,8 +388,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00013-tech-camera-detector.jpg"
     ],
     "viewsBase": 31.7,
     "specs": {
@@ -427,8 +414,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00014-tech-airtag-finder.jpg"
     ],
     "viewsBase": 26.8,
     "specs": {
@@ -454,8 +440,7 @@ export const ARCHETYPES = [
       149.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00015-tech-projector-fan.jpg"
     ],
     "viewsBase": 44.3,
     "specs": {
@@ -481,8 +466,7 @@ export const ARCHETYPES = [
       79.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00016-home-spin-scrubber.jpg"
     ],
     "viewsBase": 112.4,
     "specs": {
@@ -508,8 +492,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00017-home-veg-chopper.jpg"
     ],
     "viewsBase": 84.5,
     "specs": {
@@ -535,8 +518,7 @@ export const ARCHETYPES = [
       69.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00018-home-vacuum-sealer.jpg"
     ],
     "viewsBase": 49.1,
     "specs": {
@@ -562,8 +544,7 @@ export const ARCHETYPES = [
       42.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00019-home-jar-opener.jpg"
     ],
     "viewsBase": 42.1,
     "specs": {
@@ -589,8 +570,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00020-home-salt-grinder.jpg"
     ],
     "viewsBase": 35.8,
     "specs": {
@@ -616,8 +596,7 @@ export const ARCHETYPES = [
       28.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00021-home-milk-frother.jpg"
     ],
     "viewsBase": 61.2,
     "specs": {
@@ -643,8 +622,7 @@ export const ARCHETYPES = [
       34.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00022-home-thawing-tray.jpg"
     ],
     "viewsBase": 31.5,
     "specs": {
@@ -670,8 +648,7 @@ export const ARCHETYPES = [
       94.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00023-home-fruit-purifier.jpg"
     ],
     "viewsBase": 28.7,
     "specs": {
@@ -697,8 +674,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00024-home-sensor-trash.jpg"
     ],
     "viewsBase": 36.4,
     "specs": {
@@ -724,8 +700,7 @@ export const ARCHETYPES = [
       22.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00025-home-bag-sealer.jpg"
     ],
     "viewsBase": 64.2,
     "specs": {
@@ -751,8 +726,7 @@ export const ARCHETYPES = [
       99.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00026-home-dish-rack.jpg"
     ],
     "viewsBase": 22.9,
     "specs": {
@@ -778,8 +752,7 @@ export const ARCHETYPES = [
       16.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00027-home-magic-soap.jpg"
     ],
     "viewsBase": 19.3,
     "specs": {
@@ -805,8 +778,7 @@ export const ARCHETYPES = [
       24.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00028-home-safety-gloves.jpg"
     ],
     "viewsBase": 25.1,
     "specs": {
@@ -832,8 +804,7 @@ export const ARCHETYPES = [
       21.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00029-home-silicone-lids.jpg"
     ],
     "viewsBase": 38.6,
     "specs": {
@@ -859,8 +830,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00030-home-soap-dispenser.jpg"
     ],
     "viewsBase": 33.7,
     "specs": {
@@ -886,8 +856,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00031-beauty-posture.jpg"
     ],
     "viewsBase": 78.4,
     "specs": {
@@ -913,8 +882,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00032-beauty-massage-gun.jpg"
     ],
     "viewsBase": 92.1,
     "specs": {
@@ -940,8 +908,7 @@ export const ARCHETYPES = [
       139.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00033-beauty-led-mask.jpg"
     ],
     "viewsBase": 68.3,
     "specs": {
@@ -967,8 +934,7 @@ export const ARCHETYPES = [
       46.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00034-beauty-skin-scrubber.jpg"
     ],
     "viewsBase": 51.9,
     "specs": {
@@ -994,8 +960,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00035-beauty-toothbrush.jpg"
     ],
     "viewsBase": 33.4,
     "specs": {
@@ -1021,8 +986,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00036-beauty-hair-clipper.jpg"
     ],
     "viewsBase": 44.7,
     "specs": {
@@ -1048,8 +1012,7 @@ export const ARCHETYPES = [
       64.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00037-beauty-cupping.jpg"
     ],
     "viewsBase": 71,
     "specs": {
@@ -1075,8 +1038,7 @@ export const ARCHETYPES = [
       26.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00038-beauty-ice-roller.jpg"
     ],
     "viewsBase": 88.3,
     "specs": {
@@ -1102,8 +1064,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00039-beauty-sleep-mask.jpg"
     ],
     "viewsBase": 39.5,
     "specs": {
@@ -1129,8 +1090,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00040-beauty-callus-remover.jpg"
     ],
     "viewsBase": 37.1,
     "specs": {
@@ -1156,8 +1116,7 @@ export const ARCHETYPES = [
       58.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00041-beauty-water-flosser.jpg"
     ],
     "viewsBase": 29.8,
     "specs": {
@@ -1183,8 +1142,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00042-beauty-hair-straightener.jpg"
     ],
     "viewsBase": 56.4,
     "specs": {
@@ -1210,8 +1168,7 @@ export const ARCHETYPES = [
       109.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00043-beauty-knee-massager.jpg"
     ],
     "viewsBase": 34.2,
     "specs": {
@@ -1237,8 +1194,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00044-beauty-scale.jpg"
     ],
     "viewsBase": 27.9,
     "specs": {
@@ -1264,8 +1220,7 @@ export const ARCHETYPES = [
       56.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00045-beauty-nail-drill.jpg"
     ],
     "viewsBase": 31.6,
     "specs": {
@@ -1291,8 +1246,7 @@ export const ARCHETYPES = [
       149.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00046-car-jump-starter.jpg"
     ],
     "viewsBase": 59.2,
     "specs": {
@@ -1318,8 +1272,7 @@ export const ARCHETYPES = [
       64.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00047-car-vacuum.jpg"
     ],
     "viewsBase": 68.4,
     "specs": {
@@ -1345,8 +1298,7 @@ export const ARCHETYPES = [
       119.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00048-car-dash-cam.jpg"
     ],
     "viewsBase": 47.9,
     "specs": {
@@ -1372,8 +1324,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00049-car-phone-mount.jpg"
     ],
     "viewsBase": 38.1,
     "specs": {
@@ -1399,8 +1350,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00050-car-flashlight.jpg"
     ],
     "viewsBase": 51.3,
     "specs": {
@@ -1426,8 +1376,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00051-car-water-filter.jpg"
     ],
     "viewsBase": 35.6,
     "specs": {
@@ -1453,8 +1402,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00052-car-hammock.jpg"
     ],
     "viewsBase": 27.2,
     "specs": {
@@ -1480,8 +1428,7 @@ export const ARCHETYPES = [
       64.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00053-car-dent-repair.jpg"
     ],
     "viewsBase": 41.5,
     "specs": {
@@ -1507,8 +1454,7 @@ export const ARCHETYPES = [
       94.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00054-car-solar-panel.jpg"
     ],
     "viewsBase": 23.4,
     "specs": {
@@ -1534,8 +1480,7 @@ export const ARCHETYPES = [
       46.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00055-car-trunk-organizer.jpg"
     ],
     "viewsBase": 31,
     "specs": {
@@ -1561,8 +1506,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00056-car-sunshade.jpg"
     ],
     "viewsBase": 58.7,
     "specs": {
@@ -1588,8 +1532,7 @@ export const ARCHETYPES = [
       69.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00057-car-tpms.jpg"
     ],
     "viewsBase": 19.8,
     "specs": {
@@ -1615,8 +1558,7 @@ export const ARCHETYPES = [
       29.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00058-car-ceramic-spray.jpg"
     ],
     "viewsBase": 74.5,
     "specs": {
@@ -1642,8 +1584,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00059-car-camping-stove.jpg"
     ],
     "viewsBase": 26.5,
     "specs": {
@@ -1669,8 +1610,7 @@ export const ARCHETYPES = [
       18.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00060-car-window-breaker.jpg"
     ],
     "viewsBase": 49.3,
     "specs": {
@@ -1696,8 +1636,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00061-tool-laser-tape.jpg"
     ],
     "viewsBase": 38.2,
     "specs": {
@@ -1723,8 +1662,7 @@ export const ARCHETYPES = [
       69.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00062-tool-electric-screwdriver.jpg"
     ],
     "viewsBase": 44.8,
     "specs": {
@@ -1750,8 +1688,7 @@ export const ARCHETYPES = [
       46.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00063-tool-furniture-lifter.jpg"
     ],
     "viewsBase": 52.1,
     "specs": {
@@ -1777,8 +1714,7 @@ export const ARCHETYPES = [
       29.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00064-tool-contour-gauge.jpg"
     ],
     "viewsBase": 36.5,
     "specs": {
@@ -1804,8 +1740,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00065-tool-multitool-pliers.jpg"
     ],
     "viewsBase": 33.2,
     "specs": {
@@ -1831,8 +1766,7 @@ export const ARCHETYPES = [
       19.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00066-tool-nano-tape.jpg"
     ],
     "viewsBase": 77.9,
     "specs": {
@@ -1858,8 +1792,7 @@ export const ARCHETYPES = [
       74.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00067-tool-plastic-welder.jpg"
     ],
     "viewsBase": 46.1,
     "specs": {
@@ -1885,8 +1818,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00068-tool-wire-stripper.jpg"
     ],
     "viewsBase": 24.8,
     "specs": {
@@ -1912,8 +1844,7 @@ export const ARCHETYPES = [
       22.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00069-tool-screw-extractor.jpg"
     ],
     "viewsBase": 41.2,
     "specs": {
@@ -1939,8 +1870,7 @@ export const ARCHETYPES = [
       27.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1530088528371-105e6f3b2336?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00070-tool-universal-socket.jpg"
     ],
     "viewsBase": 35,
     "specs": {
@@ -1966,8 +1896,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00071-tool-laser-level.jpg"
     ],
     "viewsBase": 29.7,
     "specs": {
@@ -1993,8 +1922,7 @@ export const ARCHETYPES = [
       24.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00072-tool-anti-vibration.jpg"
     ],
     "viewsBase": 48.3,
     "specs": {
@@ -2020,8 +1948,7 @@ export const ARCHETYPES = [
       59.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00073-tool-endoscope.jpg"
     ],
     "viewsBase": 38.6,
     "specs": {
@@ -2047,8 +1974,7 @@ export const ARCHETYPES = [
       21.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00074-tool-caulk-finisher.jpg"
     ],
     "viewsBase": 26.9,
     "specs": {
@@ -2074,8 +2000,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00075-tool-caliper.jpg"
     ],
     "viewsBase": 18.7,
     "specs": {
@@ -2101,8 +2026,7 @@ export const ARCHETYPES = [
       74.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00076-fit-ab-roller.jpg"
     ],
     "viewsBase": 104.2,
     "specs": {
@@ -2128,8 +2052,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00077-fit-resistance-bands.jpg"
     ],
     "viewsBase": 63.8,
     "specs": {
@@ -2155,8 +2078,7 @@ export const ARCHETYPES = [
       24.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00078-fit-jump-rope.jpg"
     ],
     "viewsBase": 42.1,
     "specs": {
@@ -2182,8 +2104,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00079-fit-back-stretcher.jpg"
     ],
     "viewsBase": 58.9,
     "specs": {
@@ -2209,8 +2130,7 @@ export const ARCHETYPES = [
       21.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00080-fit-grip-trainer.jpg"
     ],
     "viewsBase": 49.3,
     "specs": {
@@ -2236,8 +2156,7 @@ export const ARCHETYPES = [
       34.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00081-fit-knee-sleeves.jpg"
     ],
     "viewsBase": 36.4,
     "specs": {
@@ -2263,8 +2182,7 @@ export const ARCHETYPES = [
       38.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1591741535585-9c4f52b3f13f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00082-fit-foam-roller.jpg"
     ],
     "viewsBase": 28.1,
     "specs": {
@@ -2290,8 +2208,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00083-fit-pilates-bar.jpg"
     ],
     "viewsBase": 53.7,
     "specs": {
@@ -2317,8 +2234,7 @@ export const ARCHETYPES = [
       48.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00084-fit-pushup-board.jpg"
     ],
     "viewsBase": 81.3,
     "specs": {
@@ -2344,8 +2260,7 @@ export const ARCHETYPES = [
       56.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00085-fit-smart-hoop.jpg"
     ],
     "viewsBase": 95.8,
     "specs": {
@@ -2371,8 +2286,7 @@ export const ARCHETYPES = [
       52.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00086-fit-acupressure-mat.jpg"
     ],
     "viewsBase": 44.6,
     "specs": {
@@ -2398,8 +2312,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00087-fit-yoga-mat.jpg"
     ],
     "viewsBase": 31.9,
     "specs": {
@@ -2425,8 +2338,7 @@ export const ARCHETYPES = [
       27.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00088-fit-waist-trimmer.jpg"
     ],
     "viewsBase": 51,
     "specs": {
@@ -2452,8 +2364,7 @@ export const ARCHETYPES = [
       16.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00089-fit-finger-extensor.jpg"
     ],
     "viewsBase": 38.5,
     "specs": {
@@ -2479,8 +2390,7 @@ export const ARCHETYPES = [
       18.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00090-fit-cooling-towel.jpg"
     ],
     "viewsBase": 27.6,
     "specs": {
@@ -2506,8 +2416,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00091-smart-sunset-lamp.jpg"
     ],
     "viewsBase": 128.5,
     "specs": {
@@ -2533,8 +2442,7 @@ export const ARCHETYPES = [
       64.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00092-smart-neon-rope.jpg"
     ],
     "viewsBase": 84.1,
     "specs": {
@@ -2560,8 +2468,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00093-smart-flame-diffuser.jpg"
     ],
     "viewsBase": 94.6,
     "specs": {
@@ -2587,8 +2494,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00094-smart-fingerbot.jpg"
     ],
     "viewsBase": 47.3,
     "specs": {
@@ -2614,8 +2520,7 @@ export const ARCHETYPES = [
       149.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00095-smart-moon-lamp.jpg"
     ],
     "viewsBase": 76.9,
     "specs": {
@@ -2641,8 +2546,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00096-smart-under-cabinet.jpg"
     ],
     "viewsBase": 41.5,
     "specs": {
@@ -2668,8 +2572,7 @@ export const ARCHETYPES = [
       64.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00097-smart-star-projector.jpg"
     ],
     "viewsBase": 115.2,
     "specs": {
@@ -2695,8 +2598,7 @@ export const ARCHETYPES = [
       29.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00098-smart-wifi-plug.jpg"
     ],
     "viewsBase": 26.4,
     "specs": {
@@ -2722,8 +2624,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00099-smart-video-doorbell.jpg"
     ],
     "viewsBase": 39.8,
     "specs": {
@@ -2749,8 +2650,7 @@ export const ARCHETYPES = [
       58.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00100-smart-sand-art.jpg"
     ],
     "viewsBase": 88,
     "specs": {
@@ -2776,8 +2676,7 @@ export const ARCHETYPES = [
       109.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00101-smart-air-purifier.jpg"
     ],
     "viewsBase": 34.5,
     "specs": {
@@ -2803,8 +2702,7 @@ export const ARCHETYPES = [
       49.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00102-smart-salt-lamp.jpg"
     ],
     "viewsBase": 37.9,
     "specs": {
@@ -2830,8 +2728,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00103-smart-temp-sensor.jpg"
     ],
     "viewsBase": 19.3,
     "specs": {
@@ -2857,8 +2754,7 @@ export const ARCHETYPES = [
       89.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00104-smart-corner-lamp.jpg"
     ],
     "viewsBase": 67.2,
     "specs": {
@@ -2884,8 +2780,7 @@ export const ARCHETYPES = [
       22.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00105-smart-plant-waterer.jpg"
     ],
     "viewsBase": 31.8,
     "specs": {
@@ -2911,8 +2806,7 @@ export const ARCHETYPES = [
       29.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00106-kids-pop-game.jpg"
     ],
     "viewsBase": 142,
     "specs": {
@@ -2938,8 +2832,7 @@ export const ARCHETYPES = [
       26.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00107-kids-lcd-tablet.jpg"
     ],
     "viewsBase": 65.4,
     "specs": {
@@ -2965,8 +2858,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00108-kids-flying-orb.jpg"
     ],
     "viewsBase": 135.8,
     "specs": {
@@ -2992,8 +2884,7 @@ export const ARCHETYPES = [
       24.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00109-kids-magnetic-pen.jpg"
     ],
     "viewsBase": 89.2,
     "specs": {
@@ -3019,8 +2910,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00110-kids-dancing-cactus.jpg"
     ],
     "viewsBase": 124.9,
     "specs": {
@@ -3046,8 +2936,7 @@ export const ARCHETYPES = [
       36.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00111-kids-kinetic-sculpture.jpg"
     ],
     "viewsBase": 47.8,
     "specs": {
@@ -3073,8 +2962,7 @@ export const ARCHETYPES = [
       16.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00112-kids-octopus-plush.jpg"
     ],
     "viewsBase": 168.4,
     "specs": {
@@ -3100,8 +2988,7 @@ export const ARCHETYPES = [
       54.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00113-kids-piggy-bank.jpg"
     ],
     "viewsBase": 49.3,
     "specs": {
@@ -3127,8 +3014,7 @@ export const ARCHETYPES = [
       52.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00114-kids-ferrofluid.jpg"
     ],
     "viewsBase": 58.1,
     "specs": {
@@ -3154,8 +3040,7 @@ export const ARCHETYPES = [
       32.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00115-kids-3d-illusion-lamp.jpg"
     ],
     "viewsBase": 62.7,
     "specs": {
@@ -3181,8 +3066,7 @@ export const ARCHETYPES = [
       39.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1558877385-81a1c7e67d72?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00116-kids-fidget-bundle.jpg"
     ],
     "viewsBase": 91.2,
     "specs": {
@@ -3208,8 +3092,7 @@ export const ARCHETYPES = [
       56.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00117-kids-wooden-puzzle.jpg"
     ],
     "viewsBase": 38,
     "specs": {
@@ -3235,8 +3118,7 @@ export const ARCHETYPES = [
       27.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1595588982209-5c45ceb4f350?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581975878061-7a91f800757a?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00118-kids-speed-cube.jpg"
     ],
     "viewsBase": 71.4,
     "specs": {
@@ -3262,8 +3144,7 @@ export const ARCHETYPES = [
       44.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1500995617113-cf789362a3e1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00119-kids-bubble-gun.jpg"
     ],
     "viewsBase": 112.7,
     "specs": {
@@ -3289,8 +3170,7 @@ export const ARCHETYPES = [
       34.99
     ],
     "images": [
-      "https://images.unsplash.com/photo-1560859251-d563a49c5e4a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80"
+      "/images/products/prod-00120-kids-finger-skateboard.jpg"
     ],
     "viewsBase": 49.5,
     "specs": {
@@ -3528,8 +3408,6 @@ export const VARIANT_MODIFIERS = [
 const PRODUCT_RAW_MAP = new Map<string, ProductItem>();
 const PRODUCT_ARCH_MAP = new Map<string, {
   arch: typeof ARCHETYPES[0];
-  modifier: typeof VARIANT_MODIFIERS[0];
-  v: number;
   lowPrice: number;
   retailPrice: number;
   potentialProfit: number;
@@ -3541,115 +3419,105 @@ function generateAllProducts(): ProductItem[] {
   let globalIndex = 1;
 
   for (const arch of ARCHETYPES) {
-    const variantsCount = arch.variantsCount || 44;
+    const idNum = String(globalIndex).padStart(5, "0");
+    const idStr = `prod-${idNum}`;
+    const title = arch.nameTemplate;
+    const slug = `prod-${idNum}-${arch.key.replace(/_/g, '-')}`;
+
     const [minLow, maxLow] = arch.lowRange;
     const [minRetail, maxRetail] = arch.retailRange;
+    const lowPrice = Number(((minLow + maxLow) / 2).toFixed(2));
+    const retailPrice = Number(((minRetail + maxRetail) / 2).toFixed(2));
+    const potentialProfit = Number((retailPrice - lowPrice).toFixed(2));
+    const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
 
-    for (let v = 0; v < variantsCount; v++) {
-      const modifier = VARIANT_MODIFIERS[v % VARIANT_MODIFIERS.length];
-      const idNum = String(globalIndex).padStart(5, "0");
-      const idStr = `prod-${idNum}`;
-      
-      const title = `${modifier.prefix} ${arch.nameTemplate} ${modifier.suffix}`;
-      const slugBase = `${arch.key}-${modifier.prefix.toLowerCase().replace(/[^a-z0-9]/g, '')}-${v + 1}`;
-      const slug = `prod-${idNum}-${slugBase}`;
+    const cleanSearchQuery = arch.cleanSearch;
+    const img1 = arch.images[0];
+    const img2 = arch.images[1] || arch.images[0];
 
-      const priceFactor = v / variantsCount;
-      const lowPrice = Number((minLow + (maxLow - minLow) * (0.3 + 0.7 * priceFactor)).toFixed(2));
-      const retailPrice = Number((minRetail + (maxRetail - minRetail) * (0.3 + 0.7 * priceFactor)).toFixed(2));
-      const potentialProfit = Number((retailPrice - lowPrice).toFixed(2));
-      const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
+    const views = `${arch.viewsBase.toFixed(1)}M`;
+    const rating = Number((4.7 + ((globalIndex * 3) % 3) * 0.1).toFixed(1));
+    const reviewsCount = 1200 + ((globalIndex * 379) % 7800);
 
-      const cleanSearchQuery = arch.cleanSearch;
-      const img1 = arch.images[v % arch.images.length];
-      const img2 = arch.images[(v + 1) % arch.images.length];
+    const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
+    const trendStatus = trendStatuses[globalIndex % trendStatuses.length];
 
-      const views = (arch.viewsBase * (0.7 + 0.6 * ((v * 7) % 10) / 10)).toFixed(1) + "M";
-      const rating = Number((4.6 + (((v * 3) % 4) * 0.1)).toFixed(1));
-      const reviewsCount = 500 + ((v * 370 + globalIndex * 13) % 9500);
+    const product: ProductItem = {
+      id: idStr,
+      slug: slug,
+      title: title,
+      tagline: arch.tagline,
+      description: `${title} is a premier viral problem-solver in the ${arch.categoryName} category.`,
+      category: arch.category as ProductCategory,
+      categoryName: arch.categoryName,
+      images: [img1, img2],
+      sourcing: {
+        lowestPrice: lowPrice,
+        currency: "$",
+        supplierName: "AliExpress Verified Direct Manufacturer",
+        supplierUrl: `https://www.aliexpress.com/w/wholesale-${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html`,
+        moq: "1 unit (Dropship Ready)",
+        shippingTimeEst: "7-12 business days",
+        secondarySuppliers: []
+      },
+      market: {
+        retailPrice: retailPrice,
+        currency: "$",
+        potentialProfit: potentialProfit,
+        profitMarginPercent: marginPercent,
+        competitorStoreName: "Amazon Retail / TikTok Shop",
+        competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(cleanSearchQuery)}`,
+        recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
+        estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
+      },
+      analytics: {
+        trendScore: Number((9.2 + (globalIndex % 8) * 0.1).toFixed(1)),
+        trendStatus: trendStatus,
+        monthlySalesVolumeEst: `${(15000 + ((globalIndex * 850) % 35000)).toLocaleString()}+ units`,
+        competitionLevel: globalIndex % 3 === 0 ? "Low" : globalIndex % 3 === 1 ? "Medium" : "High",
+        tiktokViews: `${views} views`,
+        socialBuzz: globalIndex % 2 === 0 ? "Very High" : "High"
+      },
+      businessGuide: {
+        whyItSells: [
+          "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
+          "Directly solves an everyday problem without expensive alternatives.",
+          `High perceived retail value commanding a ${marginPercent}% gross profit margin.`
+        ],
+        targetAudience: [
+          "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
+          "Social media users looking for smart convenience solutions"
+        ],
+        adHooks: [
+          `"Stop doing this the hard way... this tiny gadget changed everything!"`,
+          `"I found the #1 viral product everyone on TikTok is talking about."`
+        ],
+        recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
+      },
+      specs: Object.assign({}, arch.specs, {
+        "Warranty": "1-Year Manufacturer Direct Warranty",
+        "Certification": "CE, RoHS, FCC Standard Compliant",
+        "Origin": "Factory Direct Quality Inspected"
+      }) as unknown as Record<string, string>,
+      rating: rating,
+      reviewsCount: reviewsCount,
+      isFeatured: globalIndex <= 16,
+      isDailyPick: globalIndex <= 8,
+      addedAt: "2026-09-19T00:00:00.000Z",
+      updatedAt: "2026-09-19T00:00:00.000Z"
+    };
 
-      const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
-      const trendStatus = trendStatuses[(v + globalIndex) % trendStatuses.length];
+    allProducts.push(product);
+    PRODUCT_RAW_MAP.set(slug, product);
+    PRODUCT_ARCH_MAP.set(slug, {
+      arch,
+      lowPrice,
+      retailPrice,
+      potentialProfit,
+      marginPercent
+    });
 
-      const product: ProductItem = {
-        id: idStr,
-        slug: slug,
-        title: title,
-        tagline: `${arch.tagline} ${modifier.feature}`,
-        description: `${title} is a premier viral problem-solver in the ${arch.categoryName} category.`,
-        category: arch.category as ProductCategory,
-        categoryName: arch.categoryName,
-        images: [img1, img2],
-        sourcing: {
-          lowestPrice: lowPrice,
-          currency: "$",
-          supplierName: "AliExpress Verified Direct Manufacturer",
-          supplierUrl: `https://www.aliexpress.com/w/wholesale-${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html`,
-          moq: "1 unit (Dropship Ready)",
-          shippingTimeEst: "7-12 business days",
-          secondarySuppliers: []
-        },
-        market: {
-          retailPrice: retailPrice,
-          currency: "$",
-          potentialProfit: potentialProfit,
-          profitMarginPercent: marginPercent,
-          competitorStoreName: "Amazon Retail / TikTok Shop",
-          competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(cleanSearchQuery)}`,
-          recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
-          estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
-        },
-        analytics: {
-          trendScore: Number((9.1 + (v % 9) * 0.1).toFixed(1)),
-          trendStatus: trendStatus,
-          monthlySalesVolumeEst: `${(12000 + ((v * 850) % 45000)).toLocaleString()}+ units`,
-          competitionLevel: v % 3 === 0 ? "Low" : v % 3 === 1 ? "Medium" : "High",
-          tiktokViews: `${views} views`,
-          socialBuzz: v % 2 === 0 ? "Very High" : "High"
-        },
-        businessGuide: {
-          whyItSells: [
-            "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
-            "Directly solves an everyday problem without expensive alternatives.",
-            `High perceived retail value commanding a ${marginPercent}% gross profit margin.`
-          ],
-          targetAudience: [
-            "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
-            "Social media users looking for smart convenience solutions"
-          ],
-          adHooks: [
-            `"Stop doing this the hard way... this tiny gadget changed everything!"`,
-            `"I found the #1 viral product everyone on TikTok is talking about."`
-          ],
-          recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
-        },
-        specs: Object.assign({}, arch.specs, {
-          "Warranty": "1-Year Manufacturer Direct Warranty",
-          "Certification": "CE, RoHS, FCC Standard Compliant",
-          "Origin": "Factory Direct Quality Inspected"
-        }) as unknown as Record<string, string>,
-        rating: rating,
-        reviewsCount: reviewsCount,
-        isFeatured: v < 2,
-        isDailyPick: v === 0,
-        addedAt: "2026-09-19T00:00:00.000Z",
-        updatedAt: "2026-09-19T00:00:00.000Z"
-      };
-
-      allProducts.push(product);
-      PRODUCT_RAW_MAP.set(slug, product);
-      PRODUCT_ARCH_MAP.set(slug, {
-        arch,
-        modifier,
-        v,
-        lowPrice,
-        retailPrice,
-        potentialProfit,
-        marginPercent
-      });
-
-      globalIndex++;
-    }
+    globalIndex++;
   }
 
   return allProducts;
@@ -3666,12 +3534,12 @@ export function getProductBySlug(slug: string): ProductItem | undefined {
   const meta = PRODUCT_ARCH_MAP.get(slug);
   if (!meta) return base;
 
-  const { arch, modifier, lowPrice, retailPrice, potentialProfit, marginPercent } = meta;
+  const { arch, lowPrice, retailPrice, potentialProfit, marginPercent } = meta;
   const cleanSearchQuery = arch.cleanSearch;
 
   return {
     ...base,
-    description: `${base.title} is a premier viral problem-solver in the ${arch.categoryName} category. ${arch.tagline} ${modifier.feature} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.`,
+    description: `${base.title} is a premier viral problem-solver in the ${arch.categoryName} category. ${arch.tagline} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.`,
     specs: Object.assign({}, arch.specs, {
       "Warranty": "1-Year Manufacturer Direct Warranty",
       "Certification": "CE, RoHS, FCC Standard Compliant",

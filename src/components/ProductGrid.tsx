@@ -147,7 +147,7 @@ export default function ProductGrid({ products, defaultCategory = "all" }: Produ
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search 5,000+ viral gadgets, kitchen hacks, life problem solvers..."
+              placeholder="Search viral gadgets, kitchen hacks, life problem solvers..."
               className="w-full bg-slate-950 border border-slate-800 rounded-2xl pl-12 pr-12 py-3.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
             />
             {searchQuery && (

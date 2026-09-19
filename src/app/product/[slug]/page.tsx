@@ -11,9 +11,8 @@ interface ProductPageProps {
 }
 
 export async function generateStaticParams() {
-  // Prerender top 100 daily picks & featured products at build time;
-  // remaining 5,000+ products are rendered on-demand and cached dynamically.
-  return INITIAL_PRODUCTS.slice(0, 100).map((product) => ({
+  // Prerender all 120 verified winning products at build time for instant loading and 100% SSG coverage.
+  return INITIAL_PRODUCTS.map((product) => ({
     slug: product.slug,
   }));
 }

@@ -84,11 +84,11 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         {/* Left: Gallery */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="aspect-square rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 relative shadow-2xl group">
+          <div className="aspect-square rounded-3xl overflow-hidden bg-slate-950/80 border border-slate-800 relative shadow-2xl group flex items-center justify-center p-6">
             <img
               src={images[activeImageIndex] || images[0]}
               alt={title}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-2xl"
               onError={(e) => {
                 const target = e.currentTarget;
                 if (images[1] && target.src !== images[1]) {
@@ -133,7 +133,7 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
                       : "border-slate-800 hover:border-slate-700 opacity-70 hover:opacity-100"
                   }`}
                 >
-                  <img src={img} alt={`Preview ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`Preview ${i + 1}`} className="w-full h-full object-contain p-2" />
                 </button>
               ))}
             </div>
