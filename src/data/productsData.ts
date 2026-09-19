@@ -36218,7 +36218,7 @@ export const INITIAL_PRODUCTS: ProductItem[] = [
   },
   {
     "id": "prod-394",
-    "slug": "smart-bluetooth-body-tape-measure-with-health-tracker-app",
+    "slug": "fitness-smart-bluetooth-body-tape-measure-health-tracker",
     "title": "Smart Bluetooth Body Tape Measure with Health Tracker App",
     "tagline": "Retractable tape locks circumference and sends centimeter measurements to phone.",
     "description": "Smart Bluetooth Body Tape Measure with Health Tracker App is one of the highest-converting viral products in the Fitness & Active Lifestyle market. Retractable tape locks circumference and sends centimeter measurements to phone. Sourced directly from verified tier-1 factory manufacturers, this item delivers premium build quality with unbeatable profit margins for online sellers and exceptional value for shoppers.",

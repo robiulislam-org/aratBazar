@@ -493,6 +493,9 @@ export default function ProductDetailClient({ product, similarProducts }: Produc
                 ))}
               </div>
             </div>
+          </div>
+        )}
+
         {/* Tab 5: Buyer FAQs (SEO Accordion) */}
         {activeTab === "faq" && (
           <div className="pt-6 space-y-4">

@@ -66,10 +66,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [wishlist, isLoaded]);
 
   const addToCart = (product: ProductItem, quantity = 1) => {
-    setCart((prev) => {
-      const existing = prev.find((item) => item.product.id === product.id);
+    setCart((prev: CartItem[]) => {
+      const existing = prev.find((item: CartItem) => item.product.id === product.id);
       if (existing) {
-        return prev.map((item) =>
+        return prev.map((item: CartItem) =>
           item.product.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
             : item
@@ -81,7 +81,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeFromCart = (productId: string) => {
-    setCart((prev) => prev.filter((item) => item.product.id !== productId));
+    setCart((prev: CartItem[]) => prev.filter((item: CartItem) => item.product.id !== productId));
   };
 
   const updateQuantity = (productId: string, quantity: number) => {
@@ -89,8 +89,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       removeFromCart(productId);
       return;
     }
-    setCart((prev) =>
-      prev.map((item) =>
+    setCart((prev: CartItem[]) =>
+      prev.map((item: CartItem) =>
         item.product.id === productId ? { ...item, quantity } : item
       )
     );
@@ -101,18 +101,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleWishlist = (productId: string) => {
-    setWishlist((prev) =>
+    setWishlist((prev: string[]) =>
       prev.includes(productId)
-        ? prev.filter((id) => id !== productId)
+        ? prev.filter((id: string) => id !== productId)
         : [...prev, productId]
     );
   };
 
   const isWishlisted = (productId: string) => wishlist.includes(productId);
 
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const totalItems = cart.reduce((sum: number, item: CartItem) => sum + item.quantity, 0);
   const totalPrice = cart.reduce(
-    (sum, item) => sum + item.product.sourcing.lowestPrice * item.quantity,
+    (sum: number, item: CartItem) => sum + item.product.sourcing.lowestPrice * item.quantity,
     0
   );
 
