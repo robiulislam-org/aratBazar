@@ -2,7 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { INITIAL_PRODUCTS } from "@/data/productsData";
+import { INITIAL_PRODUCTS, getProductBySlug } from "@/data/productsData";
 import ProductDetailClient from "@/components/ProductDetailClient";
 import { ArrowLeft } from "lucide-react";
 
@@ -10,19 +10,17 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
-const PRODUCT_MAP = new Map(INITIAL_PRODUCTS.map((p) => [p.slug, p]));
-
 export async function generateStaticParams() {
-  // Prerender top 150 daily picks & featured products at build time;
+  // Prerender top 100 daily picks & featured products at build time;
   // remaining 5,000+ products are rendered on-demand and cached dynamically.
-  return INITIAL_PRODUCTS.slice(0, 150).map((product) => ({
+  return INITIAL_PRODUCTS.slice(0, 100).map((product) => ({
     slug: product.slug,
   }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = PRODUCT_MAP.get(slug);
+  const product = getProductBySlug(slug);
 
   if (!product) {
     return {
@@ -89,7 +87,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = PRODUCT_MAP.get(slug);
+  const product = getProductBySlug(slug);
 
   if (!product) {
     notFound();

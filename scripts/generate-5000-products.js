@@ -2323,26 +2323,230 @@ function generateAllProducts() {
 }
 
 console.log("Generating 5,000+ products across 120 archetypes...");
-const products = generateAllProducts();
+const sampleProducts = generateAllProducts();
 
 // Update category product counts
 CATEGORIES_DATA.forEach(cat => {
-  cat.productCount = products.filter(p => p.category === cat.slug).length;
+  cat.productCount = sampleProducts.filter(p => p.category === cat.slug).length;
 });
 
-console.log(`\n✅ Generated total ${products.length} verified products across ${CATEGORIES_DATA.length} categories!`);
+console.log(`\n✅ Generated total ${sampleProducts.length} verified products across ${CATEGORIES_DATA.length} categories!`);
 CATEGORIES_DATA.forEach(c => console.log(` - ${c.name}: ${c.productCount} products`));
 
-// Write to src/data/productsData.ts
+// Write to src/data/productsData.ts as high-performance self-contained TypeScript module
 const outputFilePath = path.join(__dirname, "../src/data/productsData.ts");
 
-console.log("\nWriting dataset to " + outputFilePath + "...");
-const fileContent = `import { ProductItem, CategoryMeta } from "@/types/product";
+console.log("\nWriting high-performance dataset to " + outputFilePath + "...");
+
+const fileContent = `import type { ProductItem, CategoryMeta, ProductCategory } from "@/types/product";
 
 export const CATEGORIES: CategoryMeta[] = ${JSON.stringify(CATEGORIES_DATA, null, 2)};
 
-export const INITIAL_PRODUCTS: ProductItem[] = ${JSON.stringify(products, null, 2)};
+export const ARCHETYPES = ${JSON.stringify(ARCHETYPES, null, 2)};
+
+export const VARIANT_MODIFIERS = ${JSON.stringify(VARIANT_MODIFIERS, null, 2)};
+
+const PRODUCT_RAW_MAP = new Map<string, ProductItem>();
+const PRODUCT_ARCH_MAP = new Map<string, {
+  arch: typeof ARCHETYPES[0];
+  modifier: typeof VARIANT_MODIFIERS[0];
+  v: number;
+  lowPrice: number;
+  retailPrice: number;
+  potentialProfit: number;
+  marginPercent: number;
+}>();
+
+function generateAllProducts(): ProductItem[] {
+  const allProducts: ProductItem[] = [];
+  let globalIndex = 1;
+
+  for (const arch of ARCHETYPES) {
+    const variantsCount = arch.variantsCount || 44;
+    const [minLow, maxLow] = arch.lowRange;
+    const [minRetail, maxRetail] = arch.retailRange;
+
+    for (let v = 0; v < variantsCount; v++) {
+      const modifier = VARIANT_MODIFIERS[v % VARIANT_MODIFIERS.length];
+      const idNum = String(globalIndex).padStart(5, "0");
+      const idStr = \`prod-\${idNum}\`;
+      
+      const title = \`\${modifier.prefix} \${arch.nameTemplate} \${modifier.suffix}\`;
+      const slugBase = \`\${arch.key}-\${modifier.prefix.toLowerCase().replace(/[^a-z0-9]/g, '')}-\${v + 1}\`;
+      const slug = \`prod-\${idNum}-\${slugBase}\`;
+
+      const priceFactor = v / variantsCount;
+      const lowPrice = Number((minLow + (maxLow - minLow) * (0.3 + 0.7 * priceFactor)).toFixed(2));
+      const retailPrice = Number((minRetail + (maxRetail - minRetail) * (0.3 + 0.7 * priceFactor)).toFixed(2));
+      const potentialProfit = Number((retailPrice - lowPrice).toFixed(2));
+      const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
+
+      const cleanSearchQuery = arch.cleanSearch;
+      const img1 = arch.images[v % arch.images.length];
+      const img2 = arch.images[(v + 1) % arch.images.length];
+
+      const views = (arch.viewsBase * (0.7 + 0.6 * ((v * 7) % 10) / 10)).toFixed(1) + "M";
+      const rating = Number((4.6 + (((v * 3) % 4) * 0.1)).toFixed(1));
+      const reviewsCount = 500 + ((v * 370 + globalIndex * 13) % 9500);
+
+      const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
+      const trendStatus = trendStatuses[(v + globalIndex) % trendStatuses.length];
+
+      const product: ProductItem = {
+        id: idStr,
+        slug: slug,
+        title: title,
+        tagline: \`\${arch.tagline} \${modifier.feature}\`,
+        description: \`\${title} is a premier viral problem-solver in the \${arch.categoryName} category.\`,
+        category: arch.category as ProductCategory,
+        categoryName: arch.categoryName,
+        images: [img1, img2],
+        sourcing: {
+          lowestPrice: lowPrice,
+          currency: "$",
+          supplierName: "AliExpress Verified Direct Manufacturer",
+          supplierUrl: \`https://www.aliexpress.com/wholesale?SearchText=\${encodeURIComponent(cleanSearchQuery)}\`,
+          moq: "1 unit (Dropship Ready)",
+          shippingTimeEst: "7-12 business days",
+          secondarySuppliers: []
+        },
+        market: {
+          retailPrice: retailPrice,
+          currency: "$",
+          potentialProfit: potentialProfit,
+          profitMarginPercent: marginPercent,
+          competitorStoreName: "Amazon Retail / TikTok Shop",
+          competitorStoreUrl: \`https://www.amazon.com/s?k=\${encodeURIComponent(cleanSearchQuery)}\`,
+          recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
+          estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
+        },
+        analytics: {
+          trendScore: Number((9.1 + (v % 9) * 0.1).toFixed(1)),
+          trendStatus: trendStatus,
+          monthlySalesVolumeEst: \`\${(12000 + ((v * 850) % 45000)).toLocaleString()}+ units\`,
+          competitionLevel: v % 3 === 0 ? "Low" : v % 3 === 1 ? "Medium" : "High",
+          tiktokViews: \`\${views} views\`,
+          socialBuzz: v % 2 === 0 ? "Very High" : "High"
+        },
+        businessGuide: {
+          whyItSells: [
+            "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
+            "Directly solves an everyday problem without expensive alternatives.",
+            \`High perceived retail value commanding a \${marginPercent}% gross profit margin.\`
+          ],
+          targetAudience: [
+            "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
+            "Social media users looking for smart convenience solutions"
+          ],
+          adHooks: [
+            \`"Stop doing this the hard way... this tiny gadget changed everything!"\`,
+            \`"I found the #1 viral product everyone on TikTok is talking about."\`
+          ],
+          recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
+        },
+        specs: Object.assign({}, arch.specs, {
+          "Warranty": "1-Year Manufacturer Direct Warranty",
+          "Certification": "CE, RoHS, FCC Standard Compliant",
+          "Origin": "Factory Direct Quality Inspected"
+        }) as unknown as Record<string, string>,
+        rating: rating,
+        reviewsCount: reviewsCount,
+        isFeatured: v < 2,
+        isDailyPick: v === 0,
+        addedAt: "2026-09-19T00:00:00.000Z",
+        updatedAt: "2026-09-19T00:00:00.000Z"
+      };
+
+      allProducts.push(product);
+      PRODUCT_RAW_MAP.set(slug, product);
+      PRODUCT_ARCH_MAP.set(slug, {
+        arch,
+        modifier,
+        v,
+        lowPrice,
+        retailPrice,
+        potentialProfit,
+        marginPercent
+      });
+
+      globalIndex++;
+    }
+  }
+
+  return allProducts;
+}
+
+export const INITIAL_PRODUCTS: ProductItem[] = generateAllProducts();
+
+export const TICKER_PRODUCTS: ProductItem[] = INITIAL_PRODUCTS.slice(0, 8);
+
+export function getProductBySlug(slug: string): ProductItem | undefined {
+  const base = PRODUCT_RAW_MAP.get(slug);
+  if (!base) return undefined;
+
+  const meta = PRODUCT_ARCH_MAP.get(slug);
+  if (!meta) return base;
+
+  const { arch, modifier, lowPrice, retailPrice, potentialProfit, marginPercent } = meta;
+  const cleanSearchQuery = arch.cleanSearch;
+
+  return {
+    ...base,
+    description: \`\${base.title} is a premier viral problem-solver in the \${arch.categoryName} category. \${arch.tagline} \${modifier.feature} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.\`,
+    specs: Object.assign({}, arch.specs, {
+      "Warranty": "1-Year Manufacturer Direct Warranty",
+      "Certification": "CE, RoHS, FCC Standard Compliant",
+      "Origin": "Factory Direct Quality Inspected"
+    }) as unknown as Record<string, string>,
+    sourcing: {
+      ...base.sourcing,
+      secondarySuppliers: [
+        {
+          name: "CJ Dropshipping Global",
+          price: Number((lowPrice * 1.08).toFixed(2)),
+          currency: "$",
+          url: \`https://cjdropshipping.com/search/\${encodeURIComponent(cleanSearchQuery)}.html\`,
+          moq: "1 unit",
+          shippingEst: "8-14 days"
+        },
+        {
+          name: "Temu Direct Factory",
+          price: Number((lowPrice * 1.12).toFixed(2)),
+          currency: "$",
+          url: \`https://www.temu.com/search_result.html?search_key=\${encodeURIComponent(cleanSearchQuery)}\`,
+          moq: "1 unit",
+          shippingEst: "6-11 days"
+        }
+      ]
+    },
+    market: {
+      ...base.market,
+      competitorStoreName: "Amazon Retail / TikTok Shop",
+      competitorStoreUrl: \`https://www.amazon.com/s?k=\${encodeURIComponent(cleanSearchQuery)}\`,
+      recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
+      estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
+    },
+    businessGuide: {
+      whyItSells: [
+        "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
+        "Directly solves an everyday problem without expensive alternatives.",
+        \`High perceived retail value commanding a \${marginPercent}% gross profit margin.\`
+      ],
+      targetAudience: [
+        "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
+        "Social media users looking for smart convenience solutions",
+        "Homeowners and professionals valuing reliable everyday tools"
+      ],
+      adHooks: [
+        \`"Stop doing this the hard way... this tiny gadget changed everything!"\`,
+        \`"I found the #1 viral product everyone on TikTok is talking about."\`,
+        \`"POV: You finally found the tool that solves this in 10 seconds."\`
+      ],
+      recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
+    }
+  };
+}
 `;
 
 fs.writeFileSync(outputFilePath, fileContent, "utf-8");
-console.log(`🎉 Successfully wrote ${products.length} products to ${outputFilePath}!\n`);
+console.log(`🎉 Successfully wrote optimized dataset to ${outputFilePath}!\n`);

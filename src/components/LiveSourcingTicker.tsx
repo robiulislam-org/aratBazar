@@ -2,11 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { INITIAL_PRODUCTS } from "@/data/productsData";
+import { TICKER_PRODUCTS } from "@/data/productsData";
 import { TrendingUp, Sparkles, ExternalLink } from "lucide-react";
 
 export default function LiveSourcingTicker() {
-  const tickerItems = INITIAL_PRODUCTS.slice(0, 8);
+  const tickerItems = TICKER_PRODUCTS;
 
   return (
     <div className="w-full bg-slate-950 border-y border-emerald-500/20 py-2.5 overflow-hidden relative shadow-inner">
