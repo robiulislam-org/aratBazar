@@ -249,21 +249,33 @@ async function main() {
 
   content = content.replace(/export const AI_MARKET_METRICS: AIMarketMetrics = \{[\s\S]*?\};/, updatedMetrics);
 
-  // Update AI_DAILY_RELEASES by prepending newly found dispatches while keeping existing unique ones
+  // Update AI_DAILY_RELEASES by prepending only new unique dispatches
   const existingMatches = content.match(/export const AI_DAILY_RELEASES: AIDailyRelease\[\] = (\[[\s\S]*?\]);/);
   if (existingMatches && existingMatches[1]) {
     try {
-      // Evaluate or parse existing array
-      // To safely inject, we can prepend the new dispatches as formatted JS objects
-      const formattedNew = newDispatches.map((d) => `  ${JSON.stringify(d, null, 2).replace(/\n/g, "\n  ")}`).join(",\n");
-      if (formattedNew) {
+      const existingList = eval(existingMatches[1]);
+      const existingHeadlines = new Set(existingList.map((item) => (item.headline || "").toLowerCase().trim()));
+      const existingUrls = new Set(existingList.map((item) => (item.url || "").trim()));
+
+      const toAdd = newDispatches.filter((d) => {
+        const h = (d.headline || "").toLowerCase().trim();
+        const u = (d.url || "").trim();
+        return !existingHeadlines.has(h) && (!u || !existingUrls.has(u));
+      });
+
+      if (toAdd.length > 0) {
+        // Prepend new dispatches and keep up to 50 latest
+        const combined = [...toAdd, ...existingList].slice(0, 50);
         content = content.replace(
-          /export const AI_DAILY_RELEASES: AIDailyRelease\[\] = \[/,
-          `export const AI_DAILY_RELEASES: AIDailyRelease[] = [\n${formattedNew},`
+          /export const AI_DAILY_RELEASES: AIDailyRelease\[\] = \[[\s\S]*?\];/,
+          `export const AI_DAILY_RELEASES: AIDailyRelease[] = ${JSON.stringify(combined, null, 2)};`
         );
+        console.log(`   ✅ Added ${toAdd.length} new unique AI dispatches (total: ${combined.length})`);
+      } else {
+        console.log(`   ℹ️ No duplicate AI dispatches added — existing archive is current.`);
       }
     } catch (e) {
-      console.warn("   ⚠️ Could not prepend dispatches:", e.message);
+      console.warn("   ⚠️ Could not process dispatches:", e.message);
     }
   }
 

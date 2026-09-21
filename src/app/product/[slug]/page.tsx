@@ -13,9 +13,7 @@ interface ProductPageProps {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  // Prerender the top 240 winning products at build time for instant loading.
-  // The remaining 4,760 products are rendered on demand and cached via Next.js ISR.
-  return INITIAL_PRODUCTS.slice(0, 240).map((product) => ({
+  return INITIAL_PRODUCTS.map((product) => ({
     slug: product.slug,
   }));
 }

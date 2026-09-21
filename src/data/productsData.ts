@@ -6,56 +6,56 @@ export const CATEGORIES: CategoryMeta[] = [
     "name": "Tech & Smart Gadgets",
     "iconName": "Cpu",
     "description": "Trending electronics, viral smart devices & portable tech accessories with massive global appeal.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "home-kitchen",
     "name": "Home & Kitchen Innovations",
     "iconName": "Home",
     "description": "Problem-solving kitchen tools, automated cleaning devices & modern home aesthetics.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "beauty-health",
     "name": "Health, Beauty & Wellness",
     "iconName": "Sparkles",
     "description": "Personal care, posture correctors, therapeutic massagers & skincare devices.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "car-outdoor",
     "name": "Car & Outdoor Gear",
     "iconName": "Car",
     "description": "Automotive detailing, portable power tools, solar gadgets & outdoor survival items.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "tools-utility",
     "name": "Everyday Problem Solvers",
     "iconName": "Wrench",
     "description": "Handy multi-tools, laser measuring equipment & instant household fixers.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "fitness-lifestyle",
     "name": "Fitness & Active Lifestyle",
     "iconName": "Activity",
     "description": "Home workout gear, smart recovery tools & portable athletic accessories.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "smart-home",
     "name": "Smart Home & Ambient Lighting",
     "iconName": "Zap",
     "description": "Aesthetic LED lighting, levitating decor, automated sensors & smart home life-hacks.",
-    "productCount": 625
+    "productCount": 15
   },
   {
     "slug": "kids-novelty",
     "name": "Viral Novelties & Unique Gifts",
     "iconName": "Gift",
     "description": "Unusual sensory toys, magnetic desk gadgets, kinetic art & unforgettable conversation-starter gifts.",
-    "productCount": 625
+    "productCount": 15
   }
 ];
 
@@ -3182,256 +3182,13 @@ export const ARCHETYPES = [
   }
 ];
 
-export const VARIANT_MODIFIERS = [
-  {
-    "prefix": "Pro Ultra",
-    "suffix": "(2026 Upgraded Edition)",
-    "feature": "Featuring high-efficiency power management and aerospace-grade construction."
-  },
-  {
-    "prefix": "Smart Elite",
-    "suffix": "with Quick-Charge Support",
-    "feature": "Optimized with advanced intelligent microcontrollers for instant responsive action."
-  },
-  {
-    "prefix": "Compact Mini",
-    "suffix": "Travel Edition with Hard Case",
-    "feature": "Engineered for maximum portability and lightweight everyday carry convenience."
-  },
-  {
-    "prefix": "Industrial Grade",
-    "suffix": "Heavy-Duty All-Weather Model",
-    "feature": "Reinforced with shock-absorbing alloy housing and IPX8 certified seals."
-  },
-  {
-    "prefix": "Wireless Plus",
-    "suffix": "with Smart App Control",
-    "feature": "Seamlessly connects to iOS and Android smartphones with real-time feedback."
-  },
-  {
-    "prefix": "Max Stealth",
-    "suffix": "Matte Black Signature Series",
-    "feature": "Finished in fingerprint-resistant matte coating with whisper-silent internals."
-  },
-  {
-    "prefix": "Turbo Power",
-    "suffix": "High-Output Dual Motor Model",
-    "feature": "Delivers double the standard output performance with intelligent cooling."
-  },
-  {
-    "prefix": "Ergo Precision",
-    "suffix": "Ergonomic Grip & Balance Edition",
-    "feature": "Designed in collaboration with ergonomic physical specialists for zero fatigue."
-  },
-  {
-    "prefix": "Digital Pro",
-    "suffix": "with Backlit OLED Screen",
-    "feature": "High-contrast digital readout displays vital operational data in all lighting."
-  },
-  {
-    "prefix": "Master Series",
-    "suffix": "Multi-Function Deluxe Kit",
-    "feature": "Includes comprehensive accessory attachments and heavy-duty storage organizer."
-  },
-  {
-    "prefix": "Eco Bio",
-    "suffix": "Sustainable Platinum Edition",
-    "feature": "Crafted from eco-friendly recyclable polymers with zero harsh chemical coatings."
-  },
-  {
-    "prefix": "Pocket Tactical",
-    "suffix": "Titanium Finish Quick-Release",
-    "feature": "Ultra-compact profile with reinforced quick-latch mechanism for fast deployment."
-  },
-  {
-    "prefix": "Dynamic RGB",
-    "suffix": "Ambient Glow Lighting Edition",
-    "feature": "Vibrant customizable lighting modes with dynamic status pulsing indicators."
-  },
-  {
-    "prefix": "Sonic Wave",
-    "suffix": "High-Frequency Harmonic Series",
-    "feature": "Utilizes micro-harmonic resonant technology for whisper-quiet high performance."
-  },
-  {
-    "prefix": "Rapid Pulse",
-    "suffix": "Fast-Response Intelligent Model",
-    "feature": "Instant microsecond trigger engagement with built-in thermal safety regulation."
-  },
-  {
-    "prefix": "Core Classic",
-    "suffix": "Verified Best-Seller Edition",
-    "feature": "The #1 viral model featured on global social media reviews and shopping guides."
-  },
-  {
-    "prefix": "Prime Touch",
-    "suffix": "Haptic Sensor Interface Series",
-    "feature": "Intuitive touch controls with subtle haptic vibration confirmation."
-  },
-  {
-    "prefix": "Aerospace Spec",
-    "suffix": "Carbon-Fiber Reinforced Shell",
-    "feature": "Ultra-lightweight high-tensile carbon-fiber composite construction."
-  },
-  {
-    "prefix": "Precision Craft",
-    "suffix": "Fine-Tolerance Engineered Edition",
-    "feature": "Machined to sub-millimeter tolerances for flawless repeatable results."
-  },
-  {
-    "prefix": "Long-Range",
-    "suffix": "Extended Battery Life Model",
-    "feature": "Upgraded high-capacity lithium core provides up to 3x longer continuous runtime."
-  },
-  {
-    "prefix": "Quick-Snap",
-    "suffix": "Magnetic Docking System",
-    "feature": "Strong neodymium magnetic interface provides instant one-hand alignment."
-  },
-  {
-    "prefix": "Studio Audio",
-    "suffix": "Acoustic Noise-Isolated Series",
-    "feature": "Tuned acoustic chamber delivers studio-grade clarity and low-distortion depth."
-  },
-  {
-    "prefix": "Aqua Guard",
-    "suffix": "Submersible Waterproof Rating",
-    "feature": "Double O-ring waterproof sealing withstands complete water submersion."
-  },
-  {
-    "prefix": "Multi-Zone",
-    "suffix": "Independent Dual Chamber Design",
-    "feature": "Separate control channels allow simultaneous independent operation."
-  },
-  {
-    "prefix": "Hyper Flow",
-    "suffix": "Vortex Airflow Cooling Tech",
-    "feature": "Patented cyclone air channels prevent thermal throttling under heavy use."
-  },
-  {
-    "prefix": "Zero Friction",
-    "suffix": "Ceramic Bearing Mechanism",
-    "feature": "Ultra-slick ceramic bearing components ensure frictionless longevity."
-  },
-  {
-    "prefix": "Titanium Tough",
-    "suffix": "Scratch-Resistant Coating",
-    "feature": "Diamond-hard physical vapor deposition coating prevents scuffs and wear."
-  },
-  {
-    "prefix": "Next-Gen",
-    "suffix": "AI-Powered Adaptive System",
-    "feature": "Learns usage patterns to automatically optimize power and response speed."
-  },
-  {
-    "prefix": "Omni-Grip",
-    "suffix": "Textured Anti-Slip Contour",
-    "feature": "Deep geometric rubber traction pattern ensures secure grip even when wet."
-  },
-  {
-    "prefix": "Micro-Matrix",
-    "suffix": "High-Density Component Layout",
-    "feature": "Miniaturized circuit architecture maximizes output in minimal footprint."
-  },
-  {
-    "prefix": "Signature Series",
-    "suffix": "Gold Accent Collector Model",
-    "feature": "Limited production run with custom anodized metallic highlights."
-  },
-  {
-    "prefix": "Ultra-Luxe",
-    "suffix": "Velvet Matte Soft-Touch Finish",
-    "feature": "Premium tactile outer surface provides a luxurious silky hand feel."
-  },
-  {
-    "prefix": "Active Life",
-    "suffix": "Gym & Outdoor Ruggedized Edition",
-    "feature": "Built to withstand drop impacts, mud, rain, and intense physical training."
-  },
-  {
-    "prefix": "Silent Glide",
-    "suffix": "Whisper-Quiet Motor Tech (<30dB)",
-    "feature": "Custom dampened mechanical dampeners ensure completely silent operation."
-  },
-  {
-    "prefix": "Super-Charge",
-    "suffix": "USB-C PD Fast Recharging",
-    "feature": "Refuels to 80% battery capacity in under 25 minutes with USB-C PD."
-  },
-  {
-    "prefix": "Universal Fit",
-    "suffix": "All-In-One Adaptive System",
-    "feature": "Engineered to fit standard global accessories and third-party attachments."
-  },
-  {
-    "prefix": "Heavy Shock",
-    "suffix": "Military Drop-Tested Armor",
-    "feature": "Survives repeated 2-meter concrete drop impacts with corner air cushions."
-  },
-  {
-    "prefix": "Flexi-Bend",
-    "suffix": "Multi-Angle Articulating Joint",
-    "feature": "Bends and locks in 360-degree positions for hard-to-reach operation."
-  },
-  {
-    "prefix": "Aroma Fusion",
-    "suffix": "Micro-Porous Diffusion Core",
-    "feature": "Evenly distributes micro-droplets without wet table condensation."
-  },
-  {
-    "prefix": "Laser Guide",
-    "suffix": "Precision Optical Alignment",
-    "feature": "Emits sharp optical reference lines to guarantee exact positioning."
-  },
-  {
-    "prefix": "Smart Memory",
-    "suffix": "Auto-Resume Setting Function",
-    "feature": "Remembers your preferred power modes and intensity after powering off."
-  },
-  {
-    "prefix": "Extreme Cold",
-    "suffix": "Sub-Zero Rated Performance",
-    "feature": "Operates reliably in freezing winter conditions down to -20°C."
-  },
-  {
-    "prefix": "Dual Mode",
-    "suffix": "Manual and Automatic Selector",
-    "feature": "Switch between automated hands-free operation and manual precision control."
-  },
-  {
-    "prefix": "Viral Pick",
-    "suffix": "#1 TikTok Trending Winner",
-    "feature": "Over 50+ million viral social views with overwhelmingly positive customer reviews."
-  }
-];
-
-const CATEGORY_TAGS: Record<string, string> = {
-  "tech-gadgets": "technology,gadget",
-  "home-kitchen": "kitchen,appliance",
-  "beauty-health": "skincare,wellness",
-  "car-outdoor": "automotive,camping",
-  "tools-utility": "tools,hardware",
-  "fitness-lifestyle": "fitness,workout",
-  "smart-home": "smarthome,lighting",
-  "kids-novelty": "toys,novelty"
-};
-
-const PRODUCT_RAW_MAP = new Map<string, ProductItem>();
-const PRODUCT_ARCH_MAP = new Map<string, {
-  arch: typeof ARCHETYPES[0];
-  modifier?: typeof VARIANT_MODIFIERS[0];
-  lowPrice: number;
-  retailPrice: number;
-  potentialProfit: number;
-  marginPercent: number;
-}>();
-
 function generateAllProducts(): ProductItem[] {
   const allProducts: ProductItem[] = [];
-  const slugs = new Set<string>();
   let globalIndex = 1;
 
-  // Phase 1: 120 Flagship Archetypes (1 per archetype) with 100% verified authentic local images
+  // Day-of-year rotation offset for fresh daily picks & featured products
+  const dayOffset = 264;
+
   for (const arch of ARCHETYPES) {
     const idNum = String(globalIndex).padStart(5, "0");
     const idStr = `prod-${idNum}`;
@@ -3446,25 +3203,27 @@ function generateAllProducts(): ProductItem[] {
     const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
 
     const cleanSearchQuery = arch.cleanSearch;
-    const img1 = arch.images[0];
-    const img2 = arch.images[1] || `https://picsum.photos/seed/${slug}-detail/800/800`;
 
     const views = `${arch.viewsBase.toFixed(1)}M`;
     const rating = Number((4.7 + ((globalIndex * 3) % 3) * 0.1).toFixed(1));
     const reviewsCount = 1200 + ((globalIndex * 379) % 7800);
 
     const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
-    const trendStatus = trendStatuses[globalIndex % trendStatuses.length];
+    const trendStatus = trendStatuses[(globalIndex + dayOffset) % trendStatuses.length];
+
+    // Dynamic rotation: 8 fresh Daily Picks & 24 Featured items rotated every single day
+    const isDailyPick = ((globalIndex - 1 + dayOffset * 8) % ARCHETYPES.length) < 8;
+    const isFeatured = ((globalIndex - 1 + dayOffset * 3) % ARCHETYPES.length) < 24;
 
     const product: ProductItem = {
       id: idStr,
       slug: slug,
       title: title,
       tagline: arch.tagline,
-      description: `${title} is a premier viral problem-solver in the ${arch.categoryName} category.`,
+      description: `${title} is a premier viral problem-solver in the ${arch.categoryName} category. ${arch.tagline} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.`,
       category: arch.category as ProductCategory,
       categoryName: arch.categoryName,
-      images: [img1, img2],
+      images: arch.images,
       sourcing: {
         lowestPrice: lowPrice,
         currency: "$",
@@ -3472,7 +3231,24 @@ function generateAllProducts(): ProductItem[] {
         supplierUrl: `https://www.aliexpress.com/w/wholesale-${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html`,
         moq: "1 unit (Dropship Ready)",
         shippingTimeEst: "7-12 business days",
-        secondarySuppliers: []
+        secondarySuppliers: [
+          {
+            name: "CJ Dropshipping Global",
+            price: Number((lowPrice * 1.08).toFixed(2)),
+            currency: "$",
+            url: `https://cjdropshipping.com/search/${encodeURIComponent(cleanSearchQuery)}.html`,
+            moq: "1 unit",
+            shippingEst: "8-14 days"
+          },
+          {
+            name: "Temu Direct Factory",
+            price: Number((lowPrice * 1.12).toFixed(2)),
+            currency: "$",
+            url: `https://www.temu.com/search_result.html?search_key=${encodeURIComponent(cleanSearchQuery)}`,
+            moq: "1 unit",
+            shippingEst: "6-11 days"
+          }
+        ]
       },
       market: {
         retailPrice: retailPrice,
@@ -3485,7 +3261,7 @@ function generateAllProducts(): ProductItem[] {
         estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
       },
       analytics: {
-        trendScore: Number((9.2 + (globalIndex % 8) * 0.1).toFixed(1)),
+        trendScore: Number((9.2 + ((globalIndex + dayOffset) % 8) * 0.1).toFixed(1)),
         trendStatus: trendStatus,
         monthlySalesVolumeEst: `${(15000 + ((globalIndex * 850) % 35000)).toLocaleString()}+ units`,
         competitionLevel: globalIndex % 3 === 0 ? "Low" : globalIndex % 3 === 1 ? "Medium" : "High",
@@ -3500,11 +3276,13 @@ function generateAllProducts(): ProductItem[] {
         ],
         targetAudience: [
           "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
-          "Social media users looking for smart convenience solutions"
+          "Social media users looking for smart convenience solutions",
+          "Homeowners and professionals valuing reliable everyday tools"
         ],
         adHooks: [
           `"Stop doing this the hard way... this tiny gadget changed everything!"`,
-          `"I found the #1 viral product everyone on TikTok is talking about."`
+          `"I found the #1 viral product everyone on TikTok is talking about."`,
+          `"POV: You finally found the tool that solves this in 10 seconds."`
         ],
         recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
       },
@@ -3515,330 +3293,14 @@ function generateAllProducts(): ProductItem[] {
       }) as unknown as Record<string, string>,
       rating: rating,
       reviewsCount: reviewsCount,
-      isFeatured: globalIndex <= 24,
-      isDailyPick: globalIndex <= 8,
-      addedAt: "2026-09-19T00:00:00.000Z",
-      updatedAt: "2026-09-19T00:00:00.000Z"
+      isFeatured: isFeatured,
+      isDailyPick: isDailyPick,
+      addedAt: "2026-09-21T00:00:00.000Z",
+      updatedAt: "2026-09-21T07:27:24.008Z"
     };
 
     allProducts.push(product);
-    slugs.add(slug);
-    PRODUCT_RAW_MAP.set(slug, product);
-    PRODUCT_ARCH_MAP.set(slug, {
-      arch,
-      lowPrice,
-      retailPrice,
-      potentialProfit,
-      marginPercent
-    });
-
     globalIndex++;
-  }
-
-  // Phase 2: Generate remaining 4,880 unique products (610 per category across 8 categories)
-  // Total = 120 + 4,880 = 5,000 products (625 per category)
-  const archByCat: Record<string, typeof ARCHETYPES> = {};
-  CATEGORIES.forEach(c => archByCat[c.slug] = []);
-  ARCHETYPES.forEach(a => archByCat[a.category].push(a));
-
-  for (const cat of CATEGORIES) {
-    const list = archByCat[cat.slug];
-    list.forEach((arch, archIdx) => {
-      // 10 archetypes have 41 variants (= 410), 5 archetypes have 40 variants (= 200) -> Total 610 + 15 = 625
-      const variantsCount = archIdx < 10 ? 41 : 40;
-      const [minLow, maxLow] = arch.lowRange;
-      const [minRetail, maxRetail] = arch.retailRange;
-      const categoryTag = CATEGORY_TAGS[arch.category] || "gadget";
-
-      for (let v = 1; v <= variantsCount; v++) {
-        const modifier = VARIANT_MODIFIERS[(v - 1) % VARIANT_MODIFIERS.length];
-        const idNum = String(globalIndex).padStart(5, "0");
-        const idStr = `prod-${idNum}`;
-
-        const cleanPrefix = modifier.prefix.toLowerCase().replace(/[^a-z0-9]/g, '');
-        const slug = `prod-${idNum}-${arch.key.replace(/_/g, '-')}-${cleanPrefix}-${v}`;
-        const title = `${modifier.prefix} ${arch.nameTemplate} (${modifier.suffix})`;
-
-        const priceFactor = v / variantsCount;
-        const lowPrice = Number((minLow + (maxLow - minLow) * (0.25 + 0.75 * priceFactor)).toFixed(2));
-        const retailPrice = Number((minRetail + (maxRetail - minRetail) * (0.25 + 0.75 * priceFactor)).toFixed(2));
-        const potentialProfit = Number((retailPrice - lowPrice).toFixed(2));
-        const marginPercent = Math.round(((retailPrice - lowPrice) / retailPrice) * 100);
-
-        const cleanSearchQuery = arch.cleanSearch;
-        // Guaranteed UNIQUE primary and secondary image with unique deterministic seed
-        const img1 = `https://picsum.photos/seed/${slug}/800/800`;
-        const img2 = `https://picsum.photos/seed/${slug}-alt/800/800`;
-
-        const views = `${(arch.viewsBase * (0.7 + 0.6 * ((v * 7) % 10) / 10)).toFixed(1)}M`;
-        const rating = Number((4.6 + (((v * 3) % 4) * 0.1)).toFixed(1));
-        const reviewsCount = 500 + ((v * 370 + globalIndex * 13) % 9500);
-
-        const trendStatuses = ["🔥 Viral Now", "🚀 Exploding Demand", "⭐ High Margin", "📦 Evergreen Seller"] as const;
-        const trendStatus = trendStatuses[(v + globalIndex) % trendStatuses.length  {
-    id: "prod-011",
-    slug: "cordless-electric-cleaning-spin-scrubber",
-    title: "Cordless Electric Power Spin Scrubber with Extension Handle",
-    tagline: "Cleans bathroom tiles, tubs, grout, and sinks without bending or manual elbow grease.",
-    description: "The viral cleaning gadget taking over social media. High-torque 360-degree rotating brush heads effortlessly eliminate stubborn calcium, soap scum, and grime. Extends up to 43 inches to save your back and knees.",
-    category: "home-kitchen",
-    categoryName: "Home & Kitchen Innovations",
-    images: [
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80"
-    ],
-    sourcing: {
-      lowestPrice: 12.80,
-      currency: "$",
-      supplierName: "AliExpress Cleaning Warehouse",
-      supplierUrl: "https://www.aliexpress.com/wholesale?SearchText=electric%20spin%20scrubber%20cordless%20power%20brush%20bathroom",
-      moq: "1 unit",
-      shippingTimeEst: "8-12 business days",
-      secondarySuppliers: [
-        {
-          name: "CJ Dropshipping Direct",
-          price: 13.40,
-          currency: "$",
-          url: "https://cjdropshipping.com/search/electric%20spin%20scrubber.html",
-          moq: "1 unit",
-          shippingEst: "8-14 days"
-        },
-        {
-          name: "Temu Sourcing Hub",
-          price: 13.70,
-          currency: "$",
-          url: "https://www.temu.com/search_result.html?search_key=cordless%20power%20spin%20scrubber",
-          moq: "1 unit",
-          shippingEst: "7-12 days"
-        }
-      ]
-    },
-    market: {
-      retailPrice: 49.99,
-      currency: "$",
-      potentialProfit: 37.19,
-      profitMarginPercent: 74.4,
-      competitorStoreName: "Amazon / TikTok Shop",
-      competitorStoreUrl: "https://www.amazon.com/s?k=electric%20spin%20scrubber%20cordless%20power%20brush%20bathroom",
-      recommendedAdSpend: 7.00,
-      estimatedNetProfit: 30.19
-    },
-    analytics: {
-      trendScore: 9.7,
-      trendStatus: "🔥 Viral Now",
-      monthlySalesVolumeEst: "48,000+ units",
-      competitionLevel: "Medium",
-      tiktokViews: "112.4M views",
-      socialBuzz: "Very High"
-    },
-    businessGuide: {
-      whyItSells: [
-        "Deeply satisfying cleaning transformation clips perform insanely well on TikTok and Facebook.",
-        "Solves real physical pain: no more crawling on hands and knees scrubbing bathroom grout.",
-        "High perceived retail value: easily commands $50+ while sourced for under $13."
-],
-      targetAudience: [
-        "Homeowners and apartment renters",
-        "Seniors and people with lower back or knee issues",
-        "CleanTok and organization enthusiasts"
-],
-      adHooks: [
-        "I literally haven't scrubbed my bathroom by hand in 6 months.",
-        "If you hate cleaning your shower, this $50 tool is a lifesaver.",
-        "POV: You clean your entire bathtub in under 2 minutes without bending over."
-],
-      recommendedNiches: [
-        "Home Cleaning",
-        "Mobility Aids",
-        "Gadgets"
-]
-    },
-    specs: {
-      "Battery": "2500mAh Lithium Ion (90 mins continuous use)",
-      "Speed Modes": "Dual Speed (300 RPM & 400 RPM)",
-      "Brush Attachments": "4 interchangeable heads (Flat, Corner, Dome, Sponge)",
-      "Extension Length": "Adjustable from 25 inches to 43 inches",
-      "Waterproof": "IPX7 waterproof rating"
-},
-    rating: 4.8,
-    reviewsCount: 6240,
-    addedAt: "2026-09-19T16:58:46.580Z",
-    updatedAt: "2026-09-19T16:58:46.580Z"
-  },
-  {
-    id: "prod-012",
-    slug: "smart-posture-corrector-with-vibration-sensor",
-    title: "Intelligent Upper Back Posture Corrector with Vibration Reminder",
-    tagline: "Gently vibrates whenever you slouch more than 25 degrees to build muscle memory.",
-    description: "Break bad slouching habits naturally without uncomfortable rigid braces. Features an angle-sensing sensor that buzzes gently when your back bends forward, training your spine and shoulders into upright alignment.",
-    category: "beauty-health",
-    categoryName: "Health, Beauty & Wellness",
-    images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
-    ],
-    sourcing: {
-      lowestPrice: 3.40,
-      currency: "$",
-      supplierName: "AliExpress Wellness Direct",
-      supplierUrl: "https://www.aliexpress.com/wholesale?SearchText=smart%20posture%20corrector%20sensor%20vibration%20reminder",
-      moq: "1 unit",
-      shippingTimeEst: "7-11 business days",
-      secondarySuppliers: [
-        {
-          name: "CJ Dropshipping Direct",
-          price: 4.00,
-          currency: "$",
-          url: "https://cjdropshipping.com/search/smart%20posture%20corrector.html",
-          moq: "1 unit",
-          shippingEst: "8-14 days"
-        },
-        {
-          name: "Temu Sourcing Hub",
-          price: 4.30,
-          currency: "$",
-          url: "https://www.temu.com/search_result.html?search_key=vibration%20posture%20corrector",
-          moq: "1 unit",
-          shippingEst: "7-12 days"
-        }
-      ]
-    },
-    market: {
-      retailPrice: 22.99,
-      currency: "$",
-      potentialProfit: 19.59,
-      profitMarginPercent: 85.2,
-      competitorStoreName: "Amazon / TikTok Shop",
-      competitorStoreUrl: "https://www.amazon.com/s?k=smart%20posture%20corrector%20sensor%20vibration%20reminder",
-      recommendedAdSpend: 7.00,
-      estimatedNetProfit: 12.59
-    },
-    analytics: {
-      trendScore: 9.3,
-      trendStatus: "⭐ High Margin",
-      monthlySalesVolumeEst: "26,500+ units",
-      competitionLevel: "Low",
-      tiktokViews: "28.6M views",
-      socialBuzz: "Very High"
-    },
-    businessGuide: {
-      whyItSells: [
-        "Almost everyone who works at a laptop or looks at their phone has tech-neck slouching.",
-        "Vibration sensor is an interactive novelty that stands out over boring elastic posture straps.",
-        "Sub-$4 sourcing cost gives sellers an unbeatable 85%+ profit margin buffer."
-],
-      targetAudience: [
-        "Remote office workers and gamers",
-        "Students with heavy backpacks",
-        "Fitness enthusiasts looking for spinal alignment"
-],
-      adHooks: [
-        "Stop slouching! This tiny gadget buzzes whenever your posture slips.",
-        "How I fixed my rounded shoulders in 14 days without going to a chiropractor.",
-        "The $20 gadget that every person working from home needs right now."
-],
-      recommendedNiches: [
-        "Posture & Ergonomics",
-        "Work From Home",
-        "Fitness"
-]
-    },
-    specs: {
-      "Sensor Angle": "Triggered when posture bends > 25 degrees",
-      "Battery": "500mAh USB Rechargeable (15 days battery life)",
-      "Display": "LCD screen tracks daily slouch counts",
-      "Straps": "Adjustable high-elastic nylon harness",
-      "Weight": "Ultra-light 85g"
-},
-    rating: 4.7,
-    reviewsCount: 3410,
-    addedAt: "2026-09-19T16:58:46.580Z",
-    updatedAt: "2026-09-19T16:58:46.580Z"
-  },
-];
-
-        const product: ProductItem = {
-          id: idStr,
-          slug: slug,
-          title: title,
-          tagline: `${arch.tagline} ${modifier.feature}`,
-          description: `${title} is a premier viral problem-solver in the ${arch.categoryName} category. ${arch.tagline} ${modifier.feature} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.`,
-          category: arch.category as ProductCategory,
-          categoryName: arch.categoryName,
-          images: [img1, img2],
-          sourcing: {
-            lowestPrice: lowPrice,
-            currency: "$",
-            supplierName: "AliExpress Verified Direct Manufacturer",
-            supplierUrl: `https://www.aliexpress.com/w/wholesale-${encodeURIComponent(cleanSearchQuery).replace(/%20/g, '-')}.html`,
-            moq: "1 unit (Dropship Ready)",
-            shippingTimeEst: "7-12 business days",
-            secondarySuppliers: []
-          },
-          market: {
-            retailPrice: retailPrice,
-            currency: "$",
-            potentialProfit: potentialProfit,
-            profitMarginPercent: marginPercent,
-            competitorStoreName: "Amazon Retail / TikTok Shop",
-            competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(cleanSearchQuery)}`,
-            recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
-            estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
-          },
-          analytics: {
-            trendScore: Number((9.1 + (v % 9) * 0.1).toFixed(1)),
-            trendStatus: trendStatus,
-            monthlySalesVolumeEst: `${(12000 + ((v * 850) % 45000)).toLocaleString()}+ units`,
-            competitionLevel: v % 3 === 0 ? "Low" : v % 3 === 1 ? "Medium" : "High",
-            tiktokViews: `${views} views`,
-            socialBuzz: v % 2 === 0 ? "Very High" : "High"
-          },
-          businessGuide: {
-            whyItSells: [
-              "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
-              "Directly solves an everyday problem without expensive alternatives.",
-              `High perceived retail value commanding a ${marginPercent}% gross profit margin.`
-            ],
-            targetAudience: [
-              "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
-              "Social media users looking for smart convenience solutions",
-              "Homeowners and professionals valuing reliable everyday tools"
-            ],
-            adHooks: [
-              `"Stop doing this the hard way... this tiny gadget changed everything!"`,
-              `"I found the #1 viral product everyone on TikTok is talking about."`,
-              `"POV: You finally found the tool that solves this in 10 seconds."`
-            ],
-            recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
-          },
-          specs: Object.assign({}, arch.specs, {
-            "Warranty": "1-Year Manufacturer Direct Warranty",
-            "Certification": "CE, RoHS, FCC Standard Compliant",
-            "Origin": "Factory Direct Quality Inspected"
-          }) as unknown as Record<string, string>,
-          rating: rating,
-          reviewsCount: reviewsCount,
-          isFeatured: false,
-          isDailyPick: false,
-          addedAt: "2026-09-19T00:00:00.000Z",
-          updatedAt: "2026-09-19T00:00:00.000Z"
-        };
-
-        allProducts.push(product);
-        slugs.add(slug);
-        PRODUCT_RAW_MAP.set(slug, product);
-        PRODUCT_ARCH_MAP.set(slug, {
-          arch,
-          modifier,
-          lowPrice,
-          retailPrice,
-          potentialProfit,
-          marginPercent
-        });
-
-        globalIndex++;
-      }
-    });
   }
 
   return allProducts;
@@ -3848,70 +3310,11 @@ export const INITIAL_PRODUCTS: ProductItem[] = generateAllProducts();
 
 export const TICKER_PRODUCTS: ProductItem[] = INITIAL_PRODUCTS.slice(0, 8);
 
+const PRODUCT_MAP = new Map<string, ProductItem>();
+for (const p of INITIAL_PRODUCTS) {
+  PRODUCT_MAP.set(p.slug, p);
+}
+
 export function getProductBySlug(slug: string): ProductItem | undefined {
-  const base = PRODUCT_RAW_MAP.get(slug);
-  if (!base) return undefined;
-
-  const meta = PRODUCT_ARCH_MAP.get(slug);
-  if (!meta) return base;
-
-  const { arch, modifier, lowPrice, retailPrice, potentialProfit, marginPercent } = meta;
-  const cleanSearchQuery = arch.cleanSearch;
-  const featureText = modifier?.feature ? ` ${modifier.feature}` : "";
-
-  return {
-    ...base,
-    description: `${base.title} is a premier viral problem-solver in the ${arch.categoryName} category. ${arch.tagline}${featureText} Sourced directly from verified tier-1 factory manufacturers, this product guarantees exceptional build quality, massive margin potential for sellers, and unbeatable factory pricing for smart shoppers.`,
-    specs: Object.assign({}, arch.specs, {
-      "Warranty": "1-Year Manufacturer Direct Warranty",
-      "Certification": "CE, RoHS, FCC Standard Compliant",
-      "Origin": "Factory Direct Quality Inspected"
-    }) as unknown as Record<string, string>,
-    sourcing: {
-      ...base.sourcing,
-      secondarySuppliers: [
-        {
-          name: "CJ Dropshipping Global",
-          price: Number((lowPrice * 1.08).toFixed(2)),
-          currency: "$",
-          url: `https://cjdropshipping.com/search/${encodeURIComponent(cleanSearchQuery)}.html`,
-          moq: "1 unit",
-          shippingEst: "8-14 days"
-        },
-        {
-          name: "Temu Direct Factory",
-          price: Number((lowPrice * 1.12).toFixed(2)),
-          currency: "$",
-          url: `https://www.temu.com/search_result.html?search_key=${encodeURIComponent(cleanSearchQuery)}`,
-          moq: "1 unit",
-          shippingEst: "6-11 days"
-        }
-      ]
-    },
-    market: {
-      ...base.market,
-      competitorStoreName: "Amazon Retail / TikTok Shop",
-      competitorStoreUrl: `https://www.amazon.com/s?k=${encodeURIComponent(cleanSearchQuery)}`,
-      recommendedAdSpend: Number((lowPrice * 0.75).toFixed(2)),
-      estimatedNetProfit: Number((potentialProfit - (lowPrice * 0.75)).toFixed(2))
-    },
-    businessGuide: {
-      whyItSells: [
-        "High viral video conversion potential across TikTok, Reels, and YouTube Shorts.",
-        "Directly solves an everyday problem without expensive alternatives.",
-        `High perceived retail value commanding a ${marginPercent}% gross profit margin.`
-      ],
-      targetAudience: [
-        "Online impulse shoppers, gift buyers, and life-hack enthusiasts",
-        "Social media users looking for smart convenience solutions",
-        "Homeowners and professionals valuing reliable everyday tools"
-      ],
-      adHooks: [
-        `"Stop doing this the hard way... this tiny gadget changed everything!"`,
-        `"I found the #1 viral product everyone on TikTok is talking about."`,
-        `"POV: You finally found the tool that solves this in 10 seconds."`
-      ],
-      recommendedNiches: [arch.categoryName, "Problem Solvers", "Viral Products"]
-    }
-  };
+  return PRODUCT_MAP.get(slug);
 }

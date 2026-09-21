@@ -93,7 +93,7 @@ export default function Header() {
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-emerald-400 transition-colors"
           >
             <Flame className="w-4 h-4 text-amber-400" />
-            <span>500+ Viral Products</span>
+            <span>Winning Products</span>
           </Link>
 
           {/* Categories Dropdown */}
@@ -189,7 +189,7 @@ export default function Header() {
             className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900 text-sm font-bold text-slate-200"
           >
             <Flame className="w-4 h-4 text-amber-400" />
-            <span>Explore 500+ Viral Products</span>
+            <span>Explore Winning Products</span>
           </Link>
 
           <Link
