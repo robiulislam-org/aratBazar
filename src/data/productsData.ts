@@ -20,7 +20,7 @@ export const CATEGORIES: CategoryMeta[] = [
     "name": "Health, Beauty & Wellness",
     "iconName": "Sparkles",
     "description": "Personal care, posture correctors, therapeutic massagers & skincare devices.",
-    "productCount": 15
+    "productCount": 35
   },
   {
     "slug": "car-outdoor",
@@ -3179,6 +3179,546 @@ export const ARCHETYPES = [
       "Tools": "Mini Wheel Screwdriver & Spare Bearings Included"
     },
     "variantsCount": 44
+  },
+  {
+    "key": "beauty_rotating_curling_iron",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "ceramic automatic rotating hair curling iron wand",
+    "nameTemplate": "Professional Ceramic Rotating Hair Curling Iron Wand",
+    "tagline": "Creates bouncy salon-quality curls and beach waves in seconds with dual-direction rotation.",
+    "lowRange": [
+      11.5,
+      22
+    ],
+    "retailRange": [
+      42.99,
+      69.99
+    ],
+    "images": [
+      "/images/products/prod-00121-beauty-rotating-curling-iron.jpg"
+    ],
+    "viewsBase": 38.4,
+    "specs": {
+      "Barrel Material": "Tourmaline Ceramic Coating",
+      "Temperature Range": "300°F - 450°F (150°C - 230°C)",
+      "Auto Shutoff": "60 Minutes Safety Timer",
+      "Heat-Up Time": "30 Seconds Ultra-Fast PTC"
+    },
+    "variantsCount": 36
+  },
+  {
+    "key": "beauty_hair_styling_set",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "professional salon hair styling kit blow dryer flat iron",
+    "nameTemplate": "All-in-One Professional Salon Hair Styling & Blowout Kit",
+    "tagline": "Complete ionic hair dryer and titanium flat iron bundle with anti-static paddle brush and salon clips.",
+    "lowRange": [
+      18.5,
+      34
+    ],
+    "retailRange": [
+      69.99,
+      119.99
+    ],
+    "images": [
+      "/images/products/prod-00122-beauty-hair-styling-set.jpg"
+    ],
+    "viewsBase": 44.8,
+    "specs": {
+      "Dryer Power": "2200W Professional Ionic AC Motor",
+      "Iron Plates": "1-Inch Floating Titanium Nano-Silver",
+      "Accessories": "Paddle Brush, Tail Comb, 2 Salon Section Clips",
+      "Speed/Heat Settings": "3 Heat / 2 Speed Controls + Cool Shot"
+    },
+    "variantsCount": 28
+  },
+  {
+    "key": "beauty_eyeshadow_palette_kit",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "35 color eyeshadow palette makeup artist kit",
+    "nameTemplate": "Professional 35-Color Velvet Eyeshadow & Vanity Makeup Set",
+    "tagline": "Highly pigmented matte, shimmer, and metallic shades with silky blending texture for day-to-night glam.",
+    "lowRange": [
+      7.2,
+      15
+    ],
+    "retailRange": [
+      28.99,
+      48.99
+    ],
+    "images": [
+      "/images/products/prod-00123-beauty-eyeshadow-palette-kit.jpg"
+    ],
+    "viewsBase": 31.6,
+    "specs": {
+      "Shade Count": "35 High-Pigment Blendable Pans",
+      "Finish Types": "Ultra-Matte, Pearlescent Shimmer, Metallic Foil",
+      "Formula": "Waterproof, Crease-Resistant, Cruelty-Free",
+      "Skin Compatibility": "Hypoallergenic, Dermatologist Tested"
+    },
+    "variantsCount": 42
+  },
+  {
+    "key": "beauty_foaming_cleanser",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "gentle foaming purifying facial cleanser gel",
+    "nameTemplate": "Gentle Foaming Amino Acid Purifying Facial Cleanser",
+    "tagline": "Deep cleanses pores and removes makeup residue while protecting natural moisture barrier without stripping.",
+    "lowRange": [
+      4.2,
+      9.8
+    ],
+    "retailRange": [
+      19.99,
+      32.99
+    ],
+    "images": [
+      "/images/products/prod-00124-beauty-foaming-cleanser.jpg"
+    ],
+    "viewsBase": 22.4,
+    "specs": {
+      "Net Volume": "80ml / 2.7 fl oz",
+      "Active Ingredients": "Amino Acids, Centella Asiatica, Ceramides",
+      "pH Level": "5.5 Balanced Skin Barrier Friendly",
+      "Skin Type": "All Skin Types, Sensitive & Acne-Prone"
+    },
+    "variantsCount": 30
+  },
+  {
+    "key": "beauty_brush_organizer_cup",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "makeup brush organizer cup holder cosmetic tools",
+    "nameTemplate": "Vintage Vanity Makeup Brush Organizer Cup & Brush Set",
+    "tagline": "Elegant filigree tabletop cylinder holder keeping brushes, sponges, and cosmetic pencils neatly accessible.",
+    "lowRange": [
+      5.8,
+      12.5
+    ],
+    "retailRange": [
+      24.99,
+      39.99
+    ],
+    "images": [
+      "/images/products/prod-00125-beauty-brush-organizer-cup.jpg"
+    ],
+    "viewsBase": 19.8,
+    "specs": {
+      "Holder Material": "Antique Patterned Brass-Alloy & Tempered Acrylic",
+      "Capacity": "Holds 25+ Standard Cosmetic Brushes",
+      "Dimensions": "12cm Height x 9cm Diameter",
+      "Base": "Non-Slip Scratch-Resistant Velvet Base"
+    },
+    "variantsCount": 35
+  },
+  {
+    "key": "beauty_organic_body_oil",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "organic virgin coconut body oil hair glow moisturizer",
+    "nameTemplate": "Nourishing Organic Virgin Coconut Body & Hair Glow Oil",
+    "tagline": "Cold-pressed hydrating body oil that locks in all-day moisture with a radiant, non-greasy satin sheen.",
+    "lowRange": [
+      5.5,
+      11.2
+    ],
+    "retailRange": [
+      22.99,
+      36.99
+    ],
+    "images": [
+      "/images/products/prod-00126-beauty-organic-body-oil.jpg"
+    ],
+    "viewsBase": 26.2,
+    "specs": {
+      "Net Volume": "200ml / 6.7 fl oz",
+      "Source": "100% Pure Cold-Pressed Organic Virgin Coconut",
+      "Scent": "Subtle Natural Coconut Essence (No Synthetic Fragrance)",
+      "Benefits": "Deep Hydration, Stretch Mark Care, Hair Gloss"
+    },
+    "variantsCount": 24
+  },
+  {
+    "key": "beauty_rose_gold_makeup_kit",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "rose gold makeup set cosmetic essentials brushes compact",
+    "nameTemplate": "Rose Gold Daily Glam Vanity Cosmetic & Brush Starter Kit",
+    "tagline": "Coordinated luxury rose gold makeup set with powder brush, blending brush, mascara, matte lipstick, and mirror compact.",
+    "lowRange": [
+      9.5,
+      18
+    ],
+    "retailRange": [
+      36.99,
+      59.99
+    ],
+    "images": [
+      "/images/products/prod-00127-beauty-rose-gold-makeup-kit.jpg"
+    ],
+    "viewsBase": 35.7,
+    "specs": {
+      "Set Includes": "2 Synthetic Brushes, 1 Mascara, 1 Lipstick, 1 Compact, 1 Scrunchie",
+      "Finish": "Metallic Rose Gold Plating & Ultra-Soft Bristles",
+      "Lipstick Shade": "Classic Universal Velvet Rose Red",
+      "Application": "Daily Makeup Routine & Travel Friendly"
+    },
+    "variantsCount": 38
+  },
+  {
+    "key": "beauty_pastel_skincare_kit",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "pastel luxury skincare gift set essence cream tubes",
+    "nameTemplate": "Deluxe Pastel Complete 8-Piece Daily Skincare Gift Collection",
+    "tagline": "Full-routine pastel beauty box featuring facial essence dropper, day cream, night balm, toner tube, and makeup compact.",
+    "lowRange": [
+      16.8,
+      29.5
+    ],
+    "retailRange": [
+      59.99,
+      99.99
+    ],
+    "images": [
+      "/images/products/prod-00128-beauty-pastel-skincare-kit.jpg"
+    ],
+    "viewsBase": 42.1,
+    "specs": {
+      "Total Pieces": "8 Full-Size & Travel-Size Daily Essentials",
+      "Key Ingredients": "Hyaluronic Acid, Niacinamide, Rosehip Extract",
+      "Packaging": "Eco-Friendly Matte Pastel Gift Box",
+      "Dermatology Standard": "Paraben-Free, Sulfate-Free, Cruelty-Free"
+    },
+    "variantsCount": 45
+  },
+  {
+    "key": "beauty_mineral_powder_set",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "mineral loose setting powder translucent makeup brush",
+    "nameTemplate": "Translucent Mineral Setting Powder & Kabuki Blending Brush Set",
+    "tagline": "Micro-fine oil-absorbing mineral powder that blurs fine lines, controls midday shine, and sets makeup for 16 hours.",
+    "lowRange": [
+      6.1,
+      13.4
+    ],
+    "retailRange": [
+      24.99,
+      42.99
+    ],
+    "images": [
+      "/images/products/prod-00129-beauty-mineral-powder-set.jpg"
+    ],
+    "viewsBase": 28.3,
+    "specs": {
+      "Net Weight": "3 x 15g Powder Tubs (Translucent, Banana, Medium)",
+      "Finish": "Airbrushed Soft-Matte Photofinish",
+      "Brush": "Dense Vegan Dome Kabuki Powder Brush",
+      "Oil Control": "Up to 16 Hours Shine Resistance"
+    },
+    "variantsCount": 32
+  },
+  {
+    "key": "beauty_custom_skincare_bundle",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "3 step daily hydrating facial skincare routine bundle cleanser moisturizer",
+    "nameTemplate": "3-Step Daily Barrier-Restoring Facial Skincare Routine Bundle",
+    "tagline": "Synergistic 3-step regimen with gel-to-foam cleanser, targeted treatment pump, and ceramide-rich barrier moisturizer.",
+    "lowRange": [
+      12.4,
+      24.5
+    ],
+    "retailRange": [
+      49.99,
+      79.99
+    ],
+    "images": [
+      "/images/products/prod-00130-beauty-custom-skincare-bundle.jpg"
+    ],
+    "viewsBase": 39,
+    "specs": {
+      "Step 1": "Gentle Cleanser 80ml",
+      "Step 2": "Targeted Treatment Pump 40ml",
+      "Step 3": "Rich Ceramide Barrier Moisturizer 50ml",
+      "Benefits": "Soothes Redness, Locks In Moisture, Strengthens Skin Barrier"
+    },
+    "variantsCount": 36
+  },
+  {
+    "key": "beauty_thickening_shampoo",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "bamboo fibers thickening and restoring shampoo castor oil",
+    "nameTemplate": "Bamboo Botanical Densifying & Hair Repair Shampoo",
+    "tagline": "Infused with exotic bamboo fibers, castor oil, and lush neem oil to densify and strengthen weak, brittle strands.",
+    "lowRange": [
+      4.9,
+      10.5
+    ],
+    "retailRange": [
+      18.99,
+      31.99
+    ],
+    "images": [
+      "/images/products/prod-00131-beauty-thickening-shampoo.jpg"
+    ],
+    "viewsBase": 25.1,
+    "specs": {
+      "Volume": "385ml / 13 fl oz",
+      "Hero Botanicals": "Bamboo Fibers, Jamaican Black Castor Oil, Neem Oil",
+      "Free From": "Sulfates, Parabens, Silicones, Synthetic Dyes",
+      "Target Hair": "Thin, Flat, Damaged & Color-Treated Hair"
+    },
+    "variantsCount": 26
+  },
+  {
+    "key": "beauty_spa_body_lotion",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "hydrating spa hand and body moisture lotion pump bottle",
+    "nameTemplate": "Deep Moisture Botanical Spa Hand & Body Lotion Pump Bottle",
+    "tagline": "Ultra-rich soothing botanical body cream with pump dispenser, formulated for long-lasting silken touch hydration.",
+    "lowRange": [
+      6.8,
+      13.9
+    ],
+    "retailRange": [
+      25.99,
+      44.99
+    ],
+    "images": [
+      "/images/products/prod-00132-beauty-spa-body-lotion.jpg"
+    ],
+    "viewsBase": 21.9,
+    "specs": {
+      "Bottle Volume": "500ml / 16.9 fl oz with Lockable Pump",
+      "Ingredients": "Shea Butter, Vitamin E, Sweet Almond Oil, Aloe Vera",
+      "Texture": "Fast-Absorbing Velvety Cream (Non-Sticky)",
+      "Dermatology Grade": "Ultra-Gentle Everyday Body Hydration"
+    },
+    "variantsCount": 30
+  },
+  {
+    "key": "beauty_radiance_glow_serum",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "vitamin c glow infusion facial serum dropper bottle",
+    "nameTemplate": "Radiance Vitamin Glow Infusion Facial Serum Dropper",
+    "tagline": "Potent antioxidant elixir with stabilized Vitamin C and botanical squalane that brightens dark spots and evens skin tone.",
+    "lowRange": [
+      5.2,
+      11.8
+    ],
+    "retailRange": [
+      23.99,
+      39.99
+    ],
+    "images": [
+      "/images/products/prod-00133-beauty-radiance-glow-serum.jpg"
+    ],
+    "viewsBase": 33.4,
+    "specs": {
+      "Net Volume": "30ml / 1.0 fl oz UV-Protect Glass Dropper",
+      "Active Concentration": "15% Stabilized L-Ascorbic Acid + Ferulic Acid",
+      "Function": "Brightening, Hyperpigmentation Defense, Collagen Support",
+      "Texture": "Lightweight Quick-Penetrating Liquid Oil-Free"
+    },
+    "variantsCount": 34
+  },
+  {
+    "key": "beauty_jade_roller_skincare_set",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "natural jade facial roller gua sha skincare massage set",
+    "nameTemplate": "Authentic Natural Jade Facial Massage Roller & Rejuvenation Set",
+    "tagline": "Dual-ended genuine jade stone roller that relieves facial tension, drains lymphatic puffiness, and boosts skincare absorption.",
+    "lowRange": [
+      6.4,
+      14.2
+    ],
+    "retailRange": [
+      26.99,
+      45.99
+    ],
+    "images": [
+      "/images/products/prod-00134-beauty-jade-roller-skincare-set.jpg"
+    ],
+    "viewsBase": 47.3,
+    "specs": {
+      "Stone Type": "100% Genuine Natural Xiuyan Jade Stone",
+      "Hardware": "Reinforced Squeak-Free Zinc Alloy Frame",
+      "Dual Heads": "Large Roller for Cheeks/Neck, Small Roller for Eye Contours",
+      "Includes": "Jade Roller + Mini Skincare Treatment Jars & Tubes"
+    },
+    "variantsCount": 40
+  },
+  {
+    "key": "beauty_bamboo_toothbrush_pack",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "eco friendly biodegradable bamboo toothbrush set soft bristles",
+    "nameTemplate": "Eco-Friendly Biodegradable Bamboo Toothbrush Family 4-Pack",
+    "tagline": "Zero-waste organic moso bamboo handles with BPA-free soft wave bristles that protect sensitive gums and whiten teeth.",
+    "lowRange": [
+      3.1,
+      7.5
+    ],
+    "retailRange": [
+      14.99,
+      24.99
+    ],
+    "images": [
+      "/images/products/prod-00135-beauty-bamboo-toothbrush-pack.jpg"
+    ],
+    "viewsBase": 18.2,
+    "specs": {
+      "Pack Quantity": "4 Individually Numbered Toothbrushes",
+      "Handle": "100% Biodegradable Water-Resistant Moso Bamboo",
+      "Bristles": "Infused Charcoal Soft Micro-Bristles (BPA Free)",
+      "Sustainability": "Zero Plastic Compostable Packaging"
+    },
+    "variantsCount": 24
+  },
+  {
+    "key": "beauty_neutral_eyeshadow_blush",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "neutral warm eyeshadow palette and glow blush compact kit",
+    "nameTemplate": "Warm Neutral Eyeshadow Palette & Velvety Glow Blush Compact",
+    "tagline": "Curated 12-pan warm earthy nude eyeshadow palette paired with silky baked terracotta blush and lash volumizing mascara.",
+    "lowRange": [
+      8.9,
+      16.5
+    ],
+    "retailRange": [
+      32.99,
+      54.99
+    ],
+    "images": [
+      "/images/products/prod-00136-beauty-neutral-eyeshadow-blush.jpg"
+    ],
+    "viewsBase": 36.8,
+    "specs": {
+      "Eyeshadow Pan": "12 Warm Earthy Neutral Transitions & Shimmers",
+      "Blush & Highlighter": "Baked Luminous Terracotta & Champagne Highlighter",
+      "Texture": "Silky Micronized Powder (Zero Fallout)",
+      "Longevity": "All-Day 14-Hour Crease-Proof Wear"
+    },
+    "variantsCount": 38
+  },
+  {
+    "key": "beauty_dead_sea_clay_mask",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "dead sea clay mud facial mask with applicator brush",
+    "nameTemplate": "Purifying Dead Sea Mineral Clay Mud Mask & Applicator Brush",
+    "tagline": "Spa-grade mineral mud mask with precision soft-bristle applicator brush that draws out blackheads, shrinks pores, and detoxifies.",
+    "lowRange": [
+      5.9,
+      12.8
+    ],
+    "retailRange": [
+      24.99,
+      41.99
+    ],
+    "images": [
+      "/images/products/prod-00137-beauty-dead-sea-clay-mask.jpg"
+    ],
+    "viewsBase": 29.5,
+    "specs": {
+      "Tub Volume": "250g / 8.8 oz Spa Mud Tub",
+      "Active Mud": "Dead Sea Mineral Silt, Kaolin Clay, Shea Butter",
+      "Applicator": "Ergonomic Silicone-Tipped Mask Applicator Brush",
+      "Usage": "10-Minute Weekly Pore Refining Treatment"
+    },
+    "variantsCount": 28
+  },
+  {
+    "key": "beauty_floral_perfume_vaporizer",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "luxury floral bloom eau de parfum vaporizer glass bottle",
+    "nameTemplate": "Long-Lasting Floral Bloom Luxury Eau De Parfum Vaporizer",
+    "tagline": "Captivating fragrance blending Turkish rose, Sicilian orange, and white patchouli in an elegant fluted glass atomizer.",
+    "lowRange": [
+      14.5,
+      28
+    ],
+    "retailRange": [
+      59.99,
+      98.99
+    ],
+    "images": [
+      "/images/products/prod-00138-beauty-floral-perfume-vaporizer.jpg"
+    ],
+    "viewsBase": 41.6,
+    "specs": {
+      "Volume": "100ml / 3.4 fl oz Eau de Parfum Spray",
+      "Top Notes": "Sicilian Mandarin, Bergamot, Sweet Orange",
+      "Heart Notes": "Turkish Damask Rose, Grasse Jasmine",
+      "Base Notes": "Indonesian Patchouli, Bourbon Vanilla, White Musk"
+    },
+    "variantsCount": 30
+  },
+  {
+    "key": "beauty_satin_red_lipstick_lacquer",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "satin red lipstick and high shine hydrating lip lacquer duo",
+    "nameTemplate": "Vibrant Satin Red Lipstick & High-Shine Hydrating Lip Lacquer Duo",
+    "tagline": "Double-impact lip kit featuring a velvety semi-matte bullet lipstick paired with high-shine hydrating lip lacquer.",
+    "lowRange": [
+      4.8,
+      10.2
+    ],
+    "retailRange": [
+      19.99,
+      34.99
+    ],
+    "images": [
+      "/images/products/prod-00139-beauty-satin-red-lipstick-lacquer.jpg"
+    ],
+    "viewsBase": 34.2,
+    "specs": {
+      "Set Contains": "1 Matte Bullet Lipstick (3.8g) + 1 Plumping Lip Lacquer (5ml)",
+      "Shade": "Iconic True Crimson Red",
+      "Formula": "Enriched with Hyaluronic Filling Spheres & Vitamin E",
+      "Wear Time": "Up to 12 Hours Transfer-Proof Color"
+    },
+    "variantsCount": 32
+  },
+  {
+    "key": "beauty_peptide_hydration_cream",
+    "category": "beauty-health",
+    "categoryName": "Health, Beauty & Wellness",
+    "cleanSearch": "anti aging peptide intensive hydration night cream jar",
+    "nameTemplate": "Anti-Aging Multi-Peptide Intensive Hydration Night Cream",
+    "tagline": "Rich regenerative recovery cream packed with multi-peptides and squalane that deeply plumps wrinkles and firms contours overnight.",
+    "lowRange": [
+      7.5,
+      15.8
+    ],
+    "retailRange": [
+      29.99,
+      49.99
+    ],
+    "images": [
+      "/images/products/prod-00140-beauty-peptide-hydration-cream.jpg"
+    ],
+    "viewsBase": 37.5,
+    "specs": {
+      "Jar Volume": "50ml / 1.7 oz Frosted Glass Jar",
+      "Complex": "Matrixyl 3000, Copper Peptides, Squalane, Niacinamide",
+      "Texture": "Silky Cushiony Melting Balm-Cream",
+      "Target Concerns": "Fine Lines, Loss of Elasticity, Deep Dehydration"
+    },
+    "variantsCount": 36
   }
 ];
 
@@ -3296,7 +3836,7 @@ function generateAllProducts(): ProductItem[] {
       isFeatured: isFeatured,
       isDailyPick: isDailyPick,
       addedAt: "2026-09-21T00:00:00.000Z",
-      updatedAt: "2026-09-21T07:27:24.008Z"
+      updatedAt: "2026-09-21T08:26:55.890Z"
     };
 
     allProducts.push(product);
