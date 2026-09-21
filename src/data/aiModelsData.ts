@@ -80,6 +80,18 @@ export const AI_MARKET_METRICS: AIMarketMetrics = {
 
 export const AI_DAILY_RELEASES: AIDailyRelease[] = [
   {
+    "id": "rel-2026-09-21-hf-top",
+    "date": "2026-09-21",
+    "headline": "Hugging Face Open-Weights Leaderboard Update: convaiinnovations/laya Surges in Global Downloads",
+    "summary": "Open-source research community downloads spiked for convaiinnovations/laya with over 1692 community stars this week, highlighting accelerated adoption of sovereign local AI models.",
+    "modelsAffected": [
+      "laya"
+    ],
+    "type": "Open Weights Release",
+    "source": "Hugging Face Registry",
+    "url": "https://huggingface.co/convaiinnovations/laya"
+  },
+  {
     "id": "rel-2026-09-21-live-1",
     "date": "2026-09-21",
     "headline": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
