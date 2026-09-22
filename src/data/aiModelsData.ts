@@ -82,6 +82,18 @@ export const AI_DAILY_RELEASES: AIDailyRelease[] = [
   {
     "id": "rel-2026-09-22-live-1",
     "date": "2026-09-22",
+    "headline": "Microsoft disrupts AI-assisted platform that compromised 12,000",
+    "summary": "",
+    "modelsAffected": [
+      "Frontier Models"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/"
+  },
+  {
+    "id": "rel-2026-09-22-live-1",
+    "date": "2026-09-22",
     "headline": "Muse, Meta&#039;s extraordinarily privileged AI assistant, has a serious 0-day",
     "summary": "",
     "modelsAffected": [
