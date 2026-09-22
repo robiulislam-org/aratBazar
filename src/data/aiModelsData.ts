@@ -69,7 +69,7 @@ export interface AIMarketMetrics {
 }
 
 export const AI_MARKET_METRICS: AIMarketMetrics = {
-  lastUpdated: "2026-09-21",
+  lastUpdated: "2026-09-22",
   totalModelsTracked: 18,
   freeModelsCount: 7,
   freeTrialModelsCount: 8,
@@ -79,6 +79,18 @@ export const AI_MARKET_METRICS: AIMarketMetrics = {
 };
 
 export const AI_DAILY_RELEASES: AIDailyRelease[] = [
+  {
+    "id": "rel-2026-09-22-live-1",
+    "date": "2026-09-22",
+    "headline": "Muse, Meta&#039;s extraordinarily privileged AI assistant, has a serious 0-day",
+    "summary": "",
+    "modelsAffected": [
+      "Meta Llama 3.3 70B"
+    ],
+    "type": "Major Update",
+    "source": "Ars Technica AI",
+    "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/"
+  },
   {
     "id": "rel-2026-09-21-hf-top",
     "date": "2026-09-21",
