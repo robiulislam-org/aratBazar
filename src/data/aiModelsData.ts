@@ -69,7 +69,7 @@ export interface AIMarketMetrics {
 }
 
 export const AI_MARKET_METRICS: AIMarketMetrics = {
-  lastUpdated: "2026-09-22",
+  lastUpdated: "2026-09-23",
   totalModelsTracked: 18,
   freeModelsCount: 7,
   freeTrialModelsCount: 8,

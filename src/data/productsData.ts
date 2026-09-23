@@ -3727,7 +3727,7 @@ function generateAllProducts(): ProductItem[] {
   let globalIndex = 1;
 
   // Day-of-year rotation offset for fresh daily picks & featured products
-  const dayOffset = 265;
+  const dayOffset = 266;
 
   for (const arch of ARCHETYPES) {
     const idNum = String(globalIndex).padStart(5, "0");
@@ -3835,8 +3835,8 @@ function generateAllProducts(): ProductItem[] {
       reviewsCount: reviewsCount,
       isFeatured: isFeatured,
       isDailyPick: isDailyPick,
-      addedAt: "2026-09-22T00:00:00.000Z",
-      updatedAt: "2026-09-22T23:57:39.250Z"
+      addedAt: "2026-09-23T00:00:00.000Z",
+      updatedAt: "2026-09-23T03:50:16.272Z"
     };
 
     allProducts.push(product);
