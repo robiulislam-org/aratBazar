@@ -1,68 +1,44 @@
-"use client";
+import { Mail, MapPin } from "lucide-react";
+import type { Metadata } from "next";
+import ContactFormClient from "@/components/ContactFormClient";
 
-import React, { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
-
-type FormState = "idle" | "loading" | "success" | "error";
+export const metadata: Metadata = {
+  title: "Contact AratBazar — Product Research, Support & Business Inquiries",
+  description:
+    "Contact the AratBazar team for product sourcing inquiries, press requests, advertising partnerships, technical support, or editorial feedback. We respond within 24 business hours.",
+  keywords: [
+    "contact aratbazar",
+    "aratbazar support",
+    "product sourcing help",
+    "aratbazar advertising",
+    "wholesale inquiry",
+    "dropshipping help",
+  ],
+  openGraph: {
+    title: "Contact AratBazar — Sourcing & Support",
+    description:
+      "Reach out to AratBazar for product sourcing questions, business partnerships, or editorial inquiries.",
+    url: "https://aratbazar.com/contact",
+    siteName: "AratBazar",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://aratbazar.com/contact",
+  },
+};
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState<FormState>("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-
-  const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormState("loading");
-    setErrorMsg("");
-
-    if (formspreeId) {
-      try {
-        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          }),
-        });
-        if (res.ok) {
-          setFormState("success");
-          setFormData({ name: "", email: "", subject: "", message: "" });
-        } else {
-          const data = await res.json();
-          setErrorMsg(data?.errors?.[0]?.message || "Submission failed. Please try again.");
-          setFormState("error");
-        }
-      } catch {
-        setErrorMsg("Network error. Please check your connection and try again.");
-        setFormState("error");
-      }
-    } else {
-      // Fallback: open default email client with pre-filled content
-      const mailtoLink = `mailto:support@aratbazar.com?subject=${encodeURIComponent(
-        formData.subject
-      )}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-      )}`;
-      window.location.href = mailtoLink;
-      setFormState("success");
-    }
-  };
-
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <div className="border-b border-slate-800 pb-6">
         <div className="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 mb-2">
           <Mail className="h-4 w-4" />
-          <span>EDITORIAL & SUPPORT DESK</span>
+          <span>EDITORIAL &amp; SUPPORT DESK</span>
         </div>
         <h1 className="text-3xl font-extrabold text-white">Contact AratBazar</h1>
         <p className="mt-2 text-slate-400 text-sm">
-          Have feedback, press inquiries, technical questions, or corporate advertising requests? Get in touch with our team.
+          Have feedback, press inquiries, technical questions, or corporate advertising requests?
+          Get in touch with our team. We typically respond within 24 business hours.
         </p>
       </div>
 
@@ -70,135 +46,58 @@ export default function ContactPage() {
         {/* Contact Info */}
         <div className="space-y-4 md:col-span-1">
           <div className="rounded-2xl border border-slate-800 bg-[#0c121e] p-5">
-            <h3 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <h2 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
               <Mail className="h-4 w-4 text-emerald-400" />
               Direct Inquiries
-            </h3>
-            <p className="text-xs text-slate-400 mb-1">General & Support:</p>
-            <span className="font-mono text-xs text-emerald-400 block font-semibold">
+            </h2>
+            <p className="text-xs text-slate-400 mb-1">General &amp; Support:</p>
+            <a
+              href="mailto:support@aratbazar.com"
+              className="font-mono text-xs text-emerald-400 block font-semibold hover:underline"
+            >
               support@aratbazar.com
-            </span>
+            </a>
             <p className="text-xs text-slate-400 mt-3 mb-1">Editorial Desk:</p>
-            <span className="font-mono text-xs text-cyan-400 block font-semibold">
+            <a
+              href="mailto:editor@aratbazar.com"
+              className="font-mono text-xs text-cyan-400 block font-semibold hover:underline"
+            >
               editor@aratbazar.com
-            </span>
+            </a>
           </div>
 
           <div className="rounded-2xl border border-slate-800 bg-[#0c121e] p-5">
-            <h3 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <h2 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
               <MapPin className="h-4 w-4 text-teal-400" />
               Headquarters
-            </h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              AratBazar Financial Intelligence Media<br />
-              Web: <span className="text-slate-300 font-mono">https://aratbazar.com</span><br />
+            </h2>
+            <address className="not-italic text-xs text-slate-400 leading-relaxed">
+              AratBazar Sourcing Intelligence<br />
+              Web:{" "}
+              <span className="text-slate-300 font-mono">https://aratbazar.com</span>
+              <br />
               Global Digital Operations
+            </address>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-[#0c121e] p-5">
+            <h2 className="text-sm font-bold text-white mb-2">Response Time</h2>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              We aim to respond to all inquiries within{" "}
+              <strong className="text-slate-300">24–48 business hours</strong>. For urgent
+              partnership or press matters, please indicate in the subject line.
             </p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className="rounded-2xl border border-slate-800 bg-[#0c121e] p-6 md:col-span-2">
-          {formState === "success" ? (
-            <div className="flex flex-col items-center justify-center py-12 text-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-4">
-                <CheckCircle2 className="h-8 w-8" />
-              </div>
-              <h3 className="text-lg font-bold text-white">Message Dispatched</h3>
-              <p className="mt-2 text-xs text-slate-400 max-w-sm">
-                Thank you for contacting AratBazar. Our editorial and support team will review your inquiry within 24 business hours.
-              </p>
-              <button
-                onClick={() => setFormState("idle")}
-                className="mt-6 rounded-lg bg-slate-800 px-4 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-700"
-              >
-                Send Another Inquiry
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {formState === "error" && (
-                <div className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs text-red-400">
-                  <AlertCircle className="h-4 w-4 shrink-0" />
-                  <span>{errorMsg || "Something went wrong. Please try again."}</span>
-                </div>
-              )}
-
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1">Full Name</label>
-                  <input
-                    type="text"
-                    required
-                    disabled={formState === "loading"}
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Trader Name"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
-                  <input
-                    type="email"
-                    required
-                    disabled={formState === "loading"}
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="name@domain.com"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">Inquiry Subject</label>
-                <input
-                  type="text"
-                  required
-                  disabled={formState === "loading"}
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  placeholder="e.g. Partnership, Market Data Feedback, Ad Placement"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">Message</label>
-                <textarea
-                  rows={4}
-                  required
-                  disabled={formState === "loading"}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Detail your inquiry..."
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none disabled:opacity-50"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={formState === "loading"}
-                className="flex items-center justify-center space-x-2 rounded-xl bg-emerald-500 px-6 py-2.5 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {formState === "loading" ? (
-                  <>
-                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                    <span>Sending...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-3.5 w-3.5" />
-                    <span>Submit Inquiry</span>
-                  </>
-                )}
-              </button>
-            </form>
-          )}
+          <h2 className="text-base font-bold text-white mb-5 border-b border-slate-800 pb-3">
+            Send Us a Message
+          </h2>
+          <ContactFormClient />
         </div>
       </div>
     </div>
   );
 }
-

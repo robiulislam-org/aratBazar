@@ -1,3 +1,11 @@
-# Google AdSense ads.txt for aratbazar.com
-# Replace pub-0000000000000000 with your real AdSense Publisher ID once approved
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Google AdSense ads.txt — AratBazar (aratbazar.com)
+#
+# IMPORTANT: Replace the placeholder below with your REAL AdSense Publisher ID.
+# Your Publisher ID looks like: ca-pub-1234567890123456
+# You can find it at: https://www.google.com/adsense → Account → Account Information
+#
+# After receiving AdSense approval, uncomment and update the line below:
+# google.com, YOUR-PUBLISHER-ID-HERE, DIRECT, f08c47fec0942fa0
+#
+# Until you receive your Publisher ID from Google AdSense, this file should remain
+# empty (or comment-only) to avoid Google flagging unauthorized publisher IDs.

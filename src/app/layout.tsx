@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import LiveSourcingTicker from "@/components/LiveSourcingTicker";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
+import CookieConsent from "@/components/CookieConsent";
 
 export const viewport: Viewport = {
   themeColor: "#090d16",
@@ -198,6 +199,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </CartProvider>
+        <CookieConsent />
       </body>
     </html>
   );
