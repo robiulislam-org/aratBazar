@@ -3836,7 +3836,7 @@ function generateAllProducts(): ProductItem[] {
       isFeatured: isFeatured,
       isDailyPick: isDailyPick,
       addedAt: "2026-09-26T00:00:00.000Z",
-      updatedAt: "2026-09-26T03:12:27.185Z"
+      updatedAt: "2026-09-26T09:00:58.392Z"
     };
 
     allProducts.push(product);
