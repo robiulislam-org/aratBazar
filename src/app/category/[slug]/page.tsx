@@ -1,88 +1,95 @@
-import React from "react";
-import { notFound } from "next/navigation";
-import Link from "next/link";
 import type { Metadata } from "next";
-import { CATEGORIES, INITIAL_PRODUCTS } from "@/data/productsData";
-import { ProductCategory } from "@/types/product";
-import ProductGrid from "@/components/ProductGrid";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { categories, getArticlesByCategory } from "@/data/articles";
+import { notFound } from "next/navigation";
 
-interface CategoryPageProps {
+interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return CATEGORIES.map((cat) => ({
-    slug: cat.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const category = CATEGORIES.find((c) => c.slug === slug);
-
-  if (!category) {
-    return {
-      title: "Category Not Found | AratBazar",
-    };
-  }
-
+  const cat = categories.find((c) => c.slug === slug);
+  if (!cat) return { title: "বিভাগ পাওয়া যায়নি" };
   return {
-    title: `${category.name} — Winning Products & Lowest Factory Sourcing`,
-    description: `Discover top viral ${category.name} winning products with verified factory supplier quotes, high profit margins, and dropshipping market research on AratBazar.`,
+    title: `${cat.name} | বাংলাদেশের অর্গানিক পণ্য`,
+    description: `বাংলাদেশের ${cat.name} বিভাগের পণ্যের তথ্য — কোথায় পাবেন, দাম কত, কোন জেলায় সেরা মান।`,
   };
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export async function generateStaticParams() {
+  return categories.map((c) => ({ slug: c.slug }));
+}
+
+export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const category = CATEGORIES.find((c) => c.slug === slug);
-
-  if (!category) {
-    notFound();
-  }
-
-  const categoryProducts = INITIAL_PRODUCTS.filter((p) => p.category === slug);
+  const cat = categories.find((c) => c.slug === slug);
+  if (!cat) notFound();
+  const catArticles = getArticlesByCategory(slug);
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-100 py-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs text-slate-400 mb-6">
-          <Link href="/" className="hover:text-emerald-400 transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Home</span>
-          </Link>
-          <span>/</span>
-          <span>Categories</span>
-          <span>/</span>
-          <span className="text-slate-200 font-semibold">{category.name}</span>
+    <div className="min-h-screen bg-gray-50 py-10 px-4">
+      <div className="max-w-5xl mx-auto">
+        <nav className="text-sm text-gray-400 mb-6 flex flex-wrap gap-1">
+          <Link href="/" className="hover:text-green-700">হোম</Link>
+          <span>›</span>
+          <Link href="/article" className="hover:text-green-700">আর্টিকেল</Link>
+          <span>›</span>
+          <span className="text-gray-700">{cat.name}</span>
+        </nav>
+
+        <div className="text-center mb-10">
+          <span className="text-6xl">{cat.icon}</span>
+          <h1 className="text-3xl font-bold text-gray-800 mt-3 mb-2">{cat.name}</h1>
+          <p className="text-gray-500">এই বিভাগে {catArticles.length}টি আর্টিকেল আছে</p>
         </div>
 
-        {/* Category Header Banner */}
-        <div className="p-8 md:p-12 rounded-3xl bg-slate-900 border border-slate-800 relative overflow-hidden shadow-2xl mb-10">
-          <div className="absolute -top-20 -right-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        {catArticles.length === 0 ? (
+          <div className="bg-white rounded-xl p-10 text-center border border-gray-200">
+            <p className="text-gray-500">এই বিভাগে শীঘ্রই আর্টিকেল যুক্ত হবে।</p>
+            <Link href="/article" className="mt-4 inline-block text-green-700 underline">
+              সব আর্টিকেল দেখুন
+            </Link>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {catArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/article/${article.slug}`}
+                className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg hover:border-green-300 transition group"
+              >
+                <div className="bg-gradient-to-br from-green-600 to-emerald-500 h-28 flex items-center justify-center">
+                  <span className="text-4xl">{cat.icon}</span>
+                </div>
+                <div className="p-4">
+                  <h2 className="font-bold text-gray-800 group-hover:text-green-700 mb-2 line-clamp-2">{article.title}</h2>
+                  <p className="text-sm text-gray-500 line-clamp-2 mb-3">{article.excerpt}</p>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-400">📍 {article.region}</span>
+                    <span className="font-bold text-green-700">{article.price}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
 
-          <div className="relative z-10 max-w-2xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-400 text-xs font-bold mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>CATEGORY SOURCING INTELLIGENCE</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-white">
-              {category.name}
-            </h1>
-            <p className="text-sm text-slate-300 mt-2 leading-relaxed">
-              {category.description}
-            </p>
-            <div className="mt-4 flex items-center gap-4 text-xs text-slate-400">
-              <span>Verified Winning Products: <strong className="text-emerald-400">{categoryProducts.length}</strong></span>
-              <span>•</span>
-              <span>Average Margin: <strong className="text-emerald-400">79%+</strong></span>
-            </div>
+        {/* Other categories */}
+        <div className="mt-10">
+          <h2 className="font-bold text-gray-700 mb-4">অন্যান্য বিভাগ</h2>
+          <div className="flex flex-wrap gap-2">
+            {categories.filter((c) => c.slug !== slug).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/category/${c.slug}`}
+                className={`${c.color} px-4 py-2 rounded-full text-sm font-medium border hover:opacity-80 transition`}
+              >
+                {c.icon} {c.name}
+              </Link>
+            ))}
           </div>
         </div>
-
-        {/* Filterable Products */}
-        <ProductGrid products={categoryProducts} defaultCategory={slug as ProductCategory} />
       </div>
     </div>
   );

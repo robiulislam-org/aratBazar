@@ -6,11 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "generate:content": "node scripts/generate-daily-content.js",
-    "generate:news": "node scripts/auto-news-generator.js",
-    "generate:ai": "node scripts/auto-ai-generator.js",
-    "generate:products": "node scripts/auto-product-hunter.js"
+    "lint": "eslint"
   },
   "dependencies": {
     "lucide-react": "^1.41.0",

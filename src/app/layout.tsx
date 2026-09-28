@@ -3,13 +3,10 @@ import React from "react";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
-import LiveSourcingTicker from "@/components/LiveSourcingTicker";
 import Footer from "@/components/Footer";
-import { CartProvider } from "@/context/CartContext";
-import CookieConsent from "@/components/CookieConsent";
 
 export const viewport: Viewport = {
-  themeColor: "#090d16",
+  themeColor: "#16a34a",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -18,154 +15,92 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://aratbazar.com"),
   title: {
-    default: "AratBazar | Global Winning Products & Wholesale Sourcing Intelligence",
-    template: "%s | AratBazar Wholesale & Sourcing Intelligence",
+    default: "আরতবাজার | বাংলাদেশের অর্গানিক পণ্যের তথ্যভাণ্ডার",
+    template: "%s | আরতবাজার - বাংলাদেশের অর্গানিক পণ্য",
   },
   description:
-    "AratBazar (aratbazar.com) is the premier global winning product hunter and wholesale sourcing intelligence hub. Discover high-margin viral products, lowest factory supplier rates, profit calculators, and market research for smart e-commerce sellers.",
+    "বাংলাদেশের ৬৪ জেলার বিশেষ অর্গানিক পণ্য, পাইকারি আড়ত, দাম ও বিক্রেতার তথ্য। আম, গুড়, চিংড়ি, চা, তাঁত শাড়ি সহ সব পণ্যের বিস্তারিত তথ্য। AratBazar - Bangladesh Organic Products Information Hub.",
   keywords: [
-    "winning products",
-    "viral gadgets",
-    "dropshipping winning products",
-    "wholesale sourcing hub",
-    "lowest price supplier",
-    "aliexpress factory direct",
-    "dropship profit calculator",
+    "বাংলাদেশের অর্গানিক পণ্য",
+    "বাংলাদেশের বিশেষ পণ্য",
+    "পাইকারি বাজার বাংলাদেশ",
+    "জেলার বিশেষ পণ্য",
+    "রাজশাহীর আম",
+    "চাঁপাইনবাবগঞ্জের আম",
+    "খুলনার চিংড়ি",
+    "সুন্দরবনের মধু",
+    "টাঙ্গাইলের শাড়ি",
+    "বগুড়ার দই",
+    "সিলেটের চা",
+    "শ্রীমঙ্গল চা",
+    "খেজুর গুড়",
+    "Bangladesh organic products",
+    "Bangladesh wholesale market",
     "aratbazar",
-    "e-commerce product hunting",
-    "tiktok viral finds",
-    "high margin products",
-    "b2b sourcing",
-    "cheap useful gadgets"
+    "আরত বাজার",
+    "বাংলাদেশ কৃষি পণ্য",
+    "দেশি পণ্য বাংলাদেশ",
+    "bangladesh local products",
+    "bangladesh division products",
+    "64 districts bangladesh products",
   ],
-  authors: [{ name: "AratBazar Intelligence Team", url: "https://aratbazar.com/about" }],
-  creator: "AratBazar Research",
+  authors: [{ name: "আরতবাজার টিম", url: "https://aratbazar.com/about" }],
+  creator: "AratBazar",
   publisher: "AratBazar",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
-    title: "AratBazar | Global Winning Products & Wholesale Sourcing Hub",
+    title: "আরতবাজার | বাংলাদেশের অর্গানিক পণ্যের তথ্যভাণ্ডার",
     description:
-      "Discover high-margin viral products, factory supplier quotes, profit margin analytics, and video ad hooks for e-commerce entrepreneurs.",
+      "বাংলাদেশের ৬৪ জেলার বিশেষ অর্গানিক পণ্য, পাইকারি আড়ত, দাম ও বিক্রেতার তথ্য একটি জায়গায়।",
     url: "https://aratbazar.com",
-    siteName: "AratBazar",
-    locale: "en_US",
+    siteName: "আরতবাজার",
+    locale: "bn_BD",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "AratBazar - Global Sourcing & Winning Products Hub",
-      },
-    ],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "আরতবাজার - বাংলাদেশের অর্গানিক পণ্য" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AratBazar | Global Winning Products & Wholesale Hub",
-    description:
-      "Find viral winning products, lowest factory prices, profit calculators, and supplier links.",
-    creator: "@aratbazar",
+    title: "আরতবাজার | বাংলাদেশের অর্গানিক পণ্যের তথ্যভাণ্ডার",
+    description: "বাংলাদেশের ৬৪ জেলার বিশেষ পণ্য, পাইকারি দাম ও আড়তের তথ্য।",
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
-  alternates: {
-    canonical: "https://aratbazar.com",
-  },
-  verification: {
-    google: "_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M",
-  },
+  alternates: { canonical: "https://aratbazar.com" },
+  verification: { google: "_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "";
-  const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-7DXMHPCQQ0";
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "AratBazar",
+    name: "আরতবাজার",
     url: "https://aratbazar.com",
-    description: "Global winning product hunter, wholesale sourcing quotes, and e-commerce seller intelligence.",
+    description: "বাংলাদেশের ৬৪ জেলার বিশেষ অর্গানিক পণ্য, পাইকারি আড়ত ও দামের তথ্যভাণ্ডার।",
+    inLanguage: "bn",
     publisher: {
       "@type": "Organization",
-      name: "AratBazar Sourcing Intelligence",
+      name: "আরতবাজার",
       url: "https://aratbazar.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://aratbazar.com/favicon.ico",
-      },
+      logo: { "@type": "ImageObject", url: "https://aratbazar.com/favicon.ico" },
     },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://aratbazar.com/?q={search_term_string}",
+      target: "https://aratbazar.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "AratBazar",
-    url: "https://aratbazar.com",
-    logo: "https://aratbazar.com/favicon.ico",
-    description:
-      "AratBazar is an independent global product research and wholesale sourcing directory connecting online sellers and shoppers to verified lowest-price manufacturers.",
-    foundingDate: "2024",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Support",
-      url: "https://aratbazar.com/contact",
-      availableLanguage: "English",
-    },
-    sameAs: [
-      "https://aratbazar.com",
-    ],
-  };
-
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="bn" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta
-          name="google-site-verification"
-          content={googleVerification || "_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M"}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        {/* Google AdSense Script */}
-        {adsenseClientId && (
-          <Script
-            id="google-adsense"
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        <meta name="google-site-verification" content="_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         {/* Google Analytics 4 */}
         {gaMeasurementId && (
           <>
@@ -190,16 +125,10 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="min-h-screen bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
-        <CartProvider>
-          <div>
-            <Header />
-            <LiveSourcingTicker />
-            <main>{children}</main>
-          </div>
-          <Footer />
-        </CartProvider>
-        <CookieConsent />
+      <body className="min-h-screen bg-white text-gray-900 antialiased flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

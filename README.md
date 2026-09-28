@@ -1,46 +1,68 @@
-# AratBazar — Global Winning Product Hunter & Wholesale Sourcing Intelligence
+# আরতবাজার ওয়েবসাইট সেটআপ নির্দেশিকা
 
-**Live Domain:** [aratbazar.com](https://aratbazar.com)
+## node_modules মুছে ফেলার পরে এই ধাপগুলো অনুসরণ করুন:
 
-AratBazar is the premier global winning product hunter, lowest factory supplier finder, and e-commerce seller intelligence directory. Built for online merchants, dropshippers, and smart shoppers to discover high-margin viral products with verified direct sourcing links (AliExpress, CJ Dropshipping, 1688, Temu).
+### ধাপ ১: Terminal/Command Prompt খুলুন
+Windows-এ `Win + R` চাপুন → `cmd` লিখুন → Enter
 
----
-
-## ⚡ Key Highlights & Architecture
-
-- **🤖 100% Automated Daily Product Research:** Runs automatically via GitHub Actions cron. Discovers new viral products, calculates real-time profit margin spreads, and updates factory supplier links with zero manual maintenance and **zero API keys required**.
-- **🛍️ Modern E-Commerce UI:** High-converting product cards with image previews, category filters, trend badges, verified factory sourcing links, and retail competitor benchmarks.
-- **📈 Live Wholesale Sourcing Ticker Tape:** Real-time scrolling ribbon showcasing wholesale cost spreads and gross profit margins across trending products.
-- **🧮 Interactive Dropshipping Profit Calculator:** Allows sellers to calculate true net profit, gross margins, transaction fees, and breakeven ROAS before launching ad campaigns.
-- **📊 Deep-Dive Seller Dossiers (`/product/[slug]`):** Detailed intelligence for each winning item: why it sells, target customer avatars, ready-to-test TikTok & Reels video ad hooks, and supplier rate comparison tables.
-- **📂 Dedicated Category Hubs (`/category/[slug]`):** SEO-optimized category archives for Tech Gadgets, Kitchen Innovations, Health & Beauty, Car & Outdoor, Everyday Utilities, and Fitness.
-- **💰 Google AdSense & Affiliate Monetization Ready:** Fully compliant with FTC Affiliate Disclosure standards, Google AdSense ad slots (`AdBanner.tsx`), and Google Product Schema (`JSON-LD`) for rich snippet search results.
-- **🚀 Ultra-Fast Next.js App Router:** Server-Side Generation (SSG), Tailwind CSS v4, Lucide React icons, and automated Vercel Edge CDN deployment.
-
----
-
-## 🛠 Tech Stack
-
-- **Framework:** Next.js (App Router, Server Components, SSG)
-- **Styling:** Tailwind CSS v4
-- **Icons:** Lucide React
-- **Data Pipeline:** Automated Node.js market hunter (`scripts/auto-product-hunter.js`)
-- **CI/CD:** GitHub Actions Cron
-- **Hosting:** Vercel Edge CDN
-
----
-
-## 🚀 Local Commands
-
-```bash
-# Install dependencies
-npm install
-
-# Run automated winning product hunter manually
-npm run generate:products
-
-# Run local development server
-npm run dev
+### ধাপ ২: প্রজেক্ট ফোল্ডারে যান
+```
+cd "G:\My Drive\aratBazar"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view AratBazar.
+### ধাপ ৩: Dependencies install করুন
+```
+npm install
+```
+(প্রায় ৩–৫ মিনিট লাগবে)
+
+### ধাপ ৪: Website চালু করুন (Development)
+```
+npm run dev
+```
+তারপর browser-এ যান: http://localhost:3000
+
+### ধাপ ৫: Production Build (Deploy করতে)
+```
+npm run build
+npm run start
+```
+
+---
+
+## ⚠️ Google Drive সমস্যা এড়াতে
+
+Google Drive-এ `node_modules` sync হলে ফাইল নষ্ট হয়।
+এড়াতে করণীয়:
+
+**Option A**: Google Drive Selective Sync
+- Google Drive desktop app → Settings → Selective Sync
+- `aratBazar/node_modules` ফোল্ডার sync থেকে বাদ দিন
+
+**Option B**: প্রজেক্টটি Google Drive-র বাইরে রাখুন
+- যেমন: `C:\Projects\aratBazar`
+- শুধু `src/` ফোল্ডার Google Drive-এ রাখুন
+
+---
+
+## Website Routes
+
+| URL | কী পাবেন |
+|-----|---------|
+| `/` | হোমপেজ |
+| `/bibhag` | সব বিভাগ |
+| `/bibhag/rajshahi` | রাজশাহী বিভাগ |
+| `/jela` | সব জেলা |
+| `/jela/chapainawabganj` | চাঁপাইনবাবগঞ্জ (আম + দাম + আড়ত) |
+| `/jela/bogura` | বগুড়া (দই + বাজার) |
+| `/article` | সব আর্টিকেল |
+| `/search?q=আম` | সার্চ রেজাল্ট |
+| `/about` | আমাদের সম্পর্কে |
+
+---
+
+## Google Analytics
+
+**Tracking ID**: `G-7DXMHPCQQ0` ✅ সংরক্ষিত আছে
+**Google Verification**: `_N0pjK4jsVVQxYeyeZAQp0gebsiRLi9fKjna2i74B1M` ✅
+

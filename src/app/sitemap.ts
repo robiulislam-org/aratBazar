@@ -1,117 +1,57 @@
-import { MetadataRoute } from "next";
-import { INITIAL_PRODUCTS, CATEGORIES } from "@/data/productsData";
+import type { MetadataRoute } from "next";
+import { districts, divisions } from "@/data/bangladesh";
+import { articles } from "@/data/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://aratbazar.com";
-  const now = new Date();
 
-  // Winning Product Dossier URLs — High search intent for buyers and sellers
-  const productUrls = INITIAL_PRODUCTS.map((prod) => ({
-    url: `${baseUrl}/product/${prod.slug}`,
-    lastModified: new Date(prod.updatedAt || now),
-    changeFrequency: "daily" as const,
-    priority: 0.95,
-  }));
-
-  // Category Landing Pages
-  const categoryUrls = CATEGORIES.map((cat) => ({
-    url: `${baseUrl}/category/${cat.slug}`,
-    lastModified: now,
-    changeFrequency: "daily" as const,
-    priority: 0.9,
-  }));
-
-  return [
-    // Homepage
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 1.0,
-    },
-    // Dropshipping & Seller Tools
-    {
-      url: `${baseUrl}/tools`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    // Live Market News Hub
-    {
-      url: `${baseUrl}/news`,
-      lastModified: now,
-      changeFrequency: "hourly" as const,
-      priority: 0.9,
-    },
-    // AI Models & Tracker Directory
-    {
-      url: `${baseUrl}/ai`,
-      lastModified: now,
-      changeFrequency: "hourly" as const,
-      priority: 0.9,
-    },
-    // Economic Calendar
-    {
-      url: `${baseUrl}/calendar`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    // Currency Strength & Exchange
-    {
-      url: `${baseUrl}/currency-strength`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/exchange`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/signals`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    // About
-    {
-      url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    // Affiliate Disclaimer
-    {
-      url: `${baseUrl}/disclaimer`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    // Privacy Policy
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    // Terms of Service
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    // Contact
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    ...categoryUrls,
-    ...productUrls,
+  const staticPages = [
+    { url: baseUrl, lastModified: new Date(), changeFrequency: "daily" as const, priority: 1 },
+    { url: `${baseUrl}/bibhag`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${baseUrl}/jela`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${baseUrl}/category`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.8 },
+    { url: `${baseUrl}/article`, lastModified: new Date(), changeFrequency: "daily" as const, priority: 0.8 },
+    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.5 },
+    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.5 },
+    { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.3 },
   ];
+
+  const divisionPages = divisions.map((d) => ({
+    url: `${baseUrl}/bibhag/${d.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const districtPages = districts.map((d) => ({
+    url: `${baseUrl}/jela/${d.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const articlePages = articles.map((a) => ({
+    url: `${baseUrl}/article/${a.slug}`,
+    lastModified: new Date(a.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  const categoryPages = [
+    "gur-mishti",
+    "mousumi-fol",
+    "sobji-torkari",
+    "moshla-herbs",
+    "mach-samudrik",
+    "dal-shosso",
+    "dugdho-ponno",
+    "hastoshilpo",
+  ].map((slug) => ({
+    url: `${baseUrl}/category/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...divisionPages, ...districtPages, ...categoryPages, ...articlePages];
 }

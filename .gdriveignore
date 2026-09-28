@@ -1,0 +1,6 @@
+node_modules/
+.next/
+build_output.txt
+test_build.js
+test_next.js
+*.tsbuildinfo
